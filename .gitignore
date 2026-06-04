@@ -7,3 +7,5 @@ out/
 .DS_Store
 _extracted.txt
 data/users.json
+firebase-env-snippet.txt
+*-firebase-adminsdk*.json

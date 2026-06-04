@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "parse-studies": "python scripts/parse-studies.py",
-    "pwa-icons": "python scripts/generate-pwa-icons.py"
+    "pwa-icons": "python scripts/generate-pwa-icons.py",
+    "firebase-env": "python scripts/setup-firebase-env.py",
+    "firebase-apply": "python scripts/apply-firebase-env.py"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

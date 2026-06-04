@@ -69,9 +69,12 @@ export async function POST(request: Request) {
       );
     }
     const msg = e instanceof Error ? e.message : "";
-    if (msg.includes("FIREBASE_SERVICE_ACCOUNT")) {
+    if (msg.includes("Firebase Admin no configurado") || msg.includes("FIREBASE")) {
       return NextResponse.json(
-        { error: "Firebase no está configurado en el servidor. Agregue FIREBASE_SERVICE_ACCOUNT_JSON." },
+        {
+          error:
+            "Firebase no está configurado en el servidor. En Vercel agregue FIREBASE_CLIENT_EMAIL y FIREBASE_PRIVATE_KEY (ver CONFIGURAR-FIREBASE.md) y haga Redeploy.",
+        },
         { status: 503 },
       );
     }
