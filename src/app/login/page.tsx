@@ -35,8 +35,8 @@ export default function LoginPage() {
         setPin("");
         return;
       }
-      router.push(from);
-      router.refresh();
+      const target = from && from.startsWith("/") && !from.startsWith("//") ? from : "/";
+      window.location.href = target;
     } catch {
       setError("Error de conexión. Intente de nuevo.");
     } finally {

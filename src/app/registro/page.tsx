@@ -1,13 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AuthCard, AuthLink } from "@/components/AuthCard";
 import { BirthDatePicker } from "@/components/BirthDatePicker";
 import { PinInput } from "@/components/PinInput";
 
 export default function RegistroPage() {
-  const router = useRouter();
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [fechaNacimiento, setFechaNacimiento] = useState("");
@@ -61,8 +59,8 @@ export default function RegistroPage() {
         setError(data.error ?? "No se pudo registrar.");
         return;
       }
-      router.push("/login?registrado=1");
-      router.refresh();
+      // Recarga completa para que la cookie de sesión se aplique antes del middleware
+      window.location.href = "/?registrado=1";
     } catch {
       setError("Error de conexión. Intente de nuevo.");
     } finally {
