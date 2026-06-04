@@ -60,7 +60,7 @@ export default function RegistroPage() {
         return;
       }
       // Recarga completa para que la cookie de sesión se aplique antes del middleware
-      window.location.href = "/?registrado=1";
+      window.location.href = "/estudios?registrado=1";
     } catch {
       setError("Error de conexión. Intente de nuevo.");
     } finally {

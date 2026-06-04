@@ -14,24 +14,13 @@ function CrossOrnament({ className = "" }: { className?: string }) {
   );
 }
 
-type HomeProps = {
-  searchParams?: Promise<{ registrado?: string }>;
-};
-
-export default async function HomePage({ searchParams }: HomeProps) {
+export default function HomePage() {
   const studies = getStudies();
   const { intro } = data;
-  const params = searchParams ? await searchParams : {};
-  const justRegistered = params.registrado === "1";
 
   return (
     <>
-      {justRegistered && (
-        <div className="bg-gold/20 border-b border-gold/40 px-4 py-3 text-center text-sm text-navy">
-          ¡Cuenta creada! Ya puede explorar los estudios o volver a entrar con su PIN cuando lo necesite.
-        </div>
-      )}
-      {/* Hero */}
+      {/* Hero — solo visitantes sin sesión (con sesión el middleware envía a /estudios) */}
       <section className="relative min-h-[100dvh] sm:min-h-[90vh] overflow-hidden bg-navy text-white">
         <div
           className="absolute inset-0"

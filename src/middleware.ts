@@ -5,6 +5,7 @@ import type { NextRequest } from "next/server";
 const COOKIE_NAME = "hdr_session";
 const PUBLIC_PATHS = ["/", "/login", "/registro"];
 const AUTH_ONLY_PATHS = ["/login", "/registro"];
+const DEFAULT_APP_PATH = "/estudios";
 
 function getSecret(): Uint8Array {
   const secret = process.env.AUTH_SECRET ?? "hijas-del-rey-dev-secret-cambiar-en-produccion";
@@ -22,7 +23,7 @@ async function isValidSession(token: string): Promise<boolean> {
 
 function safeRedirectPath(from: string | null): string | null {
   if (!from || !from.startsWith("/") || from.startsWith("//")) return null;
-  if (AUTH_ONLY_PATHS.includes(from)) return null;
+  if (from === "/" || AUTH_ONLY_PATHS.includes(from)) return null;
   return from;
 }
 
@@ -38,13 +39,17 @@ export async function middleware(request: NextRequest) {
     PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 
   if (isPublic) {
-    // Solo sacar de login/registro si ya hay sesión (nunca redirigir "/" → "/" )
-    if (valid && AUTH_ONLY_PATHS.includes(pathname)) {
-      const from = safeRedirectPath(request.nextUrl.searchParams.get("from"));
-      if (from) {
-        return NextResponse.redirect(new URL(from, request.url));
+    if (valid) {
+      if (pathname === "/") {
+        const dest = new URL(DEFAULT_APP_PATH, request.url);
+        const registrado = request.nextUrl.searchParams.get("registrado");
+        if (registrado === "1") dest.searchParams.set("registrado", "1");
+        return NextResponse.redirect(dest);
       }
-      return NextResponse.redirect(new URL("/", request.url));
+      if (AUTH_ONLY_PATHS.includes(pathname)) {
+        const from = safeRedirectPath(request.nextUrl.searchParams.get("from"));
+        return NextResponse.redirect(new URL(from ?? DEFAULT_APP_PATH, request.url));
+      }
     }
     return NextResponse.next();
   }

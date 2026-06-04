@@ -1,14 +1,13 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { AuthCard, AuthLink } from "@/components/AuthCard";
 import { PinInput } from "@/components/PinInput";
 
 export default function LoginPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const from = searchParams.get("from") ?? "/";
+  const from = searchParams.get("from") ?? "/estudios";
   const registered = searchParams.get("registrado") === "1";
 
   const [pin, setPin] = useState("");
@@ -35,7 +34,8 @@ export default function LoginPage() {
         setPin("");
         return;
       }
-      const target = from && from.startsWith("/") && !from.startsWith("//") ? from : "/";
+      const target =
+        from && from.startsWith("/") && !from.startsWith("//") && from !== "/" ? from : "/estudios";
       window.location.href = target;
     } catch {
       setError("Error de conexión. Intente de nuevo.");

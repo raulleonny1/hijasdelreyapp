@@ -12,11 +12,6 @@ type User = {
   email: string;
 };
 
-const links = [
-  { href: "/", label: "Inicio" },
-  { href: "/estudios", label: "Estudios" },
-];
-
 const AUTH_PAGES = ["/login", "/registro"];
 
 export function Header() {
@@ -37,17 +32,24 @@ export function Header() {
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
-    router.push("/");
-    router.refresh();
+    window.location.href = "/";
   };
 
   if (isAuthPage) return null;
+
+  const homeHref = user ? "/estudios" : "/";
+  const navLinks = user
+    ? [{ href: "/estudios", label: "Estudios" }]
+    : [
+        { href: "/", label: "Inicio" },
+        { href: "/estudios", label: "Estudios" },
+      ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md pt-[env(safe-area-inset-top)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-3 py-2.5 sm:gap-4 sm:px-6 sm:py-3">
         <Link
-          href="/"
+          href={homeHref}
           className="flex min-w-0 shrink items-center gap-2 transition-opacity hover:opacity-90 sm:gap-3"
         >
           <Image
@@ -67,10 +69,10 @@ export function Header() {
 
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-3">
           <nav className="flex gap-0.5 sm:gap-1">
-            {links.map((link) => {
+            {navLinks.map((link) => {
               const active =
                 pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href));
+                (link.href === "/estudios" && pathname.startsWith("/estudios"));
               return (
                 <Link
                   key={link.href}
