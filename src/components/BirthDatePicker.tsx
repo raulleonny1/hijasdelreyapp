@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useId, useState } from "react";
+
 const MONTHS = [
   "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
@@ -11,85 +13,185 @@ type Props = {
 };
 
 function daysInMonth(year: number, month: number): number {
+  if (!year || !month) return 31;
   return new Date(year, month, 0).getDate();
 }
 
+function parseIso(value: string): { day: number; month: number; year: number } {
+  if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return { day: 0, month: 0, year: 0 };
+  }
+  const [y, m, d] = value.split("-").map(Number);
+  return { day: d, month: m, year: y };
+}
+
+function toIso(day: number, month: number, year: number): string {
+  if (!day || !month || !year) return "";
+  const clamped = Math.min(day, daysInMonth(year, month));
+  return `${year}-${String(month).padStart(2, "0")}-${String(clamped).padStart(2, "0")}`;
+}
+
+function formatDisplay(iso: string): string {
+  return new Date(iso + "T12:00:00").toLocaleDateString("es", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 export function BirthDatePicker({ value, onChange }: Props) {
-  const parsed = value ? new Date(value + "T12:00:00") : null;
-  const day = parsed ? parsed.getDate() : 0;
-  const month = parsed ? parsed.getMonth() + 1 : 0;
-  const year = parsed ? parsed.getFullYear() : 0;
+  const id = useId();
+  const parsed = parseIso(value);
+  const [day, setDay] = useState(parsed.day);
+  const [month, setMonth] = useState(parsed.month);
+  const [year, setYear] = useState(parsed.year);
+  const [mode, setMode] = useState<"calendar" | "manual">("calendar");
 
   const currentYear = new Date().getFullYear();
+  const maxDate = new Date().toISOString().slice(0, 10);
   const years = Array.from({ length: 100 }, (_, i) => currentYear - i);
-  const maxDay = month && year ? daysInMonth(year, month) : 31;
+  const maxDay = daysInMonth(year || currentYear, month || 1);
   const days = Array.from({ length: maxDay }, (_, i) => i + 1);
 
-  const update = (d: number, m: number, y: number) => {
-    if (!d || !m || !y) {
+  useEffect(() => {
+    const p = parseIso(value);
+    setDay(p.day);
+    setMonth(p.month);
+    setYear(p.year);
+  }, [value]);
+
+  const applyParts = (d: number, m: number, y: number) => {
+    setDay(d);
+    setMonth(m);
+    setYear(y);
+    onChange(toIso(d, m, y));
+  };
+
+  const handleNativeDate = (iso: string) => {
+    if (!iso) {
+      setDay(0);
+      setMonth(0);
+      setYear(0);
       onChange("");
       return;
     }
-    const clampedDay = Math.min(d, daysInMonth(y, m));
-    const iso = `${y}-${String(m).padStart(2, "0")}-${String(clampedDay).padStart(2, "0")}`;
+    const p = parseIso(iso);
+    setDay(p.day);
+    setMonth(p.month);
+    setYear(p.year);
     onChange(iso);
   };
 
   const selectClass =
-    "w-full rounded-xl border border-navy/15 bg-white px-4 py-3.5 text-navy focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20 appearance-none cursor-pointer";
+    "w-full min-h-[48px] rounded-xl border border-navy/15 bg-white px-3 py-3 text-base text-navy focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20 cursor-pointer touch-manipulation";
 
   return (
     <div>
-      <p className="mb-2 text-sm font-medium text-navy/80">Fecha de nacimiento</p>
-      <div className="grid grid-cols-3 gap-3">
-        <div>
-          <label className="mb-1 block text-xs text-navy/50">Día</label>
-          <select
-            className={selectClass}
-            value={day || ""}
-            onChange={(e) => update(Number(e.target.value), month, year)}
-          >
-            <option value="">—</option>
-            {days.map((d) => (
-              <option key={d} value={d}>{d}</option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="mb-1 block text-xs text-navy/50">Mes</label>
-          <select
-            className={selectClass}
-            value={month || ""}
-            onChange={(e) => update(day, Number(e.target.value), year)}
-          >
-            <option value="">—</option>
-            {MONTHS.map((name, i) => (
-              <option key={name} value={i + 1}>{name}</option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="mb-1 block text-xs text-navy/50">Año</label>
-          <select
-            className={selectClass}
-            value={year || ""}
-            onChange={(e) => update(day, month, Number(e.target.value))}
-          >
-            <option value="">—</option>
-            {years.map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
-        </div>
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <label htmlFor={`${id}-date`} className="text-sm font-medium text-navy/80">
+          Fecha de nacimiento
+        </label>
+        <button
+          type="button"
+          onClick={() => setMode(mode === "calendar" ? "manual" : "calendar")}
+          className="text-xs text-navy/50 underline hover:text-gold"
+        >
+          {mode === "calendar" ? "Elegir día / mes / año" : "Usar calendario"}
+        </button>
       </div>
-      {value && (
-        <p className="mt-2 text-center text-sm text-gold font-medium">
-          {new Date(value + "T12:00:00").toLocaleDateString("es", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
+
+      {mode === "calendar" ? (
+        <input
+          id={`${id}-date`}
+          type="date"
+          value={value}
+          max={maxDate}
+          min="1920-01-01"
+          onChange={(e) => handleNativeDate(e.target.value)}
+          className={`${selectClass} block appearance-none`}
+          required
+        />
+      ) : (
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+          <div>
+            <label htmlFor={`${id}-day`} className="mb-1 block text-xs text-navy/50">
+              Día
+            </label>
+            <select
+              id={`${id}-day`}
+              className={selectClass}
+              value={day || ""}
+              onChange={(e) => applyParts(Number(e.target.value), month, year)}
+            >
+              <option value="">—</option>
+              {days.map((d) => (
+                <option key={d} value={d}>
+                  {d}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor={`${id}-month`} className="mb-1 block text-xs text-navy/50">
+              Mes
+            </label>
+            <select
+              id={`${id}-month`}
+              className={selectClass}
+              value={month || ""}
+              onChange={(e) => {
+                const m = Number(e.target.value);
+                let d = day;
+                if (year && m && d > daysInMonth(year, m)) {
+                  d = daysInMonth(year, m);
+                }
+                applyParts(d, m, year);
+              }}
+            >
+              <option value="">—</option>
+              {MONTHS.map((name, i) => (
+                <option key={name} value={i + 1}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor={`${id}-year`} className="mb-1 block text-xs text-navy/50">
+              Año
+            </label>
+            <select
+              id={`${id}-year`}
+              className={selectClass}
+              value={year || ""}
+              onChange={(e) => {
+                const y = Number(e.target.value);
+                let d = day;
+                if (month && y && d > daysInMonth(y, month)) {
+                  d = daysInMonth(y, month);
+                }
+                applyParts(d, month, y);
+              }}
+            >
+              <option value="">—</option>
+              {years.map((y) => (
+                <option key={y} value={y}>
+                  {y}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      )}
+
+      {value ? (
+        <p className="mt-2 text-center text-sm font-medium text-gold" aria-live="polite">
+          {formatDisplay(value)}
+        </p>
+      ) : (
+        <p className="mt-2 text-center text-xs text-navy/45">
+          Toque el campo de fecha o elija día, mes y año
         </p>
       )}
     </div>

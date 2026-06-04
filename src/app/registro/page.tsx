@@ -25,8 +25,12 @@ export default function RegistroPage() {
       setError("Nombre y apellido son obligatorios.");
       return;
     }
-    if (!fechaNacimiento) {
-      setError("Seleccione su fecha de nacimiento.");
+    if (!fechaNacimiento || !/^\d{4}-\d{2}-\d{2}$/.test(fechaNacimiento)) {
+      setError("Seleccione su fecha de nacimiento (día, mes y año).");
+      return;
+    }
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Ingrese un correo electrónico válido.");
       return;
     }
     if (pin.length !== 4) {
@@ -57,7 +61,7 @@ export default function RegistroPage() {
         setError(data.error ?? "No se pudo registrar.");
         return;
       }
-      router.push("/");
+      router.push("/login?registrado=1");
       router.refresh();
     } catch {
       setError("Error de conexión. Intente de nuevo.");
@@ -105,7 +109,13 @@ export default function RegistroPage() {
           </div>
         </div>
 
-        <BirthDatePicker value={fechaNacimiento} onChange={setFechaNacimiento} />
+        <BirthDatePicker
+          value={fechaNacimiento}
+          onChange={(v) => {
+            setFechaNacimiento(v);
+            if (error.includes("fecha")) setError("");
+          }}
+        />
 
         <div>
           <label className="mb-1 block text-sm font-medium text-navy/80">Correo electrónico</label>

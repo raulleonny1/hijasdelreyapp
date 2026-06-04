@@ -23,7 +23,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Los PIN no coinciden." }, { status: 400 });
     }
 
-    const birth = new Date(fechaNacimiento);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(fechaNacimiento)) {
+      return NextResponse.json({ error: "Fecha de nacimiento no válida." }, { status: 400 });
+    }
+    const birth = new Date(`${fechaNacimiento}T12:00:00`);
     if (Number.isNaN(birth.getTime()) || birth > new Date()) {
       return NextResponse.json({ error: "Fecha de nacimiento no válida." }, { status: 400 });
     }
