@@ -1,0 +1,793 @@
+{
+  "intro": {
+    "title": "Guía de Estudio Nacional",
+    "subtitle": "Preparación para la admisión en La Orden de las Hijas del Rey®",
+    "edition": "2020",
+    "description": "Doce sesiones de reflexión, oración y estudio para conocer la filosofía, historia y compromiso de La Orden. Se recomienda un período de doce semanas de preparación.",
+    "purposes": [
+      "Servir como preparación oficial para las miembros prospectivas",
+      "Establecer una comprensión de La Orden",
+      "Introducir la Regla de Vida de La Orden",
+      "Servir como revisión para las miembros actuales",
+      "Ser una fuente de información"
+    ],
+    "motto": "MAGNANIMITER CRUCEM SUSTINE",
+    "mottoTranslation": "Con noble espíritu, sostén la cruz",
+    "initials": "FHS — For His Sake (Por su amor)",
+    "scripture": "Tu palabra es una lámpara para mis pies y una luz para mi camino. — Salmo 119:105"
+  },
+  "studies": [
+    {
+      "id": 1,
+      "num": "UNO",
+      "title": "¿Qué es un cristiano?",
+      "part": "Las Hijas en un viaje",
+      "subtitle": "El viaje de fe con Jesús",
+      "summary": "Un cristiano es una persona en un viaje con Jesús, un viaje que comienza con el regalo de la vida eterna recibido durante el Bautismo y vivida en una relación de amor y confianza con Jesús, el Cristo, quien es reconocido como nuestro Señor y Salvador personal. Nuestros credos, el credo de los apóstoles y el credo de Niceno, son afirmaciones básicas de nuestra fe cristiana para este viaje de fe y declara la verdad de ambas vidas cristianas, la individual y la colectiva. Todas las personas están en un viaje de vida,…",
+      "content": [
+        "Un cristiano es una persona en un viaje con Jesús, un viaje que comienza con el regalo de la vida eterna \nrecibido durante el Bautismo y vivida en una relación de amor y confianza con Jesús, el Cristo, quien es \nreconocido como nuestro Señor y Salvador personal. Nuestros credos, el credo de los apóstoles y el credo \nde Niceno, son afirmaciones básicas de nuestra fe cristiana para este viaje de fe y declara la verdad de \nambas vidas cristianas, la individual y la colectiva.",
+        "Todas las personas  están en un viaje de vida, de una u otra manera, pero los cristianos hacen su viaje \nconscientemente con Cristo y unos con otros. Nadie puede ser excluido de la invitación a viajar, porque \njuntos como cristianos, somos el pueblo de Dios. Somos un grupo eclesiástico abrazando todo estrato de \nla existencia humana. ¡Qué cuadro hacemos – todos los colores, formas y tamaños, jóvenes, adultos , \ncasados, solteros, mujeres profesionales, amas de casa! No importa nuestro estilo de adoración, nuestro \nestilo físico, nuestra salud emocional, sabemos en lo más profundo de nuestro corazón que el amor de \nCristo invita e incluye a todos.",
+        "Buscamos seguirle a Él en este viaje, vivir nuestra vida diaria como Él lo haría. Le pedimos, le \nescuchamos, le seguimos, dependemos de Él primero y luego de unos con otros en los sucesos de nuestra \nvida diaria. Sabemos que estamos en un eterno viaje de gracia y sorpresas sin final. El viaje de la vida al \ncual Él nos llama es más que aceptar ciertas verdades o seguir de cerca un conjunto de reglas. Es una \nrelación con el Dios viviente, encarnado en una persona real, Jesucristo, y nosotros descubrimos para \nnuestro asombro y deleite que, en este viaje de amor, que Él es ambos, el viaje y el fin del viaje. Nuestro \nviaje es Jesús.",
+        "Tú eres nuestra paz, oh Señor. \nDe miles de fatigas nuestra vida diaria. \nDe nuestras decepciones. \nDel inconsciente apuro nervioso. \nNos volvemos a ti y estamos en paz. Muere el clamor. \nEstamos vivos en el brillo de tu presencia. Aun así, ven Señor Jesús, a esta alma mía. \nAnónimo"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cómo responde usted sobre “qué es un cristiano”?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Dónde, cuándo, cómo empezó su viaje con Jesús?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "A lo largo de su viaje, ¿ha habido una persona o evento particularmente significativo que le demostró amor “como Cristo”?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Quién, o qué le ha renovado o iluminado a través de su viaje?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "Mencione algunos de los obstáculos que ha encontrado en su viaje.",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Se le hace difícil hablar acerca de su viaje? ¿Por qué?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "¿Qué hace usted cuando se siente “atascada, seca y vacía”?",
+          "type": "open"
+        },
+        {
+          "id": 8,
+          "text": "¿Hay algo más de ser un cristiano que el servicio, la oración, la adoración colectiva y llevar una vida moral? Si es así, por favor explique.",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "num": "DOS",
+      "title": "¿Qué es una Orden?",
+      "part": "Las Hijas en un viaje",
+      "subtitle": "Historia y misión de La Orden",
+      "summary": "Una orden religiosa es un linaje de comunidades y organizaciones de personas que viven, de alguna manera, separadas de la sociedad de acuerdo a sus devociones religiosas específicas, usualmente caracterizadas por los principios de las prácticas religiosas de sus fundadores. Una orden está compuesta de iniciáticos (laicos) y, en algunas tradiciones, de clérigos ordenados. Las órdenes religiosas existen en muchas de las religiones mundiales. Las Órdenes Religiosas y las comunidades sirven a la iglesia mayor de…",
+      "content": [
+        "Una orden religiosa es un linaje de comunidades y organizaciones de personas que viven, de alguna manera, \nseparadas de la sociedad de acuerdo a sus devociones religiosas específicas, usualmente caracterizadas por \nlos principios de las prácticas religiosas de sus fundadores. Una orden está compuesta de iniciáticos (laicos) \ny, en algunas tradiciones, de clérigos ordenados. Las órdenes religiosas existen en muchas de las religiones \nmundiales.",
+        "Las Órdenes Religiosas y las comunidades sirven a la iglesia mayor de muchas maneras. Muchas ofrecen \ncasas de retiros y dirección individual espiritual. Cada comunidad tiene una regla de vida y está comprometida \ncon la oración, la vida en comunidad y la hospitalidad.",
+        "1. Una Orden Religiosa de una iglesia es una sociedad de cristianos que voluntariamente se \ncomprometen de por vida, o por un período de años, a mantener sus posesiones en común o en un \nfideicomiso, y en obediencia a su Regla y Constitución.",
+        "2. Una Orden Cristiana de una iglesia es una sociedad de cristianos que voluntariamente se \ncomprometen de por vida, o por un período de años, y en obediencia a su Regla y Constitución. \n¿QUÉ ES La Orden de las Hijas del Rey®? \nLa Orden de las Hijas del Rey® es una orden de mujeres que son comulgantes de la Iglesia Episcopal, iglesias \nen comunión con esta, o iglesias en el episcopado  histórico, pero no en comunión con este. Es una organización \n501(c)(3) sin fines de lucro apoyada por las cuotas y donaciones de las miembros. \nNuestra tradición incluye la supervisión episcopal, el reconocimiento de que la Sagrada Escritura contiene \ntodo lo necesario para la salvación, el reconocimiento del don del Espíritu Santo en el Bautismo, la presencia \nreal de nuestro Señor en la Sagrada Eucaristía y la adoración. El propósito de la Orden es traer a otros en una \nrelación de vida amorosa con Jesús nuestro Señor y Salvador, y ayudar a fortalecer la vida espiritual de \nnuestras iglesias.",
+        "Las miembros se comprometen a una Regla de Vida, incorporando la Regla de Oración y la Regla de Servicio. \nMediante la reafirmación de las promesas realizadas en el Bautismo y la Confirmación, una Hija se \ncompromete a un programa de oración, estudio, servicio y evangelización de por vida, dedicada a \npropagar el Reino de Cristo y fortalecer la vida espiritual de su iglesia. Una Hija toma los votos para \nmantener las dos partes de la Regla de Vida de la Orden: la Regla de Oración y la Regla de Servicio.",
+        "La Regla de Oración se menciona primero debido a que debe ser lo primero en la vida diaria de cada Hija. A \ntravés de la Regla de Oración, las Hijas prometen orar diariamente por propagar el Reino de Cristo, la bendición \nde Dios sobre todas las miembros y el crecimiento espiritual de sus iglesias. Una Hija también es fiel en su vida \ndevocional personal a través de la Biblia o los estudios cristianos espirituales; su participación en días tranquilos, \nretiros, grupos de oración y asambleas diocesanas y provinciales.",
+        "A través de la Regla de Servicio, las Hijas regularmente participan en la adoración y trabajo de sus iglesias, llevan \na cabo un programa de evangelización personal en un esfuerzo consciente de conducir a otros en su relación personal \ncon Cristo, y trabajan con sus clérigos, como se indica, para la construcción espiritual de la iglesia.",
+        "Los inicios de La Orden \nMargaret J. Franklin instituyó La Orden en la víspera de la Pascua, en 1885. La idea creció de su \nclase bíblica de adulta para mujeres jóvenes en la iglesia del Santo Sepulcro, ahora iglesia de la \nResurrección, en la ciudad de New York. El primer capítulo se llamó Capítulo Alpha. La formación de \notros grupos y el deseo de estos de afiliarse con el grupo original de las Hijas del Rey incrementó \nrápidamente el número de capítulos. El reverendo Ralph Wood Kenyon, rector de  la iglesia del Santo \nSepulcro, fue el primer capellán nacional de La Orden. Él fue un hombre de visión y cuando el número \nde capítulos llegó a cincuenta, el participó en la redacción de la primera constitución. Fue formalmente \nadoptada en la primera reunión del consejo en 1892. Justo un años después, el 25 de Octubre de 1893, \nse convocó la primera Convención Nacional en Baltimore, Maryland. Casi doscientas delegadas \nasistieron a esta convención. Ellas representaron doscientos cincuenta capítulos y un total de miembros \nde aproximadamente ocho mil. La Orden fue originalmente incorporada en New York en 1917, bajo el \nnombre oficial “La Orden de las Hijas del Rey, Inc.”. En 1986 fue incorporada de nuevo bajo las leyes \ndel estado de Georgia, donde se localiza hoy en día la Oficina Nacional.",
+        "Significativo en los anales históricos de nuestra Orden fue la creación de la División Joven. En 1896, \nla señora Willard C. Davenport formó el Capítulo Alfa de las Hijas Jóvenes del Rey con niñas de la \nclase escolar dominical de su parroquia, la Iglesia Episcopal Emanuel, Washington, DC.",
+        "Un Capítulo Joven está conformado por tres o más niñas y mujeres adolescentes bautizadas, en \nedades de siete a veintiuno años. Un Capítulo Joven debe estar aprobado por el clérigo, está bajo la \nsupervisión de una Hija Adulta y  cuenta con el apoyo del Capítulo Adulto. Las miembros jóvenes \ncompletan un período de preparación y hacen la misma promesa de oración y servicio para la \npropagación del Reino de Cristo como lo hacen las Hijas Adultas. \nLa cruz de La Orden \nComo un constante recordatorio de nuestras promesas, llevamos diariamente el emblema de La Orden: \nun pendiente de plata en forma de una cruz griega heráldica modificada. Esta se lleva sobre el corazón o \nen una cadena alrededor del cuello. La inscripción en latín de forma horizontal, “MAGNANIMITER \nCRUCEM SUSTINE”, traducido en términos generales significa “con corazón, mente y espíritu \nllevamos y defendemos la cruz”. Las iniciales en la base de la cruz “FHS” significan “FOR HIS SAKE” \n(“POR SU AMOR”.) El emblema nunca cambia el diseño original, el mismo fue registrado para uso \nexclusivo de La Orden. El emblema y la cruz se mantienen en propiedad de La Orden, y si una miembro \nrenuncia, ella debe regresar su cruz a la Oficina Nacional. Cuando una Hija fallece la cruz se puede \nenterrar con ella o colocarse en la urna, de lo contrario se debe devolver a la Oficina Nacional.",
+        "Por favor lea La política de la cruz en el Apéndice de esta guía de estudio o en \nel sitio web nacional. \n          El sitio web nacional y las publicaciones \nEl sitio web nacional de la Orden de las Hijas del Rey® es www.doknational.org. La publicación oficial \nde La Orden es The Royal Cross, la cual sirve como forma principal de comunicación. Esta proporciona \ninformación sobre actividades, artículos inspiradores e información general, y ha sido publicada desde la \nprimera reunión del consejo en 1891. Las personas que no son miembros también se pueden suscribir. Un \nboletín de noticias mensual en línea llamado Cross+Links es otra forma de comunicación disponible para \nlas Hijas del Rey. Las miembros pueden firmar para recibir el Cross+Links a través del sitio web. Las \nasambleas provinciales y diocesanas publican un boletín de noticias sobre sus actividades.",
+        "Información general \nLos colores de La Orden son azul y blanco. El primer himno de La Orden, “Señor, \nHáblame”, fue adoptado en 1915 y escrita por el francés Ridley Havergal. Sin embargo, \neste no fue incluido en el Himnario de 1982. El himno “Alzad la Cruz” fue adoptado como \nel himno oficial de La Orden en 1915. El Día de Todos los Santos ha sido establecido \ncomo un día de comunión colectivo para La Orden, y cada Hija debe considerar este día \ncomo un privilegio y una responsabilidad de asistir.",
+        "¿Cómo estamos organizados? \nLa organización de La Orden está en paralelo a la Iglesia Episcopal. Previa aprobación \ndel clero, tres o más mujeres interesadas pueden formar capítulos en las parroquias, \nmisiones y otras instituciones apropiadas (Consulte el Manual Nacional, Artículo IV del \nReglamento). Cuando tres o más capítulos concurren en una diócesis, ellos pueden \nformar asamblea diocesana. Y donde hay capítulos en tres o más asambleas diocesanas \ndentro de una provincia, se forma una asamblea provincial. Una representante  de cada \nprovincia, junto con otras 15 miembros elegidas por votación forman El Consejo \nNacional de la Orden. Las elecciones se llevan a cabo en la Convención Trienal Nacional, \nla cual se reúne cada tres años en el año de la Convención General de la Iglesia Episcopal. \nLa Orden coopera con muchas otras organizaciones relacionadas con la iglesia, tales \ncomo La Comunidad Anglicana de Oración, La Comunidad de Lectura de la Biblia, La \nHermandad de San Andrés y otros grupos como sea determinado por la acción del \nConsejo Nacional.",
+        "No es necesario que una mujer sea miembro de La Orden para orar y servir en la iglesia. \nLa Orden es una comunidad espiritual en un mundo agitado donde mujeres con intereses \nsimilares pueden orar, estudiar  y compartir juntas, afirmar ministerios y apoyarse \nmutuamente. Las miembros son presentadas unas a otras en el amor de Cristo.",
+        "¿Quién puede ser llamada a La Orden? \nApoderadas por el Espíritu Santo, nuestra \nmisión es conocer a Jesucristo, hacer que \notros lo conozcan y convertirse en reflejo del \namor de Dios en todo el mundo. \nLa Orden de las Hijas del Rey \nDeclaración de la visión",
+        "Por virtud del bautismo, todos los miembros de la familia santa de Dios son hijos e hijas de nuestro \nPadre. Algunas mujeres eligen seguir un patrón de oración, estudio y devociones regular, el cual forma su \nRegla de Vida personal. Ellas profundizan su Pacto Bautismal siendo miembros de La Orden de las Hijas \ndel Rey®. Durante la membresía en La Orden, a las mujeres se les da fortaleza por medio de la oración, \nse les desafía a través del estudio, se les proporciona fraternidad con otra Hijas, se les disciplina en la \nRegla de Vida de La Orden y se les ofrece la oportunidad del trabajo útil por medio del servicio a su \nclero, congregación, diócesis, y más allá. Las Hijas tienen el deseo de ser cristianas más comprometidas, \nque sirven a Cristo en fraternidad con otras mujeres que comparten el mismo deseo. Lea Mateo 18:20",
+        "La Orden de las Hijas del Rey® es una orden de mujeres que son comulgantes de la Iglesia Episcopal, las \niglesias en comunión con esta, o las iglesias en el episcopado histórico, pero no en comunión con este. Hoy \nnuestra membresía incluye mujeres en la Iglesia Episcopal, la Iglesia Anglicana en Norte América, las \nIglesias que están en Comunión Anglicana, la Iglesia Luterana (ELCA) y la Iglesia Católica. Las \nmiembros de todas las iglesias elegibles disfrutan de los privilegios de la membresía completa.",
+        "Cuando una Hija hace sus promesas a la hora de su admisión, ella está respondiendo voluntariamente \na la meta fija de La Orden, “la expansión del Reino de Cristo”. Ella hace cuatro promesas que, con la \nayuda de Dios, ella mantendrá por el resto de su vida. Estas promesas están declaradas en el  Servicio \nde Admisión.",
+        " Obedecer las dos reglas de La Orden, la Regla de Oración y la Regla de Servicio. \n Ofrecer en todo momento ayuda leal a nuestro clero y parroquia para esparcir el Reino de Cristo. \n ¿Usar devotamente la cruz de La Orden? \n ¿Y trabajar para sus propósitos, según Dios le dé la oportunidad?",
+        "Las Hijas buscan caminar con Dios como su guía, e intentan atraer a aquellos con quienes están en \ncontacto en la iglesia. Ellas son mujeres que tratan de esparcir el Reino de Cristo aquí en la tierra. Ellas \nno pueden nunca olvidar que la oración es la fundación con la cual su servicio crece.",
+        "“La oración sin trabajo es \npalabra hueca. El servicio sin \noración es labor perdida”. \nAnónimo"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es el lema de La Orden? ¿Qué iniciales representan el lema y dónde se encuentran?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "Cuando una Hija toma sus votos, ella recibe el emblema de La Orden, una cruz de plata. ¿A quién pertenece la cruz?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cuándo y cómo debe usar una Hija su cruz?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué se debe hacer con la cruz cuando una Hija muere?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿En qué se diferencia La Orden de las Hijas del Rey® de las organizaciones de mujeres cristianas?",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Por qué se requieren las cuotas anuales?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "¿Por qué piensa usted que La Orden es tan relevante ahora como lo fue en 1885?",
+          "type": "open"
+        },
+        {
+          "id": 8,
+          "text": "¿Por qué ha decidido usted explorar la posibilidad de convertirse en miembro de La Orden de las Hijas del Rey®?",
+          "type": "open"
+        },
+        {
+          "id": 9,
+          "text": "¿Cuáles son sus expectativas de convertirse en una Hija?",
+          "type": "open"
+        },
+        {
+          "id": 10,
+          "text": "¿Qué es un voto, y qué dice la Biblia sobre tomar uno? LLEGANDO MÁS PROFUNDO Enumere algunas referencias bíblicas donde se indique lo que los cristianos pueden reclamar.",
+          "type": "open"
+        },
+        {
+          "id": 11,
+          "text": "LLEGANDO MÁS PROFUNDO: Enumere algunas referencias bíblicas donde se indique lo que los cristianos pueden reclamar.",
+          "type": "reflection"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "num": "TRES",
+      "title": "¿Qué espera Cristo de sus Hijas?",
+      "part": "Nuestro compromiso",
+      "subtitle": "Deberes y responsabilidades",
+      "summary": "Cristo espera que las Hijas acepten la responsabilidad, como se establece en la descripción de fe (la cual se encuentra en el apéndice de esta guía de estudio). P. ¿Cuál es el deber de todo cristiano? R. El deber de todos los cristianos es seguir a Cristo, reunirse cada semana para la adoración colectiva, y trabajar, orar y dar para esparcir el Reino de Dios.  Seguir a Cristo  Alabar a Dios cada domingo en su Iglesia  Trabajar para esparcir su Reino  Orar para esparcir su Reino  Dar para esparcir su Reino El…",
+      "content": [
+        "Cristo espera que las Hijas acepten la responsabilidad, como se establece en la descripción de fe (la cual \nse encuentra en el apéndice de esta guía de estudio).",
+        "P. ¿Cuál es el deber de todo cristiano? \nR. El deber de todos los cristianos es seguir a Cristo, reunirse cada semana para la adoración colectiva, y \ntrabajar, orar y dar para esparcir el Reino de Dios.",
+        " Seguir a Cristo                                     Alabar a Dios cada domingo en su Iglesia \n Trabajar para esparcir su Reino           Orar para esparcir su Reino \n Dar para esparcir su Reino",
+        "El acto bautismal además establece lo qué se requiere de nosotros.",
+        "El sacramento del Bautismo es mucho más que ser miembro de la Iglesia de Cristo. Es el comienzo de un \nviaje a lo largo de la vida,  una nueva forma de vivir que fomenta nuestra relación con Dios y con los \ndemás, a través de prácticas espirituales tanto individuales como comunitarias. Existe una considerable \nvariedad de prácticas espirituales, tales como:",
+        " la oración           el ayuno        el estudio      la adoración             la hermandad \n el servicio                    la acción de dar (diezmar)               el escribir un diario \n la dirección espiritual               la confesión",
+        "Los votos que hará para convertirse en miembro de La Orden son una reafirmación del compromiso \nhecho en el Pacto bautismal. Como miembro de la Orden tiene deberes y responsabilidades adicionales.",
+        "Por favor lea en el sitio web Deberes y responsabilidades de la membresía el cual se encuentra en El \nManual Nacional.",
+        "Deberes (obligaciones espirituales)",
+        "1. Ama al Señor tu Dios con todo tu corazón, toda tu alma, todas tus fuerzas y toda tu mente; y a tu \nprójimo como a ti mismo. Lucas 10:27 \n2. Orar sin cesar \n3. Estudiar la palabra de Dios \n4. Servir a Dios en y a través de tu iglesia y tu comunidad. \n5. Hablarle a los demás sobre el amor de Dios y la gracia salvadora a través de tus palabras y \nejemplo.",
+        "Responsabilidades (requisitos de fidelidad)",
+        "1. Usar la Cruz habitualmente.",
+        "2. Seguir mi Regla de Vida. \n3. Asistir y participar regularmente en: \na. Reuniones del capítulo \nb. Asambleas diocesanas \nc. Asambleas provinciales (cuando sea posible) \nd. Asambleas trienales nacionales (cuando sea posible) \n4. Revisar periódicamente mi Regla de Vida"
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Qué piensas tú de lo que Cristo esperará de ti como miembro de La Orden?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "Lea Santiago 2:14-26. ¿Qué te dice como Hija de nuestro Señor?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Cómo ayudará la disciplina de La Orden a profundizar tu vida espiritual y tu compromiso con Jesucristo?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Qué significa para ti \"Buscando servir a los demás por su bien\" en tu propio camino cristiano? ",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "num": "CUATRO",
+      "title": "¿Cuál es el propósito primordial de la Orden?",
+      "part": "Nuestro compromiso",
+      "subtitle": "Oración, servicio y evangelización",
+      "summary": "La respuesta a e sta pregunta es esparcir el Reino de Cristo a través de la oración, el servicio y la evangelización. Este es un mensaje de esperanza y gozo en un mundo lleno de cinismo y desesperación. Puede ser hecho en el trabajo, en fiestas, en la mesa de la cocina o donde dos o tres se junten. No es solo el trabajo de cierto grupo especializado o personas en la Iglesia o del clero. Es el trabajo de toda la Iglesia y de cada miembro. Es una responsabilidad que adquirimos en nuestro bautismo y reafirmamos en la…",
+      "content": [
+        "La respuesta a e sta pregunta es esparcir el Reino de Cristo a través de la oración, el servicio y la \nevangelización.",
+        "Este es un mensaje de esperanza y gozo en un mundo lleno de cinismo y desesperación. Puede ser hecho \nen el trabajo, en fiestas, en la mesa de la cocina o donde dos o tres se junten. No es solo el trabajo de \ncierto grupo especializado o personas en la Iglesia o del clero. Es el trabajo de toda la Iglesia y de cada \nmiembro. Es una responsabilidad que adquirimos en nuestro bautismo y reafirmamos en la \nconfirmación.",
+        "Celebrante ¿Proclamarás por medio de la palabra y ejemplo las buenas nuevas de Dios en Cristo? \nPersonas Lo haré, con la ayuda de Dios.",
+        "Esa afirmación nos compromete a compartir en el trabajo de la Iglesia de llevar las buenas nuevas a los \nque todavía no las han escuchado.",
+        "Necesita tener una cosa en mente mientras se prepara para la tarea básica cristiana de esparcir el Reino \nde Cristo. No puedes dar a otros lo que no tienes. Mientras comparte con otros las buenas nuevas de \nDios en Cristo, debe compartir lo que viene de la propia experiencia de la gracia de Dios como también \nde su propio conocimiento de la palabra de Dios en las escrituras. Todos conocemos las creencias \nesenciales básicas de la Cristiandad. Estas creencias están bien expresadas en ambos credos, el Credo \nNiceno y el Credo de los Apóstoles usados en su adoración. Las personas escucharán las buenas nuevas \nsolo si ellos son conscientes sobre cómo usted ha sido afectado personalmente. Su propia experiencia \nde vida puede ser el mejor ejemplo del Evangelio. Para muchos es difícil compartir la historia cristiana, \npero compartir las buenas nuevas humildemente, tranquilamente y sin pretensiones, es una manera de \nalcanzar a otros y hablarles del amor de Dios. Algunas veces dudamos de compartir con otros, porque \ntenemos miedo al rechazo y al fracaso. Dios nos llama a ser obedientes y fieles al compartir su palabra. \nEl éxito está en manos de Dios. Quizá algunas veces fracasemos, pero el fracaso ha sido una experiencia \ncomún en la vida de los Santos en todos los tiempos. Nuestro Señor ha encontrado a muchos cuyo \ncorazón, mente y oídos estaban cerrados a las buenas nuevas. Nosotros no podemos esperar menos que \neso. Las experiencias de fracaso pueden ser muy tensas en nuestra sociedad orientada al éxito. Solemos \njuzgar y ser juzgados por los resultados cuantificables de nuestro trabajo. Necesitamos recordar que los \nnúmeros no son lo más importante. Cuando una sola persona se arrepiente y entra al Reino de Dios, \ntodo el cielo se regocija.",
+        "Podría ser de gran ayuda volver a leer la parábola del sembrador en Mateo 13:1-9, 18-23.",
+        "El negocio del sembrador es esparcir la semilla tan extensamente como sea posible. Algunas brotarán \notras no, de acuerdo a la tierra donde caen. El sembrador no es responsable por los resultados, \núnicamente de sembrar la semilla. Dios solo te pide que seas el sembrador, que plantes semillas. Usted \nno es el responsable de su crecimiento... Dios lo es. Lea Corintios 3:5-6. Él le ha encomendado a usted \nesparcir las buenas nuevas. Lea Mateo 28:18-20.",
+        "Compartir las buenas nuevas debería convertirse en el foco principal de cada uno de nosotros en nuestra \nvida diaria. En lugares donde menos lo esperamos, hay bolsillos de tierra receptiva. Debemos estar",
+        "preparados para compartir el Evangelio con cualquiera que Dios ponga en nuestro camino. No debemos \nolvidar que la llamada a proclamar con la palabra y el ejemplo se extiende a todas las razas, idiomas, \npueblos y naciones. Si no podemos amar a nuestro prójimo que vemos todos los días, ¿cómo podemos \namar a nuestro prójimo que está lejos?",
+        "Es importante participar en la misión más amplia de la Iglesia a través de nuestras oraciones por la \nIglesia de Cristo en la Tierra; incluyendo las iglesias episcopales, anglicanas, luteranas, romanas \ncatólicas, otras iglesias, las comunidades misioneras que llevan la luz de Cristo a los que viven en la \noscuridad, y especialmente los esfuerzos misioneros patrocinados por La Orden. Aunque podrías \ninvolucrarte personalmente en una de las organizaciones de la misión de la Iglesia. Cualquier ministerio \nespecífico que se emprenda, es importante dedicarle parte de su energía y recursos en un ministerio más \nallá de su propia iglesia. Alcanzar a otros le permite una manera de vivir la naturaleza de la Iglesia \nCatólica (universal) y apostólica (enviada) en su propia vida.",
+        "Parafraseando a Rosalinda Rinker de su libro, Sharing the God’s Love \n(Compartiendo el amor de Dios):",
+        "Nuestra responsabilidad es ser guiados por el Espíritu Santo mientras buscamos \ncompartir el amor de Dios. \nLa responsabilidad de Dios es fortalecernos para Su servicio.",
+        "Nuestra responsabilidad es creer que en Jesucristo tenemos la respuesta que todas las \npersonas buscamos. \nLa responsabilidad de Dios es guiar a las personas hacia Jesús.",
+        "Nuestra responsabilidad es prepararnos para compartir el amor de Dios. \nLa responsabilidad de Dios es preparar los corazones de aquellos con quien Él nos quía \npara compartir a Jesús.",
+        "Nuestra responsabilidad es tomar el riesgo, estar dispuestos a caer en el intento de \ncompartir el \namor de Dios. \nLa responsabilidad de Dios es perdonar nuestros errores cuando nos arrepentimos \nhonestamente."
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Por qué es necesario compartir las buenas nuevas con otros?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "Lea Mateo 9:35-38, Marcos 16:15-16, Gálatas 6:7-10 y 1 de Pedro 3:15-13-17. Luego haga un resumen de estas lecturas en una declaración.",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Ve usted la correlación entre Mateo 28:18-20 y la Misión de La Orden? (Se encuentra en El Manual Nacional).",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Cuáles es la diferencia entre La Orden de las Hijas del Rey® y las otras organizaciones de su iglesia? ",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "num": "CINCO",
+      "title": "¿Cuál es el propósito de un capítulo?",
+      "part": "Nuestro compromiso",
+      "subtitle": "Comunidad y fraternidad",
+      "summary": "El propósito de un capítulo es el apoyo espiritual de sus miembros para defender su Regla de Vida y llevar a cabo la misión de la Orden. El trabajo del capítulo es: 1. Apoyar a sus miembros en su crecimiento espiritual ofreciendo: a. Compañerismo/amistad/fraternidad, y solidaridad con las hermanas en Cristo b. Un descanso sagrado con el resto del mundo y las exigencias de la vida c. Oraciones y apoyo mutuo, los miembros de la parroquia y el clero d. Una oportunidad para servir a la iglesia y a la comunidad 2.…",
+      "content": [
+        "El propósito de un capítulo es el apoyo espiritual de sus miembros para defender su Regla de Vida y \nllevar a cabo la misión de la Orden.",
+        "El trabajo del capítulo es: \n1. Apoyar a sus miembros en su crecimiento espiritual ofreciendo: \na. Compañerismo/amistad/fraternidad, y solidaridad con las hermanas en Cristo \nb. Un descanso sagrado con el resto del mundo y las exigencias de la vida \nc. Oraciones y apoyo mutuo, los miembros de la parroquia y el clero \nd. Una oportunidad para servir a la iglesia y a la comunidad \n2. Servir como modelo de comunidad cristiana. \n3. Discernir con espíritu de oración las formas en que apoyar, participar y facilitar programas que \npromuevan el crecimiento espiritual. \n4. Apoyar al clero orando por ellos y asociándose en el ministerio para promover el crecimiento espiritual \nde su iglesia. \n5. Participar en la oración intercesora por su clero, los miembros de su Iglesia y los \nmiembros de su capítulo. \nLas reuniones del capítulo se llevan a cabo para permitir que los miembros reflexionen sobre su Regla de Vida y \ncómo la están viviendo o no. Algunos componentes importantes de una reunión de capítulo son:",
+        "1. APOYO ESPIRITUAL. Ofrecer la oportunidad de compartir historias de crecimiento espiritual y \npersonal, responsabilidad en el cumplimiento de nuestros votos, Regla de Vida y prácticas \nespirituales en un ambiente de seguridad y amor cristiano. Este debería ser el enfoque principal \nde la reunión. \n2. UN PROGRAMA DE ESTUDIOS. Aquí es donde las Hijas aprenden y crecen en su fe. El estudio \npuede ser un devocional y una discusión, una lectura y discusión de las Escrituras, o un orador \ninvitado. Continuando el Viaje, El Compañero del Plan Estratégico y la Guía de Estudio Nacional \nson excelentes recursos para el estudio y se pueden encontrar en el sitio web nacional. \n3. ORACIÓN. Comience y termine cada reunión con oración. Algunos capítulos tienen un breve \ntiempo de meditación u oración centrada. Otros capítulos forman un círculo de oración dond e \ntodos tienen la oportunidad de ofrecer sus propias oraciones si lo desean. Además, se pueden hacer \nlistas de \noración y orar al final de la reunión. \n4. El ENCUENTRO DE NEGOCIOS. Si bien es muy importante, los negocios deben mantenerse al \nmínimo. Los negocios a menudo se pueden realizar transacciones efectivas por correo electrónico \no por teléfono fuera de las reuniones del capítulo. \n5. COMPAÑEROS. Reserve tiempo para reunirse y saludarse al principio o al final de la reunión. \nEsto también puede incluir refrescos o una comida.",
+        "No todas las reuniones necesitan tener todos estos componentes. Cuando estos componentes trabajan \narmoniosamente juntos, crean una comunidad donde cada Hija se siente apoyada y fortalecida.",
+        "Estas reglas generales deben prevalecer en todas las reuniones del capítulo para fomentar la comunidad.",
+        " Inicio y finalización a tiempo. \n Comienza y termina en oración.",
+        " Muestre cortesía y respeto en lo que se dice y cómo se dice. \n Manténganse en el tema y escúchense unos a otros. \n Mantenga la confidencialidad en todos los niveles en todo momento. Esto es vital para crear un \nambiente seguro y de confianza. \n Mantenga los temas relevantes para el crecimiento espiritual, interesantes y enfocados en las metas de \nLa Orden. \n Las hijas deben estar presentes, a tiempo, y permanecer durante toda la reunión siempre que sea \nposible.",
+        "¿Cómo nos convertimos en una comunidad? \nEl diccionario ofrece muchas definiciones de la palabra comunidad. Puede ser un grupo social que \ncomparte una meta en común, un lugar donde uno vive, una afiliación con otros que comparten un \ninterés común, afinidad o necesidad.",
+        "En términos de comunidad cristiana, una definición o explicación puede decir algo así: “un grupo de \npersonas bautizadas que se juntan con Jesús como su jefe”.",
+        "Una comunidad cristiana existe para glorificar a Dios, proporcionarse fortaleza unos a otros a lo largo \ndel camino cristiano y servir a otros en el nombre de nuestro Señor, Jesucristo. La comunidad fue \nimportante para Jesús. Empezando con doce, Él estableció una comunidad muy bien organizada. Cada \nuno era responsable de los otros miembros y del grupo como un todo. Ellos compartieron sus vidas y \npreocupaciones. Ellos se sometieron el uno al otro en amor y le dieron la bienvenida a todos los que \nquerían hacer lo mismo. Una comunidad cristiana se crea cuando dos o tres se juntan regularmente en \nun  viaje   con   Jesús   y  ponen  las  enseñanzas   de   Él   en   acción   a   través   de   la   oración, \nel estudio, el servicio y la evangelización. Las Hijas sirven a los demá s escuchando, ayudando \nactivamente y apoyándose unas a otras.",
+        "9 Permitan que el amor sea genuino; odien lo que es malo, aférrense a lo que es bueno; 10 ámense mutuamente \ncon afecto; supérense unas a otras en mostrar honor. 11 No se quedes atrás en el celo, sean ardientes en espíritu, \nsirvan al Señor. 12 Alégrense en la esperanza, sean pacientes en el sufrimiento, perseveren en la oración. 13 \nContribuyan a las necesidades de los santos; ofrezcan hospitalidad a los extraños. \n14 Bendigan a quienes les persiguen; bendíganlos y no los maldigan. 15 Alégrense con los que se alegran, lloren \ncon los que lloran. 16 Vivan en armonía unas con otras; no sean altivas, sino que asóciense con los humildes; no \npretendan ser más sabias de lo que son. 17 No paguen a nadie mal por mal, sino que piensen en lo que es noble \na los ojos de todos. 18 Si es posible, en la medida en que dependa de ustedes, vivan en paz con todos. Romanos \n12:9-18 \nLa comunidad ocurre cuando cada participante demuestra una buena disposición para aceptar a  todas \nlas miembros como son y reunirse para crecer en la fe. Dos cosas ayudan a lograr que se construya la \ncomunidad: el interés común y el compromiso. Dentro de las Hijas, dos evidencias del interés común se \nreflejan en los votos de usar nuestra cruz diariamente y vivir por un Regla de Vida en oración y servicio. \nEl compromiso de una Hija puede variar de acuerdo a sus habilidades. El compromiso del tiempo y de \nsí misma determinará tanto la fortaleza como la energía de la comunidad. Entre más “dispuestas estemos \nde aprender a conocer a otras y permitirles a otras que nos conozcan”, más grande será la profundidad \nde la comunidad. La comunidad no se crea inmediatamente sino que toma un período de tiempo, y \nrequiere sinceridad y amor de unas con otras. El crecimiento llega cuando nos mantenemos enfocadas \nen el Espíritu Santo, así no nos estancamos con nuestras diferencias ni nos inflamos con nuestra propia \nimportancia.",
+        "No es necesario que una mujer sea miembro de La Orden para orar y servir en la iglesia. La O rden es \nuna comunidad espiritual en un mundo agitado donde mujeres con intereses similares pueden orar, \nestudiar y compartir juntas, afirmar ministerios y apoyarse mutuamente. Las miembros son presentadas \nunas a otras en el amor de Cristo.",
+        "Es importante que no olvidemos quienes somos: mujeres que hemos hecho un compromiso de orar y \ntrabajar, y dar para poder esparcir el Reino de Cristo. A través de La Orden tenemos muchas \noportunidades de formar comunidad cuando compartimos nuestros talentos, habilidades y  dones en el \nservicio. Mientras que nuestra participación a nivel de capítulo es vital, la participación a nivel \ndiocesano y provincial aumenta nuestro modo de ver la comunidad más allá de nuestro capítulo local. \nAsistir a las asambleas, conferencias o ret iros, o ayudar a otros a que lo hagan, da la idea de una \ncomunidad  más   grande.   La  participación   más   allá   de   la   parroquia   alimenta   a   una Hija \ny a su capítulo local, de esta manera ellas pueden crecer y prosperar en todo lo que Dios les ha destinado.",
+        "“La comunidad cristiana es solo esto: nos pertenecemos los unos a los otros a través de y en Jesucristo”. \nDietrich Bonhoffer, Life Together (La vida juntos)",
+        "Concédenos verdadero conocimiento de los demás, \nen sus diferencias a nosotros y sus similitudes a \nnosotros, que podamos tratar su verdadera \nnaturaleza midiendo sus sentimientos por los \nnuestros propios, pero pacientemente \nconsiderando sus variadas vidas, pensamientos y circunstancias…  \nFragmento de The Southwell Litany (La letanía de Southwell)"
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Cómo puedo seguir el modelo de la vida de Cristo?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Qué debo hacer si no estoy de acuerdo con un miembro del clero de mi iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Por qué es tan importante la confidencialidad en mi iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Qué compromiso personal se requiere de usted para ser parte de la comunidad?",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Qué es lo común de La Orden?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "¿Cuáles son algunas de las maneras en las que puede usted fortalecer, enriquecer y nutrir a la comunidad de su capítulo?",
+          "type": "open"
+        },
+        {
+          "id": 8,
+          "text": "¿Cómo el servir y orar juntas fortalece a la comunidad?",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "num": "SEIS",
+      "title": "Los fondos de La Orden",
+      "part": "Nuestro compromiso",
+      "subtitle": "Ministerios y recursos",
+      "summary": "Los ministerios en el cual las Hijas están involucradas son tan variados como sus personalidades y dones espirituales; sanación, evangelización, enseñanza, difusión, hospitalidad, bienvenida a los recién llegados, consuelo a los afligidos, banco de comida, comedor de beneficencia, hospicio, visita a los ancianos, enfermos y presos. Las miembros apoyan a los capítulos jóvenes, grupos de estudio, talleres, días de silencio, retiros es pirituales y grupos de oración de intercesión. Las Hijas sirven en la iglesia como…",
+      "content": [
+        "Los ministerios en el cual las Hijas están involucradas son tan variados como sus personalidades y dones \nespirituales; sanación, evangelización, enseñanza, difusión, hospitalidad, bienvenida a los recién \nllegados, consuelo a los afligidos, banco de comida, comedor de beneficencia, hospicio, visita a los \nancianos, enfermos y presos. Las miembros apoyan a los capítulos jóvenes, grupos de estudio, talleres, \ndías de silencio, retiros es pirituales y grupos de oración de intercesión. Las Hijas sirven en la iglesia \ncomo diaconas, lectoras laicas, lectoras, miembros de la cofradía del altar, maestras de la escuela \ndominical, ministras laicas de la Eucaristía y miembros de la sacristía. Cuand o las Hijas escuchan el \nllamado del Señor y están apoderadas por el Espíritu Santo, ellas están listas para hacer lo que se necesita. \nAdemás de servir como ente individual, los capítulos deben servir en sus iglesias, comunidades y a nivel \ninternacional. El capítulo, como un todo, debe decidir dónde es llamado a servir y cómo involucrar a \nmuchas de sus miembros como sea posible."
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es el “trabajo de La Orden”? CUARTA PARTE ¿Quiénes somos? Martas y Marías No para ser servidos, Pero para servir Mateo 20:28",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "num": "SIETE",
+      "title": "Oración y estudio",
+      "part": "¿Quiénes somos? Martas y Marías",
+      "subtitle": "La Regla de Oración",
+      "summary": "La oración y el estudio están enumerados juntas aquí porque son simbióticos . La oración es la base del estudio y el estudio enriquece la oración. ¿Cuál es la Regla de Oración? En la vida cristiana nada puede sustituir la oración. Es el recurso diario de la Hija para la vida y fortaleza. Cada miembro debe tener una Regla de Oración diaria. La comunicación con Dios debe ser una relación creciente y profunda con el Padre, el Hijo y el Espíritu Santo Cada Regla de Oración de la Hija debe ser considerada y resguardada…",
+      "content": [
+        "La oración y el estudio están enumerados juntas aquí porque son simbióticos . La oración es la base del \nestudio y el estudio enriquece la oración.",
+        "¿Cuál es la Regla de Oración?",
+        "En la vida cristiana nada puede sustituir la oración. Es el recurso diario de la Hija para la vida y fortaleza. \nCada miembro debe tener una Regla de Oración diaria. La comunicación con Dios debe ser una relación \ncreciente y profunda con el Padre, el Hijo y el Espíritu Santo Cada Regla de Oración de la Hija debe ser \nconsiderada y resguardada cuidadosamente Debe ser elegida en oración, revisada con regularidad y \nperiódicamente.",
+        "Parte de la Regla de Oración es orar diariamente: \n Por la unidad de la Iglesia de Cristo. \n Por la propagación del Reino de Cristo, especialmente entre mujeres y niñas. \n Para la bendición de Dios sobre las miembros de La Orden. \n Para el crecimiento espiritual de su iglesia y sus clérigos. \n Por la gracia de seguir nuestra Regla de Vida.",
+        "De acuerdo con la Constitución de La Orden de 1891, el voto original de Oración era este: “Cada miembro \nse compromete a orar diariamente para esparcir el Reino de Cristo entre las mujeres jóvenes, para la \nbendición de Dios sobre todas las miembros de La Orden y para la prosperidad de la parroquia a la que \nsu capítulo le debe lealtad”.",
+        "Las Hijas se comprometen a la disciplina de una Regla de Oración  y son obedientes a la misma, aun \ncuando ellas sientan que no quieren orar. Una Hija se ha comprometido a orar diariamente y hace \nde la oración su más alta prioridad. Las Hijas deberían siempre estar creciendo en su vida de oración. \nMediante la lectura y/o la asistencia a los seminarios de oración, los retiros y los días de silencio, nuestra \nvida de oración se alimenta y crece.",
+        "Una Hija que está preparando su Regla de Oración debe empezar con la definición de oración; la oración \nes la respuesta a Dios, por pensamiento y obras, con o sin palabras. La verdadera oración requiere de dos \ncosas: (1) abrir la mente y el corazón a Dios de quien proviene la iniciativa en la oración y (2) responder \nen pensamiento, palabra y obra lo que escuchamos.",
+        "La Virgen María es un buen ejemplo para las Hijas. Lea Lucas 1:26-38. María fue obediente, escuchó y \nrespondió a Dios. Lea otras historias de la Biblia y sus respuestas a la oración. María y Marta en Lucas \n10:38-42 Ruth en Ruth1:1-4: 17, Ester en Ester1:1- 7: 10, Hannah en Samuel 1:1-20, Susana en Susana \n1:1-64.",
+        "Nuestro servicio debe ser el fruto de la oración. Lea Juan 15:1-8. Estamos llamados a ser los seguidores \nde Jesucristo La oración nos ayuda a conocer hacia dónde Él nos guía y nos abre a su Espíritu, permitiendo \nque su poder trabaje a través de nosotros. Lea Efesios 6:18 y Romanos 8:26. La fidelidad en la oración \ndiaria exige un compromiso de tiempo y energía. El tiempo con Dios cada día debe ser una prioridad. Dios \nanima a sus Hijas a crecer en fe y comunión por medio del dialogo con Él. “Quédate quieto y entiende \nque Yo soy Dios”. \nSalmo 46:10",
+        "Oración \nDios Todopoderoso, tú conoces mis necesidades antes de pedirlas, ayúdame a orar de acuerdo a tu \nvoluntad y a pedir aquellas cosas buenas que no me atrevo, o que en mi ceguera no puedo pedir, y \nconcédemelas por el amor a tu Hijo Jesucristo. Amén.",
+        "¿Cómo oran juntos los capítulos?",
+        "Ellos abren cada reunión con la Oración de La Orden y cierran con un círculo de oración. Ellos mantienen \nuna lista de oraciones del capítulo. Cada Hija y miembro del clero debe tener una copia de la lista. Esta \nno es una “hoja de not icias”. NO DISCUTA ACERCA DE LA LISTA DE ORACIONES. ESTA SE \nCONSIDERA INFORMACIÓN CONFIDENCIAL. Si necesita guía en ciertas situaciones hable con su \nclérigo u otra Hija. Su capítulo puede crear su propio formato para la lista de oración. Un buen método es \nempezar una “nueva” cada mes. Esto mantiene la lista actualizada. Una cadena de oración organizada es \nuna manera efectiva para comunicar las necesidades de oración entre reuniones.",
+        "Guía de oración por intercesión",
+        "1. Encuentre un lugar tranquilo para orar lejos de las imaginaciones, deseos, cargas y distracciones \ndel mundo. \n2. Manténgase en quietud y vacíe su mente. \n3. Comience sus oraciones con alabanzas y agradecimientos. \n4. Pídale a Dios que perdone sus pecados, conocidos y desconocidos. \n5. Ore creyendo, esperando que Dios responda a sus oraciones. \n6. No limite a Dios a lo que usted cree que son las necesidades de la persona. \n7. Acepte la voluntad de Dios para esa persona. \n8. Quédese en quietud y escuche. \nTe instruiré y enseñaré el camino que debes seguir; te aconsejaré con la mirada puesta en ti. Salmo \n32:8 \nMis ovejas oyen mi voz, y yo las conozco, y ellas me siguen. Juan 10:27 \n9. Termine con alabanzas y agradecimientos. \n10. Ore en el nombre de Jesús. \nRecuerde, su lista de oración es confidencial. Usted nunca debe hablar con nadie sobre los nombres de la \nlista o sus necesidades, ni siquiera con la persona por la que estás orando.",
+        "¿Debería el capítulo servir como un grupo de oración en la parroquia?",
+        "Su capítulo puede o no ser llamado a ser el grupo de oración de la parroquia. Algunas personas tienen \nvocación especial para la oración. Por lo tanto, quizá su parroquia ya disponga de un grupo de oración \nactivo. Si es así considere su parroquia bendecida. Bajo estas circunstancias, el grupo de oración de las \nHijas podría ser un instrumento en las manos del clérigo para el crecimiento espiritual de la parroquia, el \npoder esparcir el Reino de Cristo en la comunidad y las necesidad de oración cuando hay crisis.",
+        "¿Por qué debería un capítulo orar como una comunidad de fe?",
+        "En el Evangelio de Mateo, 18:19-20 nuestro Señor dice, “De nuevo, les digo: si dos de ustedes se ponen \nde acuerdo aquí en la tierra para pedir algo en oración, mi Padre que está en el cielo se los concederá. \nPorque donde dos o tres se reúnen en mi nombre, allí estoy yo en medi o de ellos”. (NIV). La oración \ncolectiva nos hace conscientes de Jesús en nuestro medio. Orar juntos nos fortalece en nuestro \ncompromiso.",
+        "Hay más de 100 referencias para la oración en la Biblia, tanto en el Antiguo como en el Nuevo Testamento. \nJesús nos dio un ejemplo al orar 38 veces a lo largo de los Evangelios y hay referencias adicionales a Jesús \norando en el libro de los Hechos y otros libros del Nuevo Testamento. Si no fuera tan importante no estaría \nen la Biblia tantas veces.",
+        "Pero siempre que oren, entren en su cuarto, cierren la puerta y oren a su Padre que está en secreto; y su \nPadre que ve en secreto los recompensará. Mateo 6:6",
+        "Permanezcan despiertos y oren para que no lleguen al tiempo de la prueba; el espíritu está dispuesto, \npero la carne es débil. Mateo 26:41",
+        "Entonces Jesús les dijo una parábola sobre su necesidad de orar siempre y no perder el ánimo. \nLucas 18:1",
+        "Alégrense siempre, oren sin cesar, den gracias en todas las circunstancias; porque esta es la voluntad de \nDios en Cristo Jesús para ustedes. 1 Tesalonicenses 5:16-18",
+        "Por lo tanto, confiesen sus pecados y oren por ustedes, para que sean sanados. La oración de los justos \nes poderosa y eficaz. Santiago 5:16",
+        "Pero ustedes, amados, edifíquense sobre su santísima fe; oren en el Espíritu Santo. Judas 1:20",
+        "Durante esos días él (Jesús) salió a la montaña a orar; y pasó la noche en oración a Dios. Y cuando llegó \nel día, llamó a sus discípulos y eligió a doce de ellos, a los que también llamó apóstoles. Lucas 6:12-13",
+        "No se preocupen por nada, pero en todo, por la oración y la súplica con acción de gracias, den a conocer \nsus peticiones a Dios. Filipenses 4:6",
+        "Lea \"La oración me cambia\" que se encuentra en el apéndice de esta guía de estudio.",
+        "Oración \nOrar es tan sencillo. \nEs como abrir silenciosamente una puerta y deslizarse \nante la presencia de Dios. \nAllí en la quietud \npodemos escuchar Su voz o incluso una petición. \nLo que tengamos que decir no importa \nsolo es estar allí... en Su presencia... es la oración. (NH, Oraciones y Meditaciones)",
+        "“Bendito seas Señor, que has hecho posible que todas las Sagradas Escrituras hayan sido escritas para nuestra \nenseñanza; concédenos que las escuchemos, las leamos, las marquemos, las aprendamos y las digiramos \ninternamente...” Thomas Cranmer",
+        "El estudio de la palabra de Dios es el fundamento sobre el que construimos nuestro don de fe. Las Sagradas \nEscrituras fueron escritas para darnos una comprensión de Dios y nuestra relación con Él. Para guiarnos \nen nuestro largo viaje de la vida. Es tu manual de instrucciones para la vida.",
+        "La Biblia nos equipa para servir a Dios.",
+        "Toda la Escritura está inspirada por Dios y es útil para enseñar, reprender, corregir e instruir en la \njusticia, de modo que todo el que pertenece a Dios sea competente, equipado para toda buena obra\n. \n2 Timoteo 3:16-17",
+        "Nos ayuda a saber cómo ser salvados de nuestro pecado y su consecuencia final.",
+        "Hazme conocer tus caminos, oh Señor; enséñame tus senderos. Guíame en tu verdad y enséñame, porque tú eres el \nDios de mi salvación; por ti espero todo el día. Salmo 25:4-5 \nPero en cuanto a ti, continúa en lo que has aprendido y creído firmemente, sabiendo de quién lo \naprendiste, y cómo desde la infancia has conocido las Escrituras Sagrados que son capaces de instruirte \npara la salvación a través de la fe en Cristo Jesús. 2 Timoteo 3:14-15 \nMeditar en la palabra de Dios y obedecer sus enseñanzas traerá éxito en la vida",
+        "Este libro de la ley no se apartará de tu boca: debes meditar acerca de él día y noche, de modo que puedas \ntener cuidado de actuar de acuerdo con todo lo que en él está escrito. Para entonces harás que tu camino \nsea próspero, y entonces tendrás éxito. Josué 1:8",
+        "Pero aquellos que miran en la ley perfecta, la ley de la libertad, y perseveran, no siendo oyentes que \nolvidan, sino hacedores que actúan, serán bendecidos en su hacer. Santiago 1:25",
+        "La palabra de Dios nos ayuda a ver el pecado en nuestras vidas y nos ayuda a deshacernos de él.",
+        "¿Cómo puede la gente joven mantener su camino puro? Al protegerlo de acuerdo a su palabra. Con todo \nmi corazón te busco; no me dejes desviar de tus mandamientos. Atesoro tu palabra en mi corazón de modo \nque no pueda pecar contra ti. Salmo 119:9- 11",
+        "Danos guía en la vida, haciendo que seamos más sabios",
+        "97 ¡Oh, cuánto amo tu ley! Es mi meditación durante todo el día. 98 Tu mandamiento me hace más sabio \nque mis enemigos, porque siempre está conmigo. 103 ¡Qué dulces son tus palabras para mi gusto, más \ndulces que la miel para mi boca! 104 A través de tus preceptos consigo entender; por lo tanto, odio todos \nlos caminos falsos.105 Tu palabra es una lámpara para mis pies y una luz para mi camino. Salmo 119: 97- \n98. 103-105",
+        "La Biblia no es simplemente para leerla. Es un libro para estudiarlo y meditarlo de modo que pueda ser \naplicado. Leer, estudiar y meditar las Santas Escritura nos ay uda a ver más allá de las atracciones del \nmundo que nos rodea. Debemos leer, marcar, aprender y digerir internamente la Biblia porque Dios no \ncambia. Es relevante para nosotros hoy como cuando fue escrita.",
+        "No ames el mundo o las cosas en el mundo. El amor del Padre no está en aquellos que aman el mundo; \nporque todo lo que está en el mundo, el deseo de la carne, el deseo de los ojos, el orgullo de las riquezas \nno viene del Padre sino del mundo. Y el mundo y su deseo se van, pero los que hacen la voluntad de Dios \nviven para siempre. \n1 Juan 2:15-17",
+        "Además de la lectura diaria de la Santa Escritura, una Hija debe ser una miembro activa de un grupo de \nestudio en curso de la Biblia. El estudio de la Santa Escritura en comunidad le dará a usted mayor \nconocimiento sobre una lectura que se basa en otras experiencias, regalos y conocimiento de vida de otros \nmiembros.",
+        "El estudio también incluye la lectura de otros libros los cuales han sido inspirados por Dios, tales como \nlos escritos de Thomas Merton, Henry Nouwen, y N.T. Wright por tan solo nombrar unos pocos. La \nselección de autores y temas es infinita."
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Por qué Las Hijas tienen una Regla de Oración?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué debe ser incluido en la Regla de Oración?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo se siente usted con su vida de oración actual y cómo podría mejorarla de modo que se ajuste mejor a la Regla de Oración de La Orden?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Por qué debería usted orar por alguien que le ha herido, alguien con quien usted está molesto o por su enemigo?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Por qué es importante leer las Santas Escrituras diariamente?",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Por qué es importante estar en un grupo de",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "num": "OCHO",
+      "title": "Servicio y evangelización",
+      "part": "¿Quiénes somos? Martas y Marías",
+      "subtitle": "La Regla de Servicio",
+      "summary": "La oración y la evangelización están enumeradas juntas aquí porque son simbióti cas. La acción real de servicio a los demás para mostrarles el amor de Dios es la evangelización, y cuando usted está evangelizando está sirviendo a Dios. ¿QUÉ SE ENTIENDE POR LA REGLA DE SERVICIO? Porque por la gracia han sido salvados mediante la fe, y esto no es obra de ustedes; es el regalo de Dios, no el resultado de las obras, de modo que nadie presuma. Porque somos lo que Él nos ha hecho, creados en Cristo Jesús para las buenas…",
+      "content": [
+        "La oración y la evangelización están enumeradas juntas aquí porque son simbióti cas. La \nacción real de servicio a los demás para mostrarles el amor de Dios es la evangelización, y \ncuando usted está evangelizando está sirviendo a Dios.",
+        "¿QUÉ SE ENTIENDE POR LA REGLA DE SERVICIO?",
+        "Porque por la gracia han sido salvados mediante la fe, y esto no es obra de ustedes; es el regalo \nde Dios, no el resultado de las obras, de modo que nadie presuma. Porque somos lo que Él nos ha \nhecho, creados en Cristo Jesús para las buenas obras, las cuales Dios preparó con antelación \npara ser nuestra forma de vida. \nEfesios 2:8-10",
+        "Por Su Amo…  \nNo soy sino una, pero soy una. \nNo puedo hacerlo todo, pero puedo hacer algo. \nLo que puedo hacer, lo debo hacer. \nLo que debo hacer, lo haré por la gracia de Dios. \nSeñor, ¿qué quieres que haga?",
+        "El objetivo final de un capítulo debe ser el servicio individual y grupal por Cristo. A través de la oración, \nlas Hijas pueden descubrir que trabajo tiene Dios en mente para nosotros. Las Hijas conocen que ningún \ntrabajo es más importante que llevar a otros cerca de Jesucristo.",
+        "Las Hijas renuevan su pacto bautismal cada vez que una nuevo miembro se une al cuerpo de Cristo en la \niglesia, tanto como un nuevo compromiso y como un recordatorio de quiénes somos, y que somos llamadas \na ser como mujeres cristianas. C uando renovamos nuestra fe, lo hacemos con la conciencia de nuestra \nnecesidad de la ayuda de Dios. “Lo haré, con la ayuda de Dios” , reconoce que necesitamos más que \nnuestra propia fuerza para llevar a cabo nuestro ministerio como cristianos. Si servimos a otros sin estar \nen relación con Dios y siendo alimentados por Su Amor, nos quemamos y ya no podemos ser de ayuda a \nnadie.",
+        "En el pacto bautismal proclamamos; “Lo haré, con la ayuda de Dios para proclamar con la palabra y el \nejemplo las buenas nuevas de Dios en Cristo, y buscar y servir a Cristo en todas las personas, amando a \nmi prójimo como a mí mismo. \"Lo hacemos viendo a Cristo en todos los que conocemos. Frecuentemente \nesto es difícil de hacer. Aun cuando estemos mandados a amar y servir a todos, solo como Cristo los ama \na todos en diferentes maneras. Podemos ofrecer nuestra presencia, nuestros recursos, y nuestras oraciones \nen nombre de ellos, nuestra habilidad de escuchar, nuestra compasión, o nuestro tiempo. Descubrir la \nnecesidad es el primer paso en  el servicio cristiano. Por medio de la Regla de Servicio, una Hija busca \ndiariamente hacer la voluntad de Dios donde ella esté, recordando las palabras de Jesús. “Lo que hagas a",
+        "uno de mis hijos, me lo habrás hecho a mí”. Cualquier palabra o acción dicha  o hecha, con el sincero \npropósito de traer un alma cerca a Cristo es un esfuerzo vivo y esto hace la regla simple y práctica. Quiere \ndecir la dedicación del sentido común, la simpatía y la influencia de una mujer para esparcir el Reino de \nCristo. La Regla de Servicio es la aplicación del pacto bautismal que uno hace, el cual fue reafirmado en \nla confirmación, para ser fiel servidor de Cristo en la extensión de su Reino. Ustedes son las manos y los \npies de Cristo en el mundo, así que a menos que estén físic amente incapacitados para servir, deben estar \nen el campo esparciendo las semillas. Aunque la oración es muy importante esta no debe ser considerada \ncomo su único servicio.",
+        "El servicio se debería realizar en tres niveles, como capítulo y como individuo.",
+        "En su iglesia \nAl seleccionar el servicio que habrá de realizar su capítulo en su iglesia, es importante discutir con su \nclérigo lo siguiente: \n ¿Ayudará este servicio en una manera real a traer a otros a Cristo? \n ¿Es este un proyecto que ha sido hecho antes por otro grupo de la parroquia? \n ¿Se ajusta en su totalidad a los programas de la parroquia? \n ¿Es algo que el capítulo como un todo quiere hacer? \n ¿Tiene el capítulo el potencial de hacerlo con éxito?",
+        "Al seleccionar un servicio que usted quisiera hacer de forma individual en su iglesia, debe también discutir \ncon su clérigo dónde puede ser mejor utilizado su regalo en la parroquia. Si usted ya está involucrada en \nun servicio relacionado con la Iglesia para la cual se siente llamada entonces debe continuar haciéndolo.",
+        "En su comunidad \nAl seleccionar un servicio comunitario para ser realizado por su capítulo, es importante que el servicio sea \nuno que involucre a muchas miembros como sea posible. Recuerde que estar en La Orden es con el fin de \nestar en la  comunidad con sus hermanas, de modo que este servicio se debería realizar en grupo. Este \nservicio debería requerir la participación actual afuera en la comunidad y no solo apoyo monetario, Es \nimportante que el capítulo discuta lo siguiente: \n ¿Ayudará este servicio en una manera real a traer a otros a Cristo? \n ¿Es algo que el capítulo como un todo quiere hacer? \n ¿Tiene el capítulo el potencial de hacerlo con éxito? \n Dele a toda la oportunidad de orar sobre esto antes de tomar su decisión final.",
+        "Si usted se siente llamada para hacer servicio comunitario individual entonces pídale orientación a Dios \nal escoger un servicio en el que se sentirá cómoda haciéndolo y sienta que Dios se lo ha dado como regalo \npara que sea exitoso.",
+        "En el mundo \nSu capítulo se puede asociar con su iglesia o escoger una necesidad propia de la misión mundial. Esta \nnecesidad puede ser un regalo monetario, o una colecta de comida, ropa, Biblias, o cualquier otra \nnecesidad específica de un grupo al que ellos están intentando ayudar. Cuando escoja su servicio al mundo \nrecuerde que La Orden enfatiza el poder esparcir el Reino de Cristo, especialmente entre las mujeres y las \nniñas. Nadie está llamado a trabajar por la misión mundial individualmente, pero si usted se siente llamada, \nore sobre esto y luego discútalo con su clérigo.",
+        "Otro aspecto importante del servicio es el grado en el cual las miembros están actualmente comprometidas \nen otras actividades de servicio. Estas miembros deberían ser animadas a continuar sus actividades \nmientras siguen siendo miembros del capítulo. Su apoyo espiritual es importante y necesario. La disciplina",
+        "de Regla de La Orden ha sido práctica en ayudar a las Hijas a ganar la confianza necesaria para empezar \na asumir roles activos e importantes en su iglesia su comunidad y en el mundo.",
+        "Aunque es importante que el servicio sea realizado en comunidad con miembros de su capítulo, se hace \nen última instancia a través del ministerio del individuo. También es un hecho que en La Orden algunos \nson\n  más  conscientes  que  otros  en  hacer  el  trabajo  en  el  cual  todos \nestuvieron de acuerdo, aunque esto sea desalentador, los cristianos comprometidos buscan hondamente \nen su fe y encuentran la fortaleza para persistir.",
+        "“Buscarás y servirás a Cristo en todas las personas, amando a tu prójimo como a ti mismo”. (El pacto \nbautismal)",
+        "Adoren al Señor su Dios, y sírvanlo solo a Él. Mateo 4:10b",
+        "Cualquiera que sea que me sirve debe seguirme, y donde esté yo, también estará mi sirviente. Cualquiera \nque sea que me sirve, el Padre lo honrará. Juan 12:26",
+        "Pero levántense y pónganse de pie, porque me he presentado ante ustedes con este propósito, a fin de designarlos \npara servir y dar testimonio de las cosas en las que me han visto* y de aquellos en los que me apareceré \na ustedes. Hechos de los Apóstoles 26:16",
+        "No se queden atrás en el celo, sean ardientes en espíritu, sirvan al Señor. Romanos 12:11",
+        "El que de esta manera sirva a Cristo es aceptable para Dios y tiene aprobación de los humanos. Romanos \n14:18",
+        "Cualquiera que sea su tarea, póngase en ella, como se hace para el Señor y no para sus amos, ya saben \nque del Señor recibirán la herencia como recompensa; ustedes sirven al Señor Jesucristo. \nColosenses 3:23-24",
+        "Como buenos administradores de las múltiples gracias de Dios, sírvanse los unos a otros con cualquier regalo \nque cada uno de ustedes haya recibido.1 de Pedro 4:10 \nCualquiera que hable debe hacerlo como uno que habla las propias palabras de Dios; cualquiera que \nsirva debe hacerlo con la fortaleza que proporciona Dios, de modo que Dios pueda ser glorificado en \ntodas las cosas a través de Jesucristo. A Él pertenece la gloria y el poder por siempre y para siempre. \nAmén.\n1 de Pedro 4:11",
+        "Oh Dios, tú nos hiciste a tu propia imagen, y nos redimiste por Jesús tu Hijo; Mira en tu compasión, a \ntoda la familia humana; Quita el odio y la arrogancia que nos corrompen el corazón; Derrumba las \nbarreras que nos separan; Únenos en vínculos de amor; Y actúa a través de nuestra lucha y confusión a \nfin de cumplir tus propósitos en la tierra; Para que a su debido tiempo todas las naciones y razas te sirvan \nen armonía alrededor de tu trono celestial; Por Jesucristo Nuestro Señor. Amén.",
+        "¿Qué es la evangelización?",
+        "Evangelización: (nombre), predicar, esparcir la palabra, esparcir el evangelio, comunicar el mensaje del \nevangelio.",
+        "La Gran Comisión  \nJesús les dijo a ellos, \n“Vayan por el mundo y proclamen las buenas nuevas \na toda la creación”. Marcos 16:15 \nLa definición de evangelización adoptada por la Iglesia Episcopal en la Convención Gener al llevada a \ncabo en Louisville, Kentucky en 1973 dice: “La evangelización es la presentación de Jesucristo en el \npoder del Espíritu Santo de formas que otras personas puedan ser conducidas a creer en ÉL como \nSalvador y seguirlo a ÉL como Señor dentro de la hermandad de la iglesia”.",
+        "Evangelización viene de la palabra griega εὐαγγέλιον\n (transliterada como euangelion) que significa, “traer \no proclamar las buenas nuevas”. Los títulos canónicos de los cuatro evangelios, Mateo, Marcos, Lucas, \ny Juan son conocidos también como los cuatro evangelistas . Un evangelista es un portador de buenas \nnoticias. Ser un evangelista cristiano es ser un portador de las mejores noticias que jamás haya escuchado \neste mundo, de modo que otras personas puedan ser conducidas a creer en ÉL como Salvador y seguirlo \na ÉL como Señor dentro de la hermandad de la iglesia.",
+        "Cada Hija promete hacer un esfuerzo consciente y constante para vivir la definición en su vida, haciendo \ntodo lo que pueda a través de sus palabras y obras para traer a otros, especialmente las mujeres y las niñas, \ndentro de una relación con Jesús y dentro de los fraternidad de la iglesia.",
+        "A través de la evangelización, tratamos de llegar a aquellos que no conocen el amor de Cristo Jesús. \nHacemos un esfuerzo consciente para llegar a quienes son nuevos en la comunidad y buscan un hogar de \niglesia para quienes están en hospitales, para los confinados y para quienes están afligidos o con problemas \npersonales. Hacemos todo lo que podemos para ayudar a las miembros recién incorporadas a experimentar \nel amor de Dios a través de la hermandad de la iglesia. Las Hijas reconocen que nuestra fe no es una fe \nprivada oculta en nuestros corazones. Nuestra fe es proclamar amorosa y gozosamente que Jesucristo, nos \nelevó en nuestras vidas y palabras, para que podamos acercarnos más a Dios, para que todos podamos \ndisfrutar de su amor y gracia salvadora.",
+        "¿Qué significa la palabra evangelización para usted?",
+        "Su trabajo no es salvar a las personas, ese es el trabajo de Dios. Su trabajo solo consiste en darle a conocer \na otros el amor salvador de Dios a través de la palabra y el ejemplo, cuando Dios le dé a usted la \noportunidad de hacerlo."
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Qué proceso debería usted seguir un capítulo antes de emprender cualquier proyecto de servicio?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede su participación en los grupos de la iglesia, tales como la cofradía del altar, el coro, el ministerio eucarístico laico, contribuir a su crecimiento espiritual?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "Enumere cualesquier actividades de servicio en las que usted está involucrada actualmente y que podrían ser una parte de su Regla de Servicio personal. a. En su iglesia b. En su comunidad c. En el mundo",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "Enumere cualesquier actividades de servicio en las que usted sienta que el capítulo podría estar involucrado como un grupo. a. En su iglesia b. En su comunidad c. En el mundo",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Cómo puedo mostrar mi “fe en acción” hacia los demás?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "¿En cuál de estos tres niveles de servicio necesito mejorar?",
+          "type": "open"
+        },
+        {
+          "id": 8,
+          "text": "¿Me acuerdo de orar mientras sirvo y de servir mientras oro?",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "num": "NUEVE",
+      "title": "¿Cuál es una Regla de Vida?",
+      "part": "¿Quiénes somos? Martas y Marías",
+      "subtitle": "Tu compromiso personal",
+      "summary": "Una Regla de V ida es una disciplina personal voluntaria que se practica diariamente en asuntos espirituales: un patrón de devociones regulares y de temporada, ambas privadas y públicas; un compromiso considerado con inteligencia y oración. Esta regla conduce a un patrón de hermandad cristiana personal, en grupos de capítulos y en adoración colectiva. Esto separa a La Orden de otras organizaciones de la iglesia. Viviendo bajo una Regla de Vida nos trae una fuerte sensación de compañía con Cristo. Usted debería…",
+      "content": [
+        "Una Regla de V ida es una disciplina personal voluntaria que se practica diariamente en asuntos \nespirituales: un patrón de devociones regulares y de temporada, ambas privadas y públicas; un \ncompromiso considerado con inteligencia y oración. Esta regla conduce a un patrón de hermandad \ncristiana personal, en grupos de capítulos y en adoración colectiva. Esto separa a La Orden de otras \norganizaciones de la iglesia. Viviendo bajo una Regla de Vida nos trae una fuerte sensación de compañía \ncon Cristo. Usted debería comenzar a pensar en formular una Regla de Vida que sea particularmente \nconveniente para usted. La regla debe ser flexible y adaptable para acomodar cambios de circunstancias \ny el crecimiento en su vida. Empiece de manera simple. No se entusiasme demasiado. Ore y pídale guía \na Dios. Cuando empiece a practicar una Regla de Vida, recuerde cuidar sus pensamientos y detener su \nlengua de presumir sobre su buenos trabajos. Lea Santiago 3.",
+        "“…la Regla de Vida es un acercamiento balanceado a la vida, designado para hacer lugar a la adoración, \nla reflexión y la dedicación: el resultado final real de nuestras vidas.",
+        "Vivir una regla empieza con la decisión de tomar tiempo para lo que es más importante. Al principio o durante \nperíodos de tiempo de crisis, el tiempo que tomamos ta l vez no sea suficiente para acomodar todas las \nobservaciones y detalles de la regla. Está bien. Pero la prioridad debe mantenerse: tomarse el tiempo de \natender a Dios, del significado de mi vida y de lo que Dios quiere que mi vida signifique. El centro de La \nRegla de Vida no es la observación exacta de las indicaciones de la regla, es para tomarse el tiempo.",
+        "Las decisiones involucradas en el balance de las obligaciones de su vida y las obligaciones de una regla \nno son fáciles. Cada una de nosotras llega regularmente a un punto donde sentimos que, por el bien de \nlos que dependen de nosotras, por el bien de la riqueza de nuestra vida, por el bien de nuestra familia, \npor el bien de nuestro trabajo, simplemente no hay tiempo para orar. La regla es para cuando estas crisis \nocurren regularmente – para recordarnos la difícil y dolorosa verdad – aquellas que se toman el tiempo, \ntienen tiempo”. \nExtraído de las notas de Fr. Bede Thomas Mudge, OHC, \nMundi Medicini, edición de primavera de 1991.",
+        "Su Regla de Vida personal debería incorporar las dos partes de la Regla de Vida de las Hijas, la Regla \nde Oración y la Regla de Servicio (consulte NH, La Regla de Vida de las Hijas).",
+        "Parte de la Regla de Oración consiste en orar diariamente: \n Por la unidad de la Iglesia de Cristo. \n Para poder esparcir el Reino de Cristo, especialmente entre mujeres y niñas. \n Para la bendición de Dios sobre las miembros de La Orden. \n Para el crecimiento espiritual de la parroquia y el clérigo de la iglesia a quien el \ncapítulo le debe lealtad. \n Por la gracia de seguir nuestra Regla de Vida. \nParte de la Regla de Servicio consiste en: \n Ser un ferviente discípulo de Cristo en la extensión de Su Reino. \n Tomar parte regularmente en la adoración, estudio trabajo de la iglesia; \n Prestar ayuda en todo momento al clérigo según sea necesario para el desarrollo espiritual \nde la iglesia.",
+        "Una Regla de Vida es un patrón considerado de actividades diseñado para encarnar y concentrarse en \nnuestra relación con Dios.",
+        "Una Regla de Vida puede considerarse como: \n un pacto entre Dios y yo \n una manera de proporcionar “tiempo de primera ” para Dios en mi vida \n el lado de rutina de amar a Dios \n lo que puedo usar para enfocar mi caminata cristiana",
+        "Observar una Regla de Vida es: \n dar alta prioridad a nuestra dimensión religiosa \n reconocer que el ritmo es la clave para una vida vigorosa \n proporcionar seguridad en los períodos de espiritualidad \n desarrollar la fuerza interior y los recursos para los momentos de estrés \nextremo y las pruebas \n facilitar el encuentro con otros creyentes para celebrar nuestra vida común en \nCristo, expresando la dimensión social de la fe",
+        "¿CÓMO DEBE VIVIR SU REGLA DE VIDA? \nUna disciplina de ideales cristianos de oración, estudio y acción.",
+        "DISCIPLINA DIARIA \nEstablezca un tiempo regular cada día para la oración tranquila y el estudio. Que este sea tan esencial para \nusted como su patrón de alimentación. Si no comemos nos enfermaríamos y moriríamos. La nutrición \nespiritual no es menos vital. Ten tu tiempo con Dios, tanto si particularmente te apetece como si no. ¡Este \ntipo de determinación hace la diferencia! Aunque las oraciones son esenciales a lo largo del día y en la \nnoche, es bueno comenzar cada día con devociones. Invocamos a Dios en nuestras las actividades diarias \nal comenzar el día. Hace toda la diferencia cuando trabajamos, conocemos a la gente, nos relacionamos \ncon nuestras familias y nos enfrentamos a la tentación.",
+        "TRANQUILIDAD \nOcupe la primera parte de sus devociones en tranquilidad, “Quédese en silencio y aprenda\". Muy \nfrecuentemente nos acercamos a Dios en una actitud de impaciencia, con una forma de activismo \nespiritual. Necesitamos practicar la alegría de simplemente estar ante su presencia, sin buscar nada que \nsolo estar con Él. Intente encontrar un lugar tranquilo. El ruido y la confusión son enemigos obvios de la \npaz interior. Todavía puede haber ruido dentro de nuestro espíritu y tenemos que ofrecérselo al Señor. No \nenvidies el tiempo pasado en quietud. Es productivo, porque Dios está comenzando a arreglar el desorden \nde tu vida a medida que llega a tu ser.",
+        "ORACIÓN \nEs artificial distinguir entre tranquilidad y oración, pero por el amor de la progresión en nuestras \ndevociones, necesitamos entender que Dios, a quien conocemos como el Cristo compasivo, está listo para \nescucharnos. Él es uno que dice, “Pide y recibirás, busca y encontrarás, toca y se te abrirá”. Por lo tanto, \nhay que tomarse tiempo para hablar con Él, incluso para gritar desde las profundidades de algunas",
+        "necesidades. En una regla de Vida, es bueno tener un patrón que permita la amplitud. Un patrón de ayuda \nes el uso de la palabra “HECHOS”. \n Adoración - Dedique tiempo simplemente expresándole a la Trinidad de Dios su amor, y su alegría de \nestar ante su presencia. \n Confesión - Ofrézcale a Dios su pecado. El pecado no es solo lo que hemos hecho o hemos dejado \nde hacer; es nuestro lapso de verdad en Dios en transcurso de nuestras vidas. \n Acción de Gracias - Considere el perdón por la gracia del Señor. Pida por un espíritu de gratitud \nde modo que todo lo que haga no lo hará por amor al deber sino como un acto de acción de gracias. \n Súplica - Nuestras vidas están entrelazadas con otras y en el amor las elevamos ante Dios.",
+        "Ore por los miembros de su familia. ¿Si usted no lo hace, quién lo hará? Ore por las necesidades de \naquellos a quienes Cristo a puesto frente a su vista, que son sus vecinos, bien sea que estén cerca o lejos. \nOre por su familia ampliada, la cual es la iglesia; siempre recuerde a su clérigo. De modo que \nfrecuentemente dejamos estas oraciones para los hechos de la liturgia formal de los domingos. Traiga sus \nnecesidades ante Dios. Si es una necesidad digna, Dios hará valer su oración, si no lo es Dios negociará \ncon usted en corrección amorosa y paciente. Recuerde, la piedad personal siempre nos lleva a la oración \ncolectiva.",
+        "TODO A TRAVÉS DEL DÍA \n“Este es el día en que el Señor lo ha hecho; nosotras nos regocijaremos y alegraremos de ello”. A medida \nque dejamos nuestras devociones y emprendemos cada día, necesitamos salir con un fuerte sentido de la \ncompañía de Cristo. No dejamos esto a un encuentro casual.",
+        "Hacemos un reconocimiento consciente de Él durante el día. No hay nada grandioso o trivial en su vida \nen lo que usted no pueda referirse a Cristo. En nuestra Regla de Vida nos tomamos seriamente la promesa \nde Cristo. “Señor, estoy siempre contigo”.",
+        "GRUPOS DE ORACIÓN Y GRUPOS DE ESTUDIO \nLos grupos pequeños ofrecen hermandad. Los grupos que se reúnen para la oración o el estudio son \nimportantes en una Regla de Vida, especialm ente para quienes han compartido una experiencia de \nrenovación en Cristo. Si no hay un grupo de oración activo alrededor en el cual pueda usted participar, \n¡forme el suyo propio! Para la orientación, seleccione un estudio sencillo de la Biblia o una guía de estudio \nde oración. Solo se requiere de dos o tres personas para comenzar. Si usted quiere crecer en piedad estudio \ny acción deje que Cristo sea el líder. “Donde dos o tres se reúnan en mi nombre, Yo estaré allí en medio \nde ellos”.",
+        "ADORACIÓN \nAl recordar que la vida espiritual de un cristiano siempre conduce hacia una experiencia del Cuerpo de \nCristo, una Regla de Vida siempre incluye la adoración colectiva de la iglesia. La persona que practica la \nRegla de Vida viene a los actos litúrgicos de la Iglesia con un fervor que aviva y enciende la fe de los \ndemás. ¡Qué diferencia entre el canto, la oración y la comunión del portador diario de Cristo y los que \nvienen superficialmente sin grandes expectativas! Aunque es casi impensable que la adoración semanal \nse convierta en un esfuerzo, aquí se aplica la misma disciplina que en la oración diaria, adorar a Dios \ntengas ganas o no. En nuestro discipulado estamos llamados a vivir por encima del nivel del sentimiento, \nen el nivel de la obediencia atenta. La Sagrada Co munión es un mandato: “Hagan esto”, dijo Jesús. \nSacramental significa que la gracia se convierte en poder de acción.",
+        "ACCIÓN \nLa acción es siempre una parte de la Regla de Vida. Usted se está conduciendo de lo sería el \nsentimentalismo a una vida de servici o. Obviamente llega a su administración. El diezmo es una simple \nrespuesta al Señor quien le ha dado a usted todo. La acción tiene que ver con su deseo de compartir lo que \nusted ha estado dando de su tiempo y de su talento. La Iglesia debería ser capaz de ver una relación directa \nentre una nueva vida en Cristo y la vida de ofrenda. Recuerde que dar incluye compartir con otros lo que \nCristo significa para usted. Testificando por Cristo es, de hecho, una reflexión en lo que usted se está \nconvirtiéndose a medida que Cristo camina con usted diariamente. Incluye a los no afectados al hablarle \na los demás en lo que respecta a la bondad de Dios. Otros tienen hambre del amor de Cristo y de la vida \nde seguridad y serenidad que Él ofrece. Esté dispuesto a expresarle s u fe a quienes Dios ha puesto en su \ncamino.",
+        "SUGERENCIAS PARA ESCRIBIR SU REGLA DE VIDA \nLa Regla de Vida de cada persona es diferente. Nunca debería ser una carga, de modo que no intente realizar \nmás de lo que puede manejar al principio, y luego lentamente crezca en su Regla de Vida completamente.",
+        "Tiempo diario para la oración y el estudio  (a.m. o p.m.)",
+        "Oración \nOrar diariamente por: \n1. La unidad de la Iglesia de Cristo. \n2. Esparcir el Reino de Cristo, especialmente entre mujeres y niñas. \n3. La bendición de Dios sobre las miembros y el trabajo de La Orden. \n4. El crecimiento espiritual de mi iglesia y el clérigo. \n5. Oraciones y agradecimientos respondidos. \n6. Orar por los nombres en: \na. La lista de oraciones de la Iglesia \nb. La lista del capítulo \nc. Mis familiares y amigos \n7. Mis propias necesidades y la gracia de seguir mi Regla de Vida. \n8.  (otros).",
+        "1. Servir como  en la iglesia. \n2. Participar en proyectos de difusión del capítulo. \n3. Participar en  (servicio comunitario.) \n4. Participar y/o dar apoyo al trabajo misionario de su capítulo, su iglesia, su diócesis \n .",
+        "5.  (otros.) \nEvangelización \n1. Estar lista para compartir la gracia salvadora y el amor de Dios cuando Él me dé la \noportunidad. \n2. Estar lista para explicar la cruz de la Hija cuando se me pregunte sobre ella. \n3.  (otros.)",
+        "Responsabilidades \n1. Usar la cruz de La Orden habitualmente . \n2. Pagar mis cuotas con prontitud. \na. Cuotas nacionales $ (se vencen cada año el 1.ro de septiembre). \nb. Cuotas del capítulo $ (se vencen cada año el 1.ro de septiembre). \n3. Contribuir a los Fondos de la Orden, anualmente.",
+        "a. Alpha (el 5 de septiembre).",
+        "b. Capital (el 1.ro de noviembre.)",
+        "c. Autonegación (el 2 de febrero)",
+        "d. Maestrías (Pentecostés.)",
+        "4. Asistir y participar regularmente en: \ne. Reuniones del capítulo. \nf. Asambleas diocesanas. \ng. Asambleas provinciales (cuando sea posible) \nh. Asambleas trienales nacionales (cuando sea posible)",
+        "5. Revisar periódicamente mi Regla de Vida.",
+        "Fecha en que será revisada",
+        "Fecha en que fue revisada"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuáles dos partes de la Regla de Vida de La Orden se mencionan en El Manual Nacional?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Cuáles son sus pensamientos acerca de la Regla de Vida personal, su pacto con Dios?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "Al formular su Regla de Vida personal es de gran ayuda definirla por escrito. Escriba su Regla de Vida personal y revísela periódicamente.",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Cómo le ayuda su Regla de Vida a cumplir con sus deberes cristianos? ",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "num": "DIEZ",
+      "title": "¿Cómo están las Hijas facultadas para servir?",
+      "part": "Alcanzar para servir",
+      "subtitle": "Dones espirituales",
+      "summary": "El regalo de los siete dones del Espíritu Santo. En la oración de La Orden pedimos a Dios “Derrama sobre nosotras el regalo de los siete dones del Espíritu Santo”. ¿Qué es el regalo de los siete dones del Espíritu Santo? ¿Entendemos realmente lo que estamos pidiendo? ¿Dónde lo encontramos referenciado en la Biblia? Isaías 11: 1-3 se conoce como la profecía mesiánica. Isaías 11:2 revela: El espíritu del Señor descansará sobre él, el espíritu de sabiduría y entendimiento, el espíritu de consejo y poder, el espíritu…",
+      "content": [
+        "El regalo de los siete dones del Espíritu Santo. \nEn la oración de La Orden pedimos a Dios “Derrama sobre nosotras el regalo de los siete dones del  \nEspíritu Santo”. ¿Qué es el regalo de los siete dones del Espíritu Santo? ¿Entendemos realmente lo que \nestamos pidiendo? ¿Dónde lo encontramos referenciado en la Biblia? \nIsaías 11: 1-3 se conoce como la profecía mesiánica. \nIsaías 11:2 revela: \nEl espíritu del Señor descansará sobre él, el espíritu de sabiduría y entendimiento, el espíritu de consejo \ny poder, el espíritu de conocimiento y el temor del Señor.",
+        "Como muchas palabras hebreas/árabes tienen múltiples significados la traducción griega de este versículo \ndel Antiguo Testamento añadió el séptimo atributo, la misericordia o piedad:",
+        "El espíritu del Señor descansará sobre él/ella, el espíritu de la sabiduría y el entendimiento, el espíritu \ndel consejo y el poder, el espíritu del conocimiento y el temor del Señor. Y él/ella se llenará del espíritu \ndel temor al Señor.",
+        "El regalo de los siete dones del Espíritu Santo es un único regalo con siete atributos. Fue dado a Jesús en \nsu bautismo en cumplimiento de la profecía en Isaías. También dado a nosotros, ellos se infunden en \nnuestro ser más íntimo en el momento de nuestro bautismo. A medida que crecemos espiritualmente  y \nnuestra fe madura, así este regalo del Espíritu Santo evoluciona en nuestro interior. Es un regalo que es \ncontinuo y permanente cuando se nutre. Es una conciencia cada vez mayor.",
+        " SABIDURÍA - la conciencia del amor de Dios. \n COMPRENSIÓN - la conciencia de quién es Dios. \n CONSEJO - la comunicación con Dios. \n FUERZA o PODER - la vida totalmente triunfante. \n CONOCIMIENTO - la conciencia de la existencia de Dios. \n MISERICORDIA o PIEDAD - el reconocimiento de nuestra necesidad de Dios. \n TEMOR AL SEÑOR - la conciencia de la presencia de Dios dentro de nosotros \n¿Cómo se manifiesta en nuestras vidas este regalo de los siete dones del Espíritu Santo?",
+        "En el bautismo, ya que estamos rodeados por el amor de otros que se comprometen a apoyarnos en nuestra \nnueva vida, se recibe el regalo inicial de la SABIDURÍA o la conciencia del amor de Dios. Nuestra \nCOMPRENSIÓN de quien es Dios y nuestra necesidad de una relación con Él se hace clara. A través del \nCONSEJO el Espíritu Santo abre una comunicación bidireccional con Dios para guiarnos en nuestra vida \ndiaria. En la oración podemos alabar a Dios, dar gracias a Dios, confesar nuestro pecado, comunicar \nnuestros deseos y necesidades, y en el silencio podemos escuchar y esperar la respuesta del amor. Con la \ngracia de la FUERZA o PODER, se nos da la fortaleza para caminar en la fe, confiando en el camino de \nDios para una vida triunfante y alegre. A través del CONOCIMIENTO nos hacemos conscientes de la \npresencia y existencia de Dios en nosotros y en toda la creación. La VERDADERA MISERICORDIA \no PIEDAD nos ayuda a reconocer nuestra necesidad de Dios, e inspira en nosotros el deseo de buscar",
+        "primero el Reino de Dios, de poner a Dios en primer lugar en nuestras vidas. Con el TEMOR AL SEÑOR, \no TEMOR SANTO nos hacemos conscientes del Espíritu de Dios dentro de nosotros, su constante \npresencia, de modo que observamos lo que pensamos, hacemos o decimos para convertirnos en aquello \npara lo que Él nos creó.",
+        "Cada vez que el regalo de los siete dones se derrama sobre nosotros se nos da en un nivel más alto, aún \nmás profundo. La voluntad de Dios para nuestras vidas se hace más clara. A medida que el regalo aumenta, \nnuestra fe también crece.",
+        "No es que ya lo haya conseguido o que ya haya alcanzado la meta; pero sigo adelante para hacerlo mío, \nporque Cristo Jesús me ha hecho suyo. Filipenses 3:12",
+        "Los regalos del espíritu \nEn contraste al regalo de los siete dones del Espíritu Santo, los regalos del espíritu son múlt iples y son \nindicaciones de la presencia del trabajo de Dios en nosotros en diferentes grados y formas. Ellos son dados \nsegún se necesiten, permitiéndonos cumplir el trabajo del Reino.",
+        "Lea Corintios 12:4-6 \nLea Corintios 12:7-11",
+        "Note que en el versículo 8 no se nos da el regalo de la sabiduría ni del conocimiento. Esos se nos dan con \nel regalo de los siete dones del Espíritu Santo. En este pasaje de la Escritura, el espíritu da la EXPRESIÓN \nde la sabiduría y del conocimiento, la habilidad de hablarle a otros sobre Dios con amor.",
+        "Lea 1 de Corintios 12:7-28. \nLea Romanos 12:6-7.",
+        "En Romanos 11:29, Pablo nos dice “El regalo y el llamado de Dios son irrevocables”. Usted no los puede \ndevolver.",
+        "El regalo ~ Una historia \nHabía una chica llamada María que tenía una mejor amiga, Carol. María y Carol crecieron juntas. Ellas \nfueron juntas al colegio, y Carol fue al matrimonio de María . Las cosas cambiaron y María se mudó lejos, \npero María todavía mantenía el contacto con su mejor amiga, y de vez en cuando María llamaba a Carol, \nespecialmente cuando ella necesitaba hablar con alguien que la conocía bien.",
+        "C\nada año Carol le enviaba a María un regalo, uno que Carol había elegido cuidadosamente solo para ella. \nCarol lo envolvía en el papel más hermosos, lo decoraba con un lazo y se lo enviaba a María. \nCuando María recibía el regalo, ella quería agradecerle a Carol pero nunca dijo más que eso. De modo \nque, Carol nunca supo realmente si a María le gustaban los regalos o no. Fue muy desconcertante.",
+        "Pasaron años antes de que Carol pudiera hacer los arreglos necesarios para visitar a María. Cuando ella \nllegó, María la saludó calurosamente y le dijo: “Estoy casi lista. Pon tu abrigo en el armario y yo te \nprepararé una taza de té. Entonces podemos simplemente sentarnos y ponernos al día con nuestras vidas\". \nCarol se acercó al armario y abrió la puerta. Allí, ante ella, había estantes llenos de todos los hermosos \nregalos que le había enviado a María, ¡ sin abrir! Ella simplemente se quedó allí, congelada, mirando \ntodas las cajas envueltas para regalo.",
+        "Cuando María regresó a la habitación y encontró a Carol mirando los regalos, le dijo: “¿No son \nimpresionantes? Eran demasiado bonitos para desenvolverlos, así que los pongo en los estantes y puedo \nmirarlos cuando quiera\".",
+        "¿Cuál es su reacción a esta historia? ¿Cómo le respondería a María?",
+        "Dios también le envía hermosos regalos. ¿Abre usted los regalos o los arroja a la basura? Usted tienes la \nlibertad de elegir no abrir o usar los regalos que se le dan, pero Dios seguirá empujándonos, dándonos el \nregalo hasta que lo abramos, esperando que lo compartamos por el bien común.",
+        "Lea 1 de Corintios 2:12-14 \nLea Efesios 4: 7-8, 11-13",
+        "Se nos dan estos regalos para la edificación del Cuerpo de Cristo. Estamos dotados para que podamos \n“ser como Cristo, para ser sus manos y pies en el mundo”. Ahora vuelva a leer 1 de Corintios 12 en su \ntotalidad. Entonces, ¿cuál es esta “forma más excelente”?",
+        "Los frutos del espíritu \nLos frutos del espíritu son reservorios de plenitud dados gratuitamente para la curación del mundo. Ellos \nson regalos maravillosos de virtudes que se nos otorgan.",
+        "Lea 1 de Corintios 13: 1-13 - la poesía del amor de Dios.",
+        "En todos los sentidos, es el amor el que debe guiar nuestras acciones. \nLea Gálatas 5:22 \nLea Santiago 3:17",
+        " AMOR: amor ágape completamente centrado en el Señor \n GOZO: el verdadero gozo de comprender el amor de Dios por nosotros \n PAZ: una calma interior y un orden \n PACIENCIA: esperando el tiempo de Dios \n BONDAD: buscando lo mejor para otro \n GENEROSIDAD: dar libremente de toda nuestra vida \n FIDELIDAD: confiable y digno de confianza \n GENTILIZA: fortaleza no pasiva - vivir firme con cuidado \n AUTO CONTROL: fuerza interior en obediencia al espíritu",
+        "A medida que reciba y viva los regalos del espíritu, los frutos del espíritu florecerán en su vida diaria. Si \nparece que los frutos no se manifiestan en su vida diaria, llévelos a la oración y espere la inspiración del \nespíritu. Puede que haya regalos en usted que no ha realizado y que no conoce; es necesario despertarlos \ny ofrecerlos por el bien común.",
+        "Dios tiene un plan para su vida y la ha dotado con regalos exclusivamente para usted a fin de cumplir ese \nplan. Rece por la revelación. Escuche con el oído de su corazón, dé un paso adelante con fe y confíe en \nque Dios los hará fructificar en su vida.",
+        "Algunos regalos del espíritu \nCada regalo es igualmente valioso",
+        "expresión de la sabiduría obras de poder \nexpresión del conocimiento asistencia \nfe liderazgo \ncuración hospitalidad \ntrabajo de milagros asesor o consejero \nprofecía animador \ndiscernimiento de los espíritus dador \nvarios tipos de lenguas generosidad \ninterpretación de lenguas diligencia \napostolado compasión \nenseñanza alegría"
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Qué distingue a los obsequios, servicios y actividades?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Qué sucede cuando no usa un regalo que Dios le ha dado?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué regalo del espíritu ha abierto y ofrecido a otros?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Cómo ha utilizado su regalo para hacer brillar la Luz de Cristo en el mundo?",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Hay algún regalo del espíritu que no haya reconocido o que haya tenido miedo de abrir?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "¿Cómo podría Dios estar llamándole a usar ese regalo?",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "num": "ONCE",
+      "title": "Llamado a la humildad",
+      "part": "Alcanzar para servir",
+      "subtitle": "Servir con el corazón de Cristo",
+      "summary": "Este capítulo sobre la humildad es una adición a nuestra Guía Nacional de Estudio 2020. Sirve como un recordatorio de que estamos llamados a seguir a Jesús y su vida de verdadera humildad. En última instancia, Jesús se humilló a sí mismo incluso hasta la m uerte en la cruz. Del mismo modo, estamos llamados a humillarnos a lo largo de la vida, evitando pensar más en nosotros mismos de lo que deberíamos, poniéndonos por encima de los demás y siendo arrogantes. Debemos esforzarnos por amarnos a nosotros mismos como…",
+      "content": [
+        "Este capítulo sobre la humildad es una adición a nuestra Guía Nacional de Estudio 2020. Sirve como un \nrecordatorio de que estamos llamados a seguir a Jesús y su vida de verdadera humildad. En última \ninstancia, Jesús se humilló a sí mismo incluso hasta la m uerte en la cruz.  Del mismo modo, estamos \nllamados a humillarnos a lo largo de la vida, evitando pensar más en nosotros mismos de lo que \ndeberíamos, poniéndonos por encima de los demás y siendo arrogantes. Debemos esforzarnos por \namarnos a nosotros mismos como Jesús nos ama, amar a los demás como Jesús los ama y respetar la \ndignidad de cada persona.",
+        "2Recuerda el largo camino que el LORD tu Dios te ha guiado estos cuarenta años en el desierto, con el fin \nde humillarte, poniéndote a prueba para saber lo que había en tu corazón, si guardarías o no sus \nmandamientos... 16y te alimentó en el desierto con maná que tus antepasados no conocían, para \nhumillarte y probarte, y al final para hacerte el bien. Deuteronomio 8:2, 16",
+        "La humildad es la cualidad de ser humilde, que es la ausencia de orgullo o arrogancia, y entender que no \neres mayor o menor que los demás. Ser humilde no significa que necesites volverte débil, crédulo o \nsumiso. De hecho, la mayoría de las personas que practican la humildad son personas fuertes y seguras \nde sí mismas con grandes habilidades de liderazgo, como Jesús.",
+        "San Benito estableció 12 pasos de humildad en su Santa Regla para aquellos que viven bajo la disciplina \nde una Regla de Vida. A continuación se presentan dos versiones de estos pasos. A la izquierda están las \nreglas originales de San Benito, adaptadas ligeramente para la relevancia de la Orden. A la derecha están \nlas reglas esbozadas por Joan Chittister, una monja de la Orden de San Benito, de su libro Espíritu Radical.",
+        "A medida que leas los doce pasos, permite que el Espíritu Santo te guíe más profundamente en cómo se \nve la humildad para ti personalmente. Trate de ver cómo la práctica de cada paso lo llevará a un caminar \nmás cerca de Jesús y a una relación más amorosa con sus hermanas en La Orden.",
+        "Paso San Benito Joan Chittister \n1  Mantén el temor de Dios siempre \ndelante de ti.",
+        "Tener un conocimiento reverente de \nDios a través de la oración y el \nestudio de la palabra de Dios. \n  Reconozca que Dios es Dios.",
+        "\"Dios es una presencia para ser reconocida. El \nprimer paso de la humildad comienza en el centro, \nel núcleo, el final deseado de la vida espiritual. \nComienza con la contemplación y la conciencia del \nMISTERIO que es la única razón, la única \nposibilidad de desarrollar una vida verdaderamente \nespiritual\". (Página 36) \nPero este es a quien miraré, al humilde y contrito de espíritu, que tiembla ante mi \npalabra. Isaías 66:2b",
+        "Los que temen al Señor preparan sus corazones y se humillan ante Él. Eclesiástico 2:17",
+        "Si mi pueblo que es llamado por mi nombre se humilla, ora, busca mi rostro y se aparta \nde sus malos caminos, entonces escucharé desde el cielo, y perdonaré su pecado y sanaré \nsu tierra. \n2 Crónicas 7:14",
+        "Paso San Benito Joan Chittister \n2 Pon la voluntad de Dios para tu vida \nantes que tu propia voluntad y no te \ndeleites en la satisfacción de tus \ndeseos.",
+        "Confía en que el plan de Dios para tu \nvida es mejor que cualquier cosa que \npuedas imaginar o desear. \nSepa que la voluntad de Dios es la mejor para usted.",
+        "\"Si y cuando hacer la voluntad de Dios se convierte \nen el punto cardinal de mi vida, ninguna cantidad \nde esfuerzo hacia ella puede ser demasiado, ningún \ncamino hacia su realización demasiado largo. El \nsegundo paso me libera para darme cuenta de que \nel propósito singular de la vida es convertirme en \nlo que fui creado para ser: co-creadores con el Dios \nde la Vida\". \n(Página 52)",
+        "Son como árboles plantados por corrientes de agua, que producen sus frutos en su \ntemporada, y sus hojas no se marchitan. En todo lo que hacen, prosperan. Salmo 1:3",
+        "Estad quietos delante del Señor, y esperad pacientemente por él; no te preocupes por los \nque prosperan en su camino, por los que llevan a cabo dispositivos malvados. \nSalmo 37:7",
+        "Todos los que se exaltan a sí mismos serán humillados, y todos los que se humillan a sí \nmismos serán exaltados. Mateo 23:12",
+        "San Benito Joan Chittister \nSométete a la autoridad que Dios ha \npuesto por encima de ti.",
+        "Ten un respeto dispuesto pero perspicaz \npor aquellos puestos en autoridad sobre ti. \n  Busca la dirección de las figuras de sabiduría.",
+        "\"La obediencia no es por sí misma; es para la \npreservación de la ley de Dios... es humildad, \nnuestro compromiso total con la gloria y la \nvoluntad de Dios... que nos mantiene anclados a la \nmente de Dios\". (Página 70) \nEntonces les dijo: \"Dad, pues, al César las cosas que son del César, y a Dios las cosas que son de \nDios\". Mateo 22: 21",
+        "Humillaos ante el Señor, y Él os exaltará. Santiago 4:10",
+        "Paso 4 San Benito Joan Chittister \nSé obediente incluso en condiciones \ndifíciles, desfavorables o incluso \ninjustas.",
+        "Soporta la adversidad con paciencia y \ncalma. \nSoporta los dolores del desarrollo y no te rindas.",
+        "\"La resistencia es el cemento del desarrollo \nhumano... una garantía que tenemos de que los \nseres humanos son capaces de llegar a ser \nplenamente humanos y pueden cambiar. Al estar \ndispuestos a dejar nuestro poder personal en \nfavor de la visión y la experiencia de otra \npersona, nos comprometemos a beneficiarnos del \npoder y la bondad de los demás\". (Páginas 86-87) \nSe humilló y se volvió obediente hasta el punto de la muerte, incluso la muerte en una \ncruz. Filipenses 2:8",
+        "El amor es paciente; el amor es bondadoso; el amor no es envidioso o jactancioso o arrogante \no grosero. No insiste a su manera; no es irritable ni resentido;  6no se regocija en hacer mal, \nsino que se regocija en la verdad. Soporta todas las cosas, cree todas las cosas, espera todas \nlas cosas, soporta todas las cosas. \n1 Corintios 12:4-7",
+        "San Benito Joan Chittister \nConfiese cualquier pensamiento \npecaminoso o mal cometido, ya sea hecho \nabiertamente o en secreto.",
+        "Esté dispuesto a reconocer y \narrepentirse de su pecado. \nReconozca las fallas y retire las máscaras.",
+        "\"Sin el proceso de auto -revelación y la \nhumildad genuina que trae, nos \ncondenamos a seguir escondiéndonos \ndentro de nosotros mismos para siempre. \nCon el coraje de la auto -revelación, la \nhumildad que viene nos libera para la \nplenitud de la vida\". (Página 102) \nPorque uno cree con el corazón y así se justifica, y uno confiesa con la boca y así es salvo. \nRomanos 10:10",
+        "Si decimos que no tenemos pecado, nos engañamos a nosotros mismos, y la verdad no \nestá en nosotros. 9Si confesamos nuestros pecados, el que es fiel y justo nos perdonará \nnuestros pecados y nos limpiará de toda maldad. 1 Juan 1:8",
+        "San Benito Joan Chittister \nEsté contento con lo que tiene y lo que se \nle da.",
+        "Se te han dado los dones y habilidades \nnecesarias para llevar a cabo la obra que \nDios te ha dado para hacer; no estés \nceloso de los dones de los demás. \nContentarse con menos de lo mejor.",
+        "\"El sexto paso de la humildad, estar \n'contentos con el tratamiento más bajo y \nservil', nos libera de nuestro falso yo. Ahora \npodemos tomar la vida como viene, llena de \nla paz personal que viene con ser liberados \nde la carga de lo superfluo, lo inauténtico, \nla mascarada. Es este tipo de humildad la \nque es la base de nuestro crecimiento, la \naltura de nuestro ser espiritual, lo mejor que \ntenemos que dar al mundo\". \n(Página 118) \n¿Quién es sabio y comprensivo entre ustedes? Demuestra con tu buena vida que \ntus obras se hacen con dulzura nacida de la sabiduría. Santiago 3: 13",
+        "Toma mi yugo sobre ti, y aprende de mí; porque soy gentil y humilde de corazón, y \nencontrarán descanso para sus almas. Mateo 11:29",
+        "San Benito Joan Chittister \nAdmite no solo en tus palabras \nsino también con tu corazón que \nno eres el centro de tu vida ni de \nlos que te rodean.",
+        "Pon a Dios primero en tu vida y \nmantente abierto a aprender los \ncaminos de Dios. Haz de Dios el \ncentro de tu vida. \nDeja ir un falso sentido de sí mismo.",
+        "\"El séptimo paso de la humildad es el \nautoconocimiento, la autoaceptación que necesito \npara creer en el crecimiento y la compasión tanto \npor mí mismo como por los demás. Es aquí, en el \nséptimo paso de humildad, que finalmente \naprendemos a no decir más: \"Así es como soy\". \nAhora podemos decir con gran buena voluntad y \ncierta fe: 'Hay más en lo que puedo llegar a ser'\". \n(Página 133) \nPero esfuérzate primero por el reino de Dios y su justicia, y todas estas cosas te serán \ndadas también. Mateo 6:33",
+        "Porque así dice el alto y elevado que habita la eternidad, cuyo nombre es Santo: \nYo habito en el lugar alto y santo, y también con los que son contritos y humildes \nen espíritu, para revivir el espíritu de los humildes y para revivir el corazón de los \ncontritos. \nIsaías 57:15",
+        "San Benito Joan Chittister \nSé en comunidad con los demás Preservar la tradición y aprender de la comunidad.  \ny no llames la atención sobre ti \nmismo.",
+        "\"Nuestras comunidades son el mundo en \nmicrocosmos. Es en ellos donde podemos ver el \nvalor de la tradición y la profundidad de la sabiduría \ncomunitaria. Los grupos se sacuden las hojas secas \ndel pasado. Podan el árbol de la tradición una y otra \nvez para que en todas las épocas siga vivo. El orden, \nla tradición, avanza de generación en generación, \ncreciendo aquí, siendo podada allí, adaptándose \nsiempre al suelo en el que se planta. Y nosotros \ntambién como personas\". \n(Página 152) \n La comunidad tiene que ver \ncon el bien común. Sé un buen \noyente y un reflejo del amor de \nCristo. \nCuanto más grande eres, más debes humillarte; por lo tanto, encontrarás favor en los \nojos del Señor. Eclesiástico 3:18",
+        "18En aquel tiempo, los discípulos se acercaron a Jesús y le preguntaron: \"¿Quién es el más \ngrande del reino? \ndel cielo?' 2Llamó a un niño, a quien puso entre ellos, 3y le dijo: \"De verdad te lo digo, a menos \nque \ncambias y te vuelves como niños, nunca entrarás en el reino de los cielos \n. 4El que se vuelve humilde como este niño es el más grande en el reino de los cielos. \n5Quien da la bienvenida a uno de esos niños en mi nombre, me da la bienvenida. Mateo 18:1- \n5,10,12-14",
+        "San Benito Joan Chittister \nControla tu lengua.",
+        "Sé consciente de cómo tus palabras \nafectan a los demás. Usa tus \npalabras para edificar, difundir el \nreino de Cristo y alabar a Dios. \nEscuchar.",
+        "\"El noveno paso de la humildad nos libera de \nhacer un santuario para nosotros mismos. Nos \nconecta. Se niega a permitirnos aislarnos de la \nparte de la creación que nacimos para bendecir \ncon nuestra apertura. Es a través de un silencio de \nescucha que nosotros mismos obtenemos \nsabiduría de las palabras e ideas de los demás\". \n(Página 166)",
+        "Si alguno piensa que es religioso, y no se ata la lengua sino que engaña a sus corazones, \nsu religión no vale nada. Santiago 1:26",
+        "Pero nadie puede domar la lengua, un mal inquieto, lleno de veneno mortal. 9Con ella \nbendecimos al Señor y al Padre, y con ella maldecimos a los que están hechos a \nsemejanza de Dios. \n10De la misma boca vienen la bendición y la maldición. Mis hermanos \ny hermanas, esto no debería ser así. Santiago 3:8-10",
+        "Para aquellos que desean la vida y desean ver días buenos, que mantengan sus lenguas \ndel mal y sus labios de hablar engaño; 1 Pedro 3:10",
+        "San Benito Joan Chittister \n No hagas bromas ni te rías a \nexpensas de los demás.",
+        "La risa que se deleita en el Señor y \nen los demás es un regalo de \nDios. Sé siempre amable y ten en \ncuenta los sentimientos de los \ndemás. \nNunca ridiculices a nadie ni a nada.",
+        "\"El punto espiritual del décimo paso de la humildad \nes que la humildad camina suavemente por la vida, \nbondadoso, cariñoso y con una dignidad que se \nniega \npara rebajarse a la risa pornográfica. Y porque \nde eso, todos somos mejores, todos más amables, \ntodos más felices, todos \nmás libre, todo más lleno del amor a la vida\". (Página \n179) \nAmarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con toda tu mente. \nEste es el mandamiento más grande y primero. Y un segundo es así: Amarás a tu prójimo \ncomo a ti mismo. De estos dos mandamientos penden toda la l ey y los profetas.  Mateo \n22:37-40",
+        "No ridiculices a una persona que está amargada en espíritu, porque hay Aquel que \nhumilla y exalta. Eclesiástico 7:11",
+        "San Benito Joan Chittister",
+        "Sé gentil y amoroso con los demás \ny no levantes la voz.",
+        "Vean a los demás como hijos \namados de Dios. Trate de entender \nde dónde vienen y trátelos con \ndignidad y respeto. \nHabla \namablemente.",
+        "\"El undécimo paso de la humildad consiste en \nllegar a darnos cuenta del verdadero valor, \nhabilidad y don para la humanidad de cada \npersona que veo. Se trata de comenzar a entender \nque cada persona que conocemos es un regalo de \nsabiduría para nosotros. Tenemos algo que \naprender de cada uno de ellos. Y tenemos algo \nque todos los que satisfacemos necesitan de \nnosotros: un sentido de valor, un respeto \nprofundo, una admiración genuina, un \nreconocimiento de su contribución al \nmundo\". \n(Página 192) \nFinalmente, todos ustedes, tienen unidad de espíritu, simpatía, amor el uno por el otro, \nun corazón tierno y una mente humilde. No pagues el mal por el mal o el abuso por el \nabuso; pero, por el contrario, retribuir con una bendición. Es por esto que fuiste \nllamado. \n1 Pedro 3: 8-9",
+        "Y todos ustedes deben vestirse de humildad en sus tratos unos con otros, porque \n\"Dios se opone a los orgullosos, pero da gracia a los humildes\". 1 Pedro 5:5",
+        "San Benito Joan Chittister \nSé humilde.",
+        "Eres un hijo amado de Dios. \nCompórtate de una manera que \ntodo lo que piensas, haces y dices \nes agradable en el suspiro de Dios, \npor Su causa. \nSé sereno, mantén la calma.",
+        "\"El duodécimo paso de la humildad se trata de \nvivir una vida integrada, una vida en la que cada \nparte está en armonía con cada otra dimensión. \nLo que pensamos, lo que decimos y la forma en \nque hacemos la vida no se pueden vivir bien \ncuando están en oposición entre sí\". (Páginas \n201-202) \nporque todos los que se exaltan a sí mismos serán humillados, pero todos los que \nse humillan a sí mismos serán exaltados\". Lucas 18: 9-14",
+        "Por lo tanto, sean imitadores de Dios, como hijos amados, y vivan en amor, como \nCristo nos amó y se entregó a sí mismo por nosotros, una ofrenda fragante y \nsacrificio a Dios. \nEfesios 5: 1-2"
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Cuál de los 12 pasos de la humildad cree que le resultará más difícil de seguir y por qué?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Por qué la humildad sería un atributo tan importante como miembro de La Orden? ",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "num": "DOCE",
+      "title": "¿Cuál es el siguiente paso?",
+      "part": "¿Ha sido usted llamada?",
+      "subtitle": "Discernimiento y admisión",
+      "summary": "¿Ha sido usted llamada? El énfasis de la Guía de Estudio Nacional se ha centrado en la historia de La Orden, en el objetivo y el propósito de esta, y en lo que hace de las Hijas especiales y únicas. Esperamos que haya comenzado a comprender la profundidad de la Regla de Vida de La Orden y los votos que tomará durante el Servicio de Admisión. Recuerde, no todo el mundo está llamado a ser miembro de La Orden de las Hijas del Rey®. Si usted ha sido llamada estará haciendo un voto de por vida a Dios. El camino de La…",
+      "content": [
+        "¿Ha sido usted llamada? \nEl énfasis de la Guía de Estudio Nacional se ha centrado en la historia de La Orden, en el objetivo y el \npropósito de esta, y en lo que hace de las Hijas especiales y únicas. Esperamos que haya comenzado a \ncomprender la profundidad de la Regla de Vida de La Orden y los votos que tomará durante el Servicio \nde Admisión.",
+        "Recuerde, no todo el mundo está llamado a ser miembro de La Orden de las Hijas del Rey®. Si usted ha sido \nllamada estará haciendo un voto de por vida a Dios. El camino de La Orden es un camino estrecho que requiere \nde oración y dirección espiritual para discernir.",
+        "Dirección espiritual Hay personas en su iglesia (clérigos y laicos), en La Orden y en su vida, a \nquienes se les ha dado el regalo de la “expresión de la sabiduría”, la “expresión del conocimiento” y/o el \n“discernimiento del espíritu”. Tómese el tiempo para sentarse con una de estas personas y hablar sobre su \nllamado.",
+        "¿Cómo solicitar la membresía en La Orden?  Ahora veremos la mecánica \npara convertirse en una miembro de La Orden.  Al concluir el período de preparación, la líde r de la \nGuía de Estudio coordinará junto con el grupo, la presidenta del capítulo, la presidenta de la Asamblea \ndiocesana y el clero para determinar una fecha para el Servicio de Admisión y/o el Servicio de la \nInstitución. La presidenta del capítulo o la l íder del estudio  enviará por correo los formularios \nrellenados a la Oficina Nacional, junto con su pago para la solicitud de un paquete de miembro nueva. \nEl precio del paquete de miembro nueva incluye la tarifa de admisión, las cuotas y la cruz de La Orden \nde su elección.",
+        "Si se está convirtiendo en una miembro de una iglesia que tiene un capítulo \nestablecido:",
+        " Debe completar la Guía de Estudio Nacional. \n Debe completar la Solicitud de membresía de adulta. \n Debe pagar el paquete de miembro nueva.",
+        "Si se está convirtiendo en miembro de una iglesia que está formando un capítulo nuevo: \n Debe completar la Guía de Estudio Nacional. \n Debe completar la Solicitud de membresía de adulta. \n Debe pagar el paquete de miembro nueva. \n El grupo debe seleccionar un nombre para el capítulo. \n El grupo debe seleccionar a las oficiales para que comiencen a servir cuando se instituya el \ncapítulo. \n El grupo debe enviar una Solicitud de la carta estatutaria. \nEl nombre del capítulo puede ser el mismo que el de su iglesia o puede ser el de un santo u otro modelo \ninspirador, tradicional o contemporáneo; dos ejemplos son Julián de Norwich y Madre Teresa. Se puede \nencontrar una gran cantidad de información sobre cómo comenzar un capítulo en El Manual del \nCapítulo, disponible para su compra en la Oficina Nacional o en el sitio web.",
+        "El Manual Nacional es la guía para estar bien info rmado y una fuente constante de información para \ntodas las miembros y oficiales. A continuación se muestra un resumen resumido de su contenido."
+      ],
+      "questions": [
+        {
+          "id": 2,
+          "text": "¿Quiénes son las oficiales de su capítulo?",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Qué debe hacer para solicitar la membresía en La Orden? ¿Cuánto cuesta el paquete de miembro nuevo?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "De acuerdo con nuestros Reglamento Nacional (Artículo III, Sección 7), no podemos recaudar dinero en nombre de La Orden. Entonces, ¿cómo se apoya económicamente el trabajo de La Orden?",
+          "type": "open"
+        },
+        {
+          "id": 5,
+          "text": "¿Entiende usted que existe una obligación monetaria al convert irse en miembro de La Orden y que usted está obligada a efectuar el pago anual de cuotas nacionales, cuotas del capítulo o donaciones de apoyo anual de los cuatro Fondos de la Orden, y a participar a través de ofrendas?",
+          "type": "open"
+        },
+        {
+          "id": 6,
+          "text": "¿Cómo pagan las miembros sus cuotas anuales y apoyan a los Fondos? ¿Cuál es el año fiscal de La Orden?",
+          "type": "open"
+        },
+        {
+          "id": 7,
+          "text": "Durante el servicio de instalación de las oficiales, ¿qué compromiso hacen las miembros con las oficiales?",
+          "type": "open"
+        },
+        {
+          "id": 8,
+          "text": "Hay información sobre la formación de capítulos en El Manual Nacional. ¿En qué página? ¿Cuántas mujeres se requieren para formar un capítulo?",
+          "type": "open"
+        },
+        {
+          "id": 9,
+          "text": "¿Qué es el Servicio de Rededicación? ¿Cuándo se usa? ¿Dónde se encuentra el Servicio de Rededicación en El Manual Nacional?",
+          "type": "open"
+        },
+        {
+          "id": 10,
+          "text": "Revise su compromiso personal con Cristo, tal como está escrito en su Regla de Vida. ¿Cómo planea vivir su Regla de Oración y Servicio en los próximos meses y años?",
+          "type": "open"
+        },
+        {
+          "id": 11,
+          "text": "¿Por qué es importante tomarse el tiempo para hablar con alguien sobre su llamado a La Orden? Por Su Amor, usted ha completado el",
+          "type": "open"
+        }
+      ]
+    }
+  ]
+}
