@@ -1,0 +1,240 @@
+{
+  "slug": "calvino-vida-cristiana",
+  "title": "Meditaciones cristianas",
+  "subtitle": "El Libro de Oro de la verdadera vida cristiana",
+  "author": "Juan Calvino",
+  "description": "Cinco capítulos devocionales de Calvino sobre obediencia, auto negación, la cruz y el uso cristiano de la vida presente.",
+  "category": "Espiritualidad reformada",
+  "estimatedWeeks": 5,
+  "available": true,
+  "lessons": [
+    {
+      "id": 1,
+      "title": "La obediencia humilde",
+      "part": "Vida cristiana",
+      "subtitle": "Imitación de Cristo y la Escritura como regla",
+      "summary": ", VERDADERA IMITACIÓN DE CRISTO La Escritura es la regla de la vida. 1 Aquí Calvino inserta: \"No soy la persona idónea para escribir copiosamente. ya que amo la brevedad. Es probable que lo intente en el futuro; de todas formas. dejaré esta tarea a los otros.\" 2 Evidentemente Calvino aquí está pensando en l Cor. 1-3. 5 La santidad es el principio clave",
+      "content": [
+        ", VERDADERA IMITACIÓN DE \nCRISTO \nLa Escritura es la regla de la vida.",
+        "1 Aquí Calvino inserta: \"No soy la persona idónea para escribir copiosamente. ya que amo la brevedad. Es \nprobable que lo intente en el futuro; de todas formas. dejaré esta tarea a los otros.\" \n2 Evidentemente Calvino aquí está pensando en l Cor. 1-3.",
+        "5 La santidad es el principio clave",
+        "La Santidad significa obediencia total a Cristo",
+        "No es suficiente una cristiandad externa.",
+        "Es necesario el progreso espiritual"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es la idea central de «La obediencia humilde»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué concepto o pasaje de esta lección le resultó más significativo? Explique por qué.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede aplicar lo aprendido en su vida personal o en su servicio en la iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué preguntas le quedan después de esta lectura? ¿Qué le gustaría profundizar?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepárese para compartir con su grupo: un aprendizaje clave de «Vida cristiana».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Auto negación",
+      "part": "Vida cristiana",
+      "subtitle": "No nos pertenecemos; somos del Señor",
+      "summary": "No nos pertenecemos, somos del Señor. 10 Buscar la gloria de Dios implica un auto negación. Auto negación significa\" sobriedad, justicia y devoción.",
+      "content": [
+        "No nos pertenecemos, somos del Señor.",
+        "10 \nBuscar la gloria de Dios implica un auto negación.",
+        "Auto negación significa\" sobriedad, justicia y devoción.",
+        "La verdadera humildad significa respeto por los demás.",
+        "Debemos buscar el bien de los demás creyentes.",
+        "Debemos buscar el bien de todos, amigos y enemigos.",
+        "Una buena conducta cívica no es suficiente.",
+        "17 \nNo hay felicidad sin la bendición de Dios.",
+        "18 \nNo debemos estar ansiosos por obtener riquezas y honores.",
+        "El Señor es justo en todos Sus actos."
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es la idea central de «Auto negación»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué concepto o pasaje de esta lección le resultó más significativo? Explique por qué.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede aplicar lo aprendido en su vida personal o en su servicio en la iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué preguntas le quedan después de esta lectura? ¿Qué le gustaría profundizar?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepárese para compartir con su grupo: un aprendizaje clave de «Vida cristiana».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pacientes y llevando la cruz",
+      "part": "Vida cristiana",
+      "subtitle": "La cruz y el progreso espiritual",
+      "summary": "Llevar la cruz es más difícil que negarse a sí mismo. La cruz nos hace humildes La cruz nos hace ser esperanzados",
+      "content": [
+        "Llevar la cruz es más difícil que negarse a sí mismo.",
+        "La cruz nos hace humildes",
+        "La cruz nos hace ser esperanzados",
+        "La cruz nos enseña obediencia.",
+        "La cruz contribuye a la disciplina.",
+        "25 \nLa cruz trae arrepentimiento.",
+        "26 \nLa persecución trae consigo el favor de Dios",
+        "27 La persecución debería producir gozo espiritual",
+        "Nuestra cruz no debería hacernos indiferentes.",
+        "La cruz es necesaria para nuestra sumisión.",
+        "30 La cruz es necesaria para nuestra salvación"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es la idea central de «Pacientes y llevando la cruz»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué concepto o pasaje de esta lección le resultó más significativo? Explique por qué.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede aplicar lo aprendido en su vida personal o en su servicio en la iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué preguntas le quedan después de esta lectura? ¿Qué le gustaría profundizar?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepárese para compartir con su grupo: un aprendizaje clave de «Vida cristiana».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "La desesperanza en el mundo venidero",
+      "part": "Vida cristiana",
+      "subtitle": "Esperanza más allá de este mundo",
+      "summary": "Nos inclinamos a sobrestimar la vida presente No deberíamos desdeñar las bendiciones de esta vida presente. ¿Qué es la tierra si la comparamos con el cielo?",
+      "content": [
+        "Nos inclinamos a sobrestimar la vida presente",
+        "No deberíamos desdeñar las bendiciones de esta vida presente.",
+        "¿Qué es la tierra si la comparamos con el cielo?",
+        "No deberíamos temer a la muerte, sino levantar nuestras cabezas",
+        "38 \nEl Señor vendrá en Su gloria: Maranata",
+        "3 Está añadido en la versión en francés.",
+        "39 \nUnas breves palabras para concluir"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es la idea central de «La desesperanza en el mundo venidero»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué concepto o pasaje de esta lección le resultó más significativo? Explique por qué.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede aplicar lo aprendido en su vida personal o en su servicio en la iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué preguntas le quedan después de esta lectura? ¿Qué le gustaría profundizar?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepárese para compartir con su grupo: un aprendizaje clave de «Vida cristiana».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "El uso correcto de la vida presente",
+      "part": "Vida cristiana",
+      "subtitle": "Vivir con sobriedad y devoción",
+      "summary": "Las cosas terrenales son regalos de Dios 42 La verdadera gratitud nos limitará cometer abusos 43 Vivamos con moderación.",
+      "content": [
+        "Las cosas terrenales son regalos de Dios",
+        "42 \nLa verdadera gratitud nos limitará cometer abusos",
+        "43 \nVivamos con moderación.",
+        "Seamos pacientes y contentémonos bajo las privaciones.",
+        "Sed fieles a vuestro llamamiento divino",
+        "46 Tabla de contenido \nLA ORACIÓN DE CALVINO .................................................................................................................... 3 \nCAPÍTULO 1: LA OBEDIENCIA HUMILDE, VERDADERA IMITACIÓN DE CRISTO ................................... 4 \nLa Escritura es la regla de la vida. .................................................................................................... 4 \nLa santidad es el principio clave ...................................................................................................... 5 \nLa Santidad significa obediencia total a Cristo ................................................................................ 5 \nNo es suficiente una cristiandad externa. ....................................................................................... 6 \nEs necesario el progreso espiritual ................................................................................................. 7 \nCAPITULO 2: AUTO NEGACIÓN ........................................................................................................... 9 \nNo nos pertenecemos, somos del Señor. ....................................................................................... 9 \nBuscar la gloria de Dios implica un auto negación. ....................................................................... 10 \nAuto negación significa\" sobriedad, justicia y devoción. .............................................................. 11 \nLa verdadera humildad significa respeto por los demás. .............................................................. 12 \nDebemos buscar el bien de los demás creyentes. ........................................................................ 13 \nDebemos buscar el bien de todos, amigos y enemigos. ............................................................... 15 \nUna buena conducta cívica no es suficiente. ................................................................................ 16 \nNo hay felicidad sin la bendición de Dios. ..................................................................................... 17 \nNo debemos estar ansiosos por obtener riquezas y honores. ...................................................... 18 \nEl Señor es justo en todos Sus actos. ............................................................................................ 19 \nCAPITULO 3: PACIENTES Y LLEVANDO LA CRUZ ................................................................................ 21 \nLlevar la cruz es más difícil que negarse a sí mismo. .................................................................... 21 \nLa cruz nos hace humildes ............................................................................................................. 21 \nLa cruz nos hace ser esperanzados ............................................................................................... 22 \nLa cruz nos enseña obediencia. ..................................................................................................... 23 \nLa cruz contribuye a la disciplina. .................................................................................................. 24 \nLa cruz trae arrepentimiento. ....................................................................................................... 25 \nLa persecución trae consigo el favor de Dios ................................................................................ 26 \nLa persecución debería producir gozo espiritual .......................................................................... 27 \nNuestra cruz no debería hacernos indiferentes. ........................................................................... 27 \nLa cruz es necesaria para nuestra sumisión. ................................................................................. 28 \nLa cruz es necesaria para nuestra salvación ................................................................................. 30 \nCAPITULO 4: LA DESESPERANZA EN EL MUNDO VENIDERO ............................................................. 32",
+        "47 No hay corona sin cruz. ................................................................................................................. 32 \nNos inclinamos a sobrestimar la vida presente ............................................................................ 33 \nNo deberíamos desdeñar las bendiciones de esta vida presente. ................................................ 34 \n¿Qué es la tierra si la comparamos con el cielo? .......................................................................... 35 \nNo deberíamos temer a la muerte, sino levantar nuestras cabezas............................................. 36 \nEl Señor vendrá en Su gloria: Maranata ........................................................................................ 38 \nUnas breves palabras para concluir .............................................................................................. 39 \nCAPITULO 5: EL USO CORRECTO DE LA VIDA PRESENTE ................................................................... 40 \nEvitemos los extremismos ............................................................................................................. 40 \nLas cosas terrenales son regalos de Dios ...................................................................................... 41 \nLa verdadera gratitud nos limitará cometer abusos ..................................................................... 42 \nVivamos con moderación. ............................................................................................................. 43 \nSeamos pacientes y contentémonos bajo las privaciones. ........................................................... 43 \nSed fieles a vuestro llamamiento divino ....................................................................................... 44",
+        "EL LIBRO DE ORO DE LA VERDADERA VIDA CRISTIANA \n(10-91)",
+        "a DIRECCIÓN de la EDITORIAL CLIE agradece sinceramente el que \nusted haya adquirido este libro, deseando que sea de su entera \nsatisfacción. Si desea recibir Información remítanos este volante, con su \nnombre y dirección, y le enviaremos gratuitamente nuestro Boletín de Novedades. \nCualquier observación que desee hacernos puede escribirle al dorso. Desprenda \nesta hoja tirando hacia afuera y de arriba a abajo y envíela a su Librero o a:",
+        "Editorial Clie: \nGalvani 113 08224. Terrassa (BCN) España  \nTel: (34) 93 788 4262  \nFax: (34) 93 780 0514  \ne-mail: libros@clie.es \nWeb: http://www.clie.es/",
+        "Nombre ______________________________________________ \nCalle ______________________________________________ \nCiudad ______________________________________________ \nEstado ______________________________________________ \nL",
+        "49 Edad ______________________________________________ \nProfesión ______________________________________________ \nNota ______________________________________________",
+        "Digitalizado por:  \nAbel Raúl Tec Kumul \nJueves 10 de Enero de 2008. \nCorrecciones y comentarios: \n abeltec@prodigy.net.mx"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "¿Cuál es la idea central de «El uso correcto de la vida presente»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "¿Qué concepto o pasaje de esta lección le resultó más significativo? Explique por qué.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "¿Cómo puede aplicar lo aprendido en su vida personal o en su servicio en la iglesia?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "¿Qué preguntas le quedan después de esta lectura? ¿Qué le gustaría profundizar?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepárese para compartir con su grupo: un aprendizaje clave de «Vida cristiana».",
+          "type": "open"
+        }
+      ]
+    }
+  ],
+  "lessonCount": 5
+}

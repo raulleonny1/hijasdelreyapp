@@ -1,0 +1,91 @@
+{
+  "courses": [
+    {
+      "slug": "guia-nacional",
+      "title": "Guía de Estudio Nacional",
+      "subtitle": "Preparación para La Orden de las Hijas del Rey®",
+      "author": "La Orden de las Hijas del Rey",
+      "description": "Doce estudios oficiales de preparación para la admisión en La Orden.",
+      "category": "Formación en La Orden",
+      "lessonCount": 12,
+      "estimatedWeeks": 12,
+      "available": true
+    },
+    {
+      "slug": "matrimonio-iere",
+      "title": "Matrimonio en la Comunión Anglicana",
+      "subtitle": "Celebración religiosa anglicana en España (IERE)",
+      "author": "Catalina Pons - Estel Tugores",
+      "description": "Estudio sobre el matrimonio sacramental en la Iglesia Española Reformada Episcopal: doctrina, requisitos civiles y eclesiásticos, y celebración litúrgica.",
+      "category": "Doctrina y vida sacramental",
+      "lessonCount": 7,
+      "estimatedWeeks": 5,
+      "available": true
+    },
+    {
+      "slug": "idiomas-biblia",
+      "title": "Los idiomas de la Santa Biblia",
+      "subtitle": "Hebreo, arameo y griego en las Escrituras",
+      "author": "Juan María Tellería Larrañaga",
+      "description": "Introducción pedagógica a las lenguas en que fue escrita la Biblia, para enriquecer la lectura y el estudio de las Sagradas Escrituras.",
+      "category": "Estudio bíblico",
+      "lessonCount": 4,
+      "estimatedWeeks": 4,
+      "available": true
+    },
+    {
+      "slug": "calvino-vida-cristiana",
+      "title": "Meditaciones cristianas",
+      "subtitle": "El Libro de Oro de la verdadera vida cristiana",
+      "author": "Juan Calvino",
+      "description": "Cinco capítulos devocionales de Calvino sobre obediencia, auto negación, la cruz y el uso cristiano de la vida presente.",
+      "category": "Espiritualidad reformada",
+      "lessonCount": 5,
+      "estimatedWeeks": 5,
+      "available": true
+    },
+    {
+      "slug": "lewis-problema-dolor",
+      "title": "El problema del dolor",
+      "subtitle": "Una respuesta cristiana al sufrimiento",
+      "author": "C. S. Lewis",
+      "description": "Clásico de apologética cristiana que explora por qué existe el dolor si Dios es bueno y todopoderoso, y qué respuesta ofrece la fe.",
+      "category": "Apologética y pastoral",
+      "lessonCount": 10,
+      "estimatedWeeks": 10,
+      "available": true
+    },
+    {
+      "slug": "libros-biblia",
+      "title": "Los libros de la Biblia",
+      "subtitle": "Panorama del Antiguo y Nuevo Testamento",
+      "author": "José Manuel Díaz Yanes – Juan María Tellería Larrañaga",
+      "description": "Curso introductorio que recorre cada gran sección de la Biblia: su mensaje, contexto y lugar en la Historia de la Salvación.",
+      "category": "Estudio bíblico",
+      "lessonCount": 9,
+      "estimatedWeeks": 9,
+      "available": true
+    },
+    {
+      "slug": "pulpito-cristiano",
+      "title": "Púlpito cristiano",
+      "subtitle": "Sermones para la predicación y el estudio grupal",
+      "author": "Samuel Vila",
+      "description": "Colección de sermones evangélicos con estructura clara: ideal para reflexión personal, grupos pequeños o preparación homilética.",
+      "category": "Homilética y predicación",
+      "lessonCount": 21,
+      "estimatedWeeks": 21,
+      "available": true
+    },
+    {
+      "slug": "moltmann-dios-crucificado",
+      "title": "El Dios crucificado",
+      "subtitle": "La cruz de Cristo como fundamento y crítica de la teología cristiana",
+      "author": "Jürgen Moltmann",
+      "description": "Este libro está en formato escaneado sin texto extraíble. Se añadirá cuando dispongamos de una versión digital legible.",
+      "category": "Teología sistemática",
+      "lessonCount": 0,
+      "available": false
+    }
+  ]
+}

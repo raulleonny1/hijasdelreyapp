@@ -1,61 +1,76 @@
 import Link from "next/link";
-import { StudyCard } from "@/components/StudyCard";
+import { CourseCard } from "@/components/CourseCard";
 import { getSession } from "@/lib/auth";
-import { getStudies } from "@/lib/studies";
+import { getCourseCatalog, GUIA_NACIONAL_SLUG } from "@/lib/courses";
 
 type Props = {
   searchParams?: Promise<{ registrado?: string }>;
 };
 
 export default async function EstudiosPage({ searchParams }: Props) {
-  const studies = getStudies();
+  const courses = getCourseCatalog();
   const session = await getSession();
   const params = searchParams ? await searchParams : {};
   const justRegistered = params.registrado === "1";
+  const guia = courses.find((c) => c.slug === GUIA_NACIONAL_SLUG);
+  const biblioteca = courses.filter((c) => c.slug !== GUIA_NACIONAL_SLUG);
 
   return (
     <div className="page-container py-8 sm:py-12">
       {justRegistered && (
         <div className="mb-6 rounded-2xl border border-gold/40 bg-gold/15 px-5 py-4 text-center text-sm text-navy">
-          ¡Bienvenida! Su cuenta está lista. Elija un estudio para comenzar.
+          ¡Bienvenida! Su cuenta está lista. Elija un curso para comenzar.
         </div>
       )}
 
-      <div className="mb-8 sm:mb-12">
+      <header className="mb-10 max-w-2xl">
         {session ? (
           <>
             <p className="text-xs font-semibold tracking-wider text-gold uppercase">
-              Su guía de estudio
+              Biblioteca de estudios
             </p>
             <h1 className="mt-2 font-serif text-2xl sm:text-4xl text-navy">
               Hola, {session.nombre}
             </h1>
-            <p className="mt-3 max-w-2xl text-navy/70 leading-relaxed">
-              Los doce estudios están listos. Cada sesión incluye resumen, lectura y preguntas.
-              Sus respuestas se guardan en la nube.
+            <p className="mt-3 text-navy/70 leading-relaxed">
+              Elija un curso. Cada lección tiene resumen, lectura y preguntas; sus respuestas se
+              guardan automáticamente.
             </p>
-            <Link
-              href="/estudios/1"
-              className="mt-6 inline-flex rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-navy-light"
-            >
-              Continuar con el Estudio 1 →
-            </Link>
           </>
         ) : (
           <>
-            <h1 className="font-serif text-2xl sm:text-4xl text-navy">Los doce estudios</h1>
-            <p className="mt-3 max-w-2xl text-navy/70 leading-relaxed">
-              Inicie sesión con su PIN para acceder a los estudios y guardar sus reflexiones.
+            <h1 className="font-serif text-2xl sm:text-4xl text-navy">Cursos de estudio</h1>
+            <p className="mt-3 text-navy/70 leading-relaxed">
+              Inicie sesión con su PIN para acceder a los cursos y guardar sus reflexiones.
             </p>
           </>
         )}
-      </div>
+      </header>
 
-      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {studies.map((study, i) => (
-          <StudyCard key={study.id} study={study} index={i} />
-        ))}
-      </div>
+      {guia && (
+        <section className="mb-10">
+          <CourseCard course={guia} featured />
+          {session && guia.available && (
+            <Link
+              href={`/estudios/${GUIA_NACIONAL_SLUG}/1`}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-navy-light"
+            >
+              Ir directo a la lección 1 de la Guía Nacional →
+            </Link>
+          )}
+        </section>
+      )}
+
+      {biblioteca.length > 0 && (
+        <section>
+          <h2 className="mb-4 font-serif text-xl text-navy">Biblioteca de formación</h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+            {biblioteca.map((course) => (
+              <CourseCard key={course.slug} course={course} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

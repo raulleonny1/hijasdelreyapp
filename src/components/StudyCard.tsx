@@ -9,9 +9,8 @@ type Props = {
 export function StudyCard({ study, index }: Props) {
   return (
     <Link
-      href={`/estudios/${study.id}`}
-      className="group relative overflow-hidden rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg"
-      style={{ animationDelay: `${index * 60}ms` }}
+      href={`/estudios/guia-nacional/${study.id}`}
+      className="group block w-full rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg"
     >
       <span className="absolute top-4 right-4 font-serif text-4xl text-navy/8 group-hover:text-gold/20">
         {String(study.id).padStart(2, "0")}

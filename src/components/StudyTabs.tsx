@@ -1,17 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import type { Study } from "@/types/study";
+import type { Lesson } from "@/types/course";
 import { normalizeParagraph } from "@/lib/studies";
 import { QuestionsForm } from "./QuestionsForm";
 
 type Tab = "resumen" | "lectura" | "preguntas";
 
 type Props = {
-  study: Study;
+  lesson: Lesson;
+  courseSlug: string;
 };
 
-export function StudyTabs({ study }: Props) {
+export function StudyTabs({ lesson, courseSlug }: Props) {
   const [tab, setTab] = useState<Tab>("resumen");
 
   const tabs: { id: Tab; label: string }[] = [
@@ -35,9 +36,9 @@ export function StudyTabs({ study }: Props) {
             }`}
           >
             {t.label}
-            {t.id === "preguntas" && study.questions.length > 0 && (
+            {t.id === "preguntas" && lesson.questions.length > 0 && (
               <span className="ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-xs text-gold">
-                {study.questions.length}
+                {lesson.questions.length}
               </span>
             )}
           </button>
@@ -48,15 +49,15 @@ export function StudyTabs({ study }: Props) {
         {tab === "resumen" && (
           <section className="rounded-2xl border border-gold/30 bg-gradient-to-br from-white to-cream p-5 sm:p-8">
             <h2 className="font-serif text-2xl text-navy mb-4">Resumen del estudio</h2>
-            <p className="text-lg leading-relaxed text-navy/90">{study.summary}</p>
+            <p className="text-lg leading-relaxed text-navy/90">{lesson.summary}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl bg-navy/5 p-4">
                 <p className="text-xs font-semibold tracking-wider text-gold uppercase">Sección</p>
-                <p className="mt-1 text-navy">{study.part}</p>
+                <p className="mt-1 text-navy">{lesson.part}</p>
               </div>
               <div className="rounded-xl bg-navy/5 p-4">
                 <p className="text-xs font-semibold tracking-wider text-gold uppercase">Enfoque</p>
-                <p className="mt-1 text-navy">{study.subtitle}</p>
+                <p className="mt-1 text-navy">{lesson.subtitle}</p>
               </div>
             </div>
             <button
@@ -72,13 +73,13 @@ export function StudyTabs({ study }: Props) {
         {tab === "lectura" && (
           <section className="prose-study max-w-none rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
             <h2 className="font-serif text-2xl text-navy mb-6">Material de estudio</h2>
-            {study.content.length === 0 ? (
+            {lesson.content.length === 0 ? (
               <p className="text-navy/60 italic">
-                El contenido de este estudio se encuentra en la guía impresa. Utilice la sección de
+                El contenido de esta lección se encuentra en el material impreso. Utilice la sección de
                 preguntas para su reflexión.
               </p>
             ) : (
-              study.content.map((para, i) => {
+              lesson.content.map((para, i) => {
                 const text = normalizeParagraph(para);
                 const isQuote =
                   text.includes("Anónimo") ||
@@ -112,7 +113,11 @@ export function StudyTabs({ study }: Props) {
                 desee.
               </p>
             </div>
-            <QuestionsForm studyId={study.id} questions={study.questions} />
+            <QuestionsForm
+              studyId={lesson.id}
+              courseSlug={courseSlug}
+              questions={lesson.questions}
+            />
           </section>
         )}
       </div>

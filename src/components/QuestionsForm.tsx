@@ -5,6 +5,7 @@ import type { Question } from "@/types/study";
 
 type Props = {
   studyId: number;
+  courseSlug: string;
   questions: Question[];
 };
 
@@ -14,7 +15,7 @@ function calcProgress(answers: Record<number, string>, total: number): number {
   return Math.round((answered / total) * 100);
 }
 
-export function QuestionsForm({ studyId, questions }: Props) {
+export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [progress, setProgress] = useState(0);
   const [saved, setSaved] = useState<number | null>(null);
@@ -23,7 +24,7 @@ export function QuestionsForm({ studyId, questions }: Props) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/answers?studyId=${studyId}`)
+    fetch(`/api/answers?studyId=${studyId}&courseId=${encodeURIComponent(courseSlug)}`)
       .then((r) => (r.ok ? r.json() : { answers: {} }))
       .then((d) => {
         const a = d.answers ?? {};
@@ -32,20 +33,20 @@ export function QuestionsForm({ studyId, questions }: Props) {
       })
       .catch(() => setAnswers({}))
       .finally(() => setLoading(false));
-  }, [studyId, questions.length]);
+  }, [studyId, courseSlug, questions.length]);
 
   const persistAnswer = useCallback(
     (questionId: number, value: string) => {
       fetch("/api/answers", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ studyId, questionId, value }),
+        body: JSON.stringify({ studyId, questionId, value, courseId: courseSlug }),
       }).then(() => {
         setSaved(questionId);
         setTimeout(() => setSaved(null), 1500);
       });
     },
-    [studyId],
+    [studyId, courseSlug],
   );
 
   const handleChange = useCallback(

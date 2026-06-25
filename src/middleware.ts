@@ -60,6 +60,13 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
+  const legacyStudy = pathname.match(/^\/estudios\/(\d+)$/);
+  if (legacyStudy) {
+    return NextResponse.redirect(
+      new URL(`/estudios/guia-nacional/${legacyStudy[1]}`, request.url),
+    );
+  }
+
   return NextResponse.next();
 }
 
