@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#002d62" />
+    <title>Sin conexión — Hijas del Rey</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: max(1.5rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right))
+          max(1.5rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f8f6f1;
+        color: #001a3d;
+        text-align: center;
+      }
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.75rem;
+        color: #002d62;
+        margin: 0 0 0.75rem;
+      }
+      p {
+        margin: 0;
+        color: rgba(0, 26, 61, 0.7);
+        line-height: 1.5;
+        max-width: 22rem;
+      }
+      button {
+        margin-top: 1.5rem;
+        border: 0;
+        border-radius: 999px;
+        background: #002d62;
+        color: #fff;
+        font: inherit;
+        font-weight: 600;
+        padding: 0.85rem 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sin conexión</h1>
+      <p>
+        No hay internet en este momento. Conéctese de nuevo para continuar con sus estudios.
+      </p>
+      <button type="button" onclick="location.reload()">Reintentar</button>
+    </main>
+  </body>
+</html>

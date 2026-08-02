@@ -14,6 +14,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Evita rebote horizontal en iOS al instalar como PWA */
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -22,6 +24,15 @@ body {
   color: var(--color-navy-dark);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
+  /* Altura correcta en Safari/PWA (dvh) */
+  min-height: 100dvh;
+}
+
+/* En modo standalone (app instalada) el fondo de barra queda navy */
+@media (display-mode: standalone) {
+  html {
+    background: var(--color-navy);
+  }
 }
 
 /* Contenedor estándar con padding en móvil y tablet */
