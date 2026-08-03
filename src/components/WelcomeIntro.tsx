@@ -57,7 +57,6 @@ export function WelcomeIntro() {
         if (!cancelled) setPhase("hidden");
       }, 800);
       try {
-        audio.muted = true;
         audio.volume = 0;
         audio.pause();
       } catch {
@@ -79,7 +78,6 @@ export function WelcomeIntro() {
         vol = clamp(remaining / FADE_OUT_SEC, 0, 1);
       }
 
-      // Asegurar sonido (Chrome Android exige muted=false además de volume)
       if (audio.muted) audio.muted = false;
       audio.volume = vol;
 
@@ -90,47 +88,7 @@ export function WelcomeIntro() {
       raf = requestAnimationFrame(updateVolume);
     };
 
-    const seekToStart = async () => {
-      try {
-        if (audio.readyState < 1) {
-          await new Promise<void>((resolve, reject) => {
-            const onOk = () => {
-              cleanup();
-              resolve();
-            };
-            const onErr = () => {
-              cleanup();
-              reject(new Error("audio error"));
-            };
-            const cleanup = () => {
-              audio.removeEventListener("loadedmetadata", onOk);
-              audio.removeEventListener("error", onErr);
-            };
-            audio.addEventListener("loadedmetadata", onOk, { once: true });
-            audio.addEventListener("error", onErr, { once: true });
-            audio.load();
-          });
-        }
-        audio.currentTime = START_SEC;
-      } catch {
-        /* ignore seek errors */
-      }
-    };
-
-    const playClip = async () => {
-      stopRaf();
-      await seekToStart();
-
-      // Chrome Android bloquea autoplay CON sonido.
-      // Arrancar muted (permitido) y luego subir volumen = suena sin toque.
-      audio.muted = true;
-      audio.volume = 0;
-      await audio.play();
-
-      if (cancelled) return;
-
-      // Ya está reproduciendo: quitar mute y hacer fade-in
-      audio.muted = false;
+    const showPlayingUi = () => {
       setBlocked(false);
       setPhase("enter");
       window.setTimeout(() => {
@@ -140,6 +98,45 @@ export function WelcomeIntro() {
       if (safetyTimer) clearTimeout(safetyTimer);
       safetyTimer = setTimeout(finish, (END_SEC - START_SEC) * 1000 + 900);
     };
+
+    const playClip = async () => {
+      stopRaf();
+      try {
+        audio.currentTime = START_SEC;
+      } catch {
+        /* ignore */
+      }
+
+      // 1) Como antes en PC/iPad: fade con sonido (volume 0 → 1)
+      try {
+        audio.muted = false;
+        audio.volume = 0;
+        await audio.play();
+        if (cancelled) return;
+        showPlayingUi();
+        return;
+      } catch {
+        /* algunos navegadores bloquean sonido sin gesto */
+      }
+
+      // 2) Android Chrome: primero muted (permitido), luego unmute + fade
+      try {
+        audio.muted = true;
+        audio.volume = 0;
+        try {
+          audio.currentTime = START_SEC;
+        } catch {
+          /* ignore */
+        }
+        await audio.play();
+        if (cancelled) return;
+        audio.muted = false;
+        showPlayingUi();
+        return;
+      } catch {
+        throw new Error("autoplay-blocked");
+      }
+    };
     startPlaybackRef.current = playClip;
 
     const tryAutoplay = async () => {
@@ -147,7 +144,6 @@ export function WelcomeIntro() {
         await playClip();
       } catch {
         if (cancelled) return;
-        // Solo si el navegador bloquea incluso muted: pedir un toque
         setBlocked(true);
         setPhase("enter");
         window.setTimeout(() => {
