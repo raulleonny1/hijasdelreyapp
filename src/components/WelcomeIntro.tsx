@@ -57,6 +57,7 @@ export function WelcomeIntro() {
         if (!cancelled) setPhase("hidden");
       }, 800);
       try {
+        audio.muted = true;
         audio.volume = 0;
         audio.pause();
       } catch {
@@ -78,6 +79,8 @@ export function WelcomeIntro() {
         vol = clamp(remaining / FADE_OUT_SEC, 0, 1);
       }
 
+      // Asegurar sonido (Chrome Android exige muted=false además de volume)
+      if (audio.muted) audio.muted = false;
       audio.volume = vol;
 
       if (t >= END_SEC) {
@@ -87,22 +90,54 @@ export function WelcomeIntro() {
       raf = requestAnimationFrame(updateVolume);
     };
 
-    const playClip = async () => {
-      stopRaf();
-      audio.volume = 0;
+    const seekToStart = async () => {
       try {
+        if (audio.readyState < 1) {
+          await new Promise<void>((resolve, reject) => {
+            const onOk = () => {
+              cleanup();
+              resolve();
+            };
+            const onErr = () => {
+              cleanup();
+              reject(new Error("audio error"));
+            };
+            const cleanup = () => {
+              audio.removeEventListener("loadedmetadata", onOk);
+              audio.removeEventListener("error", onErr);
+            };
+            audio.addEventListener("loadedmetadata", onOk, { once: true });
+            audio.addEventListener("error", onErr, { once: true });
+            audio.load();
+          });
+        }
         audio.currentTime = START_SEC;
       } catch {
-        /* ignore */
+        /* ignore seek errors */
       }
+    };
+
+    const playClip = async () => {
+      stopRaf();
+      await seekToStart();
+
+      // Chrome Android bloquea autoplay CON sonido.
+      // Arrancar muted (permitido) y luego subir volumen = suena sin toque.
+      audio.muted = true;
+      audio.volume = 0;
       await audio.play();
+
       if (cancelled) return;
+
+      // Ya está reproduciendo: quitar mute y hacer fade-in
+      audio.muted = false;
       setBlocked(false);
       setPhase("enter");
       window.setTimeout(() => {
         if (!cancelled && !finished) setPhase("visible");
       }, 40);
       raf = requestAnimationFrame(updateVolume);
+      if (safetyTimer) clearTimeout(safetyTimer);
       safetyTimer = setTimeout(finish, (END_SEC - START_SEC) * 1000 + 900);
     };
     startPlaybackRef.current = playClip;
@@ -112,6 +147,7 @@ export function WelcomeIntro() {
         await playClip();
       } catch {
         if (cancelled) return;
+        // Solo si el navegador bloquea incluso muted: pedir un toque
         setBlocked(true);
         setPhase("enter");
         window.setTimeout(() => {
