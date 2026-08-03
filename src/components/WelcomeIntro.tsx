@@ -16,6 +16,15 @@ function clamp(n: number, min: number, max: number) {
   return Math.min(max, Math.max(min, n));
 }
 
+/** iPhone / iPad (incluye iPadOS que se reporta como Mac). */
+function isAppleTouchDevice() {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent || "";
+  if (/iPad|iPhone|iPod/i.test(ua)) return true;
+  // iPadOS 13+: Safari se identifica como Macintosh con pantalla táctil
+  return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+}
+
 export function WelcomeIntro() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const finishRef = useRef<(() => void) | null>(null);
@@ -31,6 +40,7 @@ export function WelcomeIntro() {
     let finished = false;
     let safetyTimer: ReturnType<typeof setTimeout> | undefined;
     let raf = 0;
+    const onApple = isAppleTouchDevice();
 
     const audio = new Audio(AUDIO_SRC);
     audio.preload = "auto";
@@ -99,47 +109,84 @@ export function WelcomeIntro() {
       safetyTimer = setTimeout(finish, (END_SEC - START_SEC) * 1000 + 900);
     };
 
-    const playClip = async () => {
-      stopRaf();
+    const seekToStart = async () => {
       try {
+        if (audio.readyState < 1) {
+          await new Promise<void>((resolve, reject) => {
+            const onOk = () => {
+              cleanup();
+              resolve();
+            };
+            const onErr = () => {
+              cleanup();
+              reject(new Error("audio-load-failed"));
+            };
+            const cleanup = () => {
+              audio.removeEventListener("loadedmetadata", onOk);
+              audio.removeEventListener("error", onErr);
+            };
+            audio.addEventListener("loadedmetadata", onOk, { once: true });
+            audio.addEventListener("error", onErr, { once: true });
+            audio.load();
+          });
+        }
         audio.currentTime = START_SEC;
       } catch {
-        /* ignore */
+        /* ignore seek errors; play from wherever we can */
       }
+    };
 
-      // 1) Como antes en PC/iPad: fade con sonido (volume 0 → 1)
+    const playClip = async () => {
+      stopRaf();
+      await seekToStart();
+
+      // 1) Sonido real (PC e iPad cuando Safari lo permite)
       try {
         audio.muted = false;
         audio.volume = 0;
         await audio.play();
         if (cancelled) return;
-        showPlayingUi();
-        return;
-      } catch {
-        /* algunos navegadores bloquean sonido sin gesto */
-      }
-
-      // 2) Android Chrome: primero muted (permitido), luego unmute + fade
-      try {
-        audio.muted = true;
-        audio.volume = 0;
-        try {
-          audio.currentTime = START_SEC;
-        } catch {
-          /* ignore */
+        // Si Safari dejó muted a true, no hay audio → no fingir éxito
+        if (audio.muted) {
+          audio.pause();
+          throw new Error("still-muted");
         }
-        await audio.play();
-        if (cancelled) return;
-        audio.muted = false;
         showPlayingUi();
         return;
       } catch {
-        throw new Error("autoplay-blocked");
+        /* bloqueado sin gesto */
       }
+
+      // 2) Android Chrome: muted primero, luego unmute + fade
+      //    En iPad/iPhone NO usar esto: unmute sin gesto no suena y
+      //    ocultaría el mensaje "Toque para escuchar".
+      if (!onApple) {
+        try {
+          audio.muted = true;
+          audio.volume = 0;
+          await seekToStart();
+          await audio.play();
+          if (cancelled) return;
+          audio.muted = false;
+          if (audio.muted) {
+            audio.pause();
+            throw new Error("unmute-failed");
+          }
+          showPlayingUi();
+          return;
+        } catch {
+          /* caer a tap */
+        }
+      }
+
+      throw new Error("autoplay-blocked");
     };
     startPlaybackRef.current = playClip;
 
+    let autoplayStarted = false;
     const tryAutoplay = async () => {
+      if (autoplayStarted || cancelled || finished) return;
+      autoplayStarted = true;
       try {
         await playClip();
       } catch {
@@ -152,14 +199,16 @@ export function WelcomeIntro() {
       }
     };
 
-    const onMeta = () => {
+    const onReady = () => {
       void tryAutoplay();
     };
 
     if (audio.readyState >= 1) {
       void tryAutoplay();
     } else {
-      audio.addEventListener("loadedmetadata", onMeta, { once: true });
+      audio.addEventListener("loadedmetadata", onReady, { once: true });
+      // canplay ayuda en Safari cuando el seek a 30s necesita más buffer
+      audio.addEventListener("canplay", onReady, { once: true });
       audio.load();
     }
 
@@ -170,7 +219,8 @@ export function WelcomeIntro() {
       if (safetyTimer) clearTimeout(safetyTimer);
       stopRaf();
       audio.removeEventListener("ended", finish);
-      audio.removeEventListener("loadedmetadata", onMeta);
+      audio.removeEventListener("loadedmetadata", onReady);
+      audio.removeEventListener("canplay", onReady);
       try {
         audio.pause();
       } catch {
