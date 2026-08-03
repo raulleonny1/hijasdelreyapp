@@ -1,4 +1,4 @@
-# Hijas del Rey — Guía de Estudio
+# La Orden de las Hijas del Rey — Guía de Estudio
 
 Aplicación web para la **Guía de Estudio Nacional** de La Orden de las Hijas del Rey® (edición 2020).
 

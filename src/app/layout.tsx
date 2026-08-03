@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import { Header } from "@/components/Header";
 import { PwaRegister } from "@/components/PwaRegister";
+import { WelcomeIntro } from "@/components/WelcomeIntro";
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
@@ -17,10 +18,10 @@ const sans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Hijas del Rey — Guía de Estudio",
+  title: "La Orden de las Hijas del Rey — Guía de Estudio",
   description:
     "Guía de Estudio Nacional para la preparación en La Orden de las Hijas del Rey. Doce estudios con reflexión y preguntas.",
-  applicationName: "Hijas del Rey",
+  applicationName: "La Orden de las Hijas del Rey",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Hijas del Rey",
+    title: "La Orden de las Hijas del Rey",
   },
   formatDetection: {
     telephone: false,
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${serif.variable} ${sans.variable}`}>
       <body className="min-h-dvh antialiased overflow-x-hidden">
         <PwaRegister />
+        <WelcomeIntro />
         <Header />
         <main className="min-h-0">{children}</main>
         <footer className="mt-16 border-t border-navy/10 bg-navy py-10 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-center text-sm text-white/70 px-4">

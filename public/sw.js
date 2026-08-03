@@ -1,9 +1,9 @@
-/* Hijas del Rey — service worker mínimo y seguro.
+/* La Orden de las Hijas del Rey — service worker mínimo y seguro.
  * - Necesario para instalar en Android Chrome
  * - Nunca intercepta /api/* (auth, respuestas)
  * - Solo cachea iconos y assets estáticos
  */
-const CACHE = "hdr-static-v1";
+const CACHE = "hdr-static-v2";
 const PRECACHE = [
   "/offline.html",
   "/manifest.webmanifest",
@@ -11,6 +11,7 @@ const PRECACHE = [
   "/apple-touch-icon.png",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
+  "/logo.jpeg",
 ];
 
 self.addEventListener("install", (event) => {

@@ -74,7 +74,7 @@ export default function RegistroPage() {
   return (
     <AuthCard
       title="Crear cuenta"
-      subtitle="Complete sus datos para acceder a la guía de estudio"
+      subtitle="La Orden de las Hijas del Rey — complete sus datos para acceder"
       footer={
         <>
           ¿Ya tiene cuenta? <AuthLink href="/login">Iniciar sesión con PIN</AuthLink>

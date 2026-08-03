@@ -35,15 +35,21 @@ export function CourseCard({ course, featured }: Props) {
       <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-navy/50">
         {course.available ? (
           <>
-            <span>{course.lessonCount} lecciones</span>
-            {course.estimatedWeeks ? (
+            {course.format === "reading" ? (
+              <span>Documento de lectura</span>
+            ) : (
               <>
-                <span aria-hidden>·</span>
-                <span>~{course.estimatedWeeks} semanas</span>
+                <span>{course.lessonCount} lecciones</span>
+                {course.estimatedWeeks ? (
+                  <>
+                    <span aria-hidden>·</span>
+                    <span>~{course.estimatedWeeks} semanas</span>
+                  </>
+                ) : null}
               </>
-            ) : null}
+            )}
             <span className="ml-auto text-gold transition-transform group-hover:translate-x-1">
-              Ver curso →
+              {course.format === "reading" ? "Leer →" : "Ver curso →"}
             </span>
           </>
         ) : (

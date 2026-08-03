@@ -15,11 +15,14 @@ export function AuthCard({ title, subtitle, children, footer }: Props) {
         <div className="mb-8 text-center">
           <Image
             src="/logo.jpeg"
-            alt="Hijas del Rey"
+            alt="La Orden de las Hijas del Rey"
             width={72}
             height={72}
             className="mx-auto rounded-full ring-2 ring-gold/40 mb-4"
           />
+          <p className="mb-2 text-xs font-semibold tracking-wider text-gold uppercase">
+            La Orden de las Hijas del Rey
+          </p>
           <h1 className="font-serif text-3xl text-navy">{title}</h1>
           <p className="mt-2 text-navy/60">{subtitle}</p>
         </div>

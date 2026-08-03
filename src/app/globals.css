@@ -22,10 +22,11 @@ body {
   font-family: var(--font-sans);
   background: var(--color-cream);
   color: var(--color-navy-dark);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
   /* Altura correcta en Safari/PWA (dvh) */
   min-height: 100dvh;
+  /* Mejor toque en iOS/Android */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* En modo standalone (app instalada) el fondo de barra queda navy */
@@ -35,7 +36,7 @@ body {
   }
 }
 
-/* Contenedor estándar con padding en móvil y tablet */
+/* Contenedor estándar con padding en móvil y tablet (+ notch) */
 .page-container {
   width: 100%;
   max-width: 72rem;
@@ -89,3 +90,306 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.7;
   padding: 4px;
 }
+
+/* Bienvenida: luces alrededor del logo */
+@keyframes welcome-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes welcome-spin-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes welcome-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.35));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 28px rgba(232, 212, 139, 0.75));
+  }
+}
+
+@keyframes welcome-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.18);
+  }
+}
+
+@keyframes welcome-ray {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes welcome-spark {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.welcome-logo-stage {
+  position: relative;
+  width: 14.5rem;
+  height: 14.5rem;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 640px) {
+  .welcome-logo-stage {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+.welcome-glow {
+  position: absolute;
+  inset: 8%;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(232, 212, 139, 0.55) 0%,
+    rgba(201, 162, 39, 0.2) 45%,
+    transparent 70%
+  );
+  animation: welcome-glow 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.welcome-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.welcome-ring-a {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(232, 212, 139, 0.95) 40deg,
+    transparent 90deg,
+    rgba(201, 162, 39, 0.55) 160deg,
+    transparent 220deg,
+    rgba(255, 255, 255, 0.7) 280deg,
+    transparent 340deg
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+  animation: welcome-spin 4s linear infinite;
+}
+
+.welcome-ring-b {
+  inset: 10%;
+  background: conic-gradient(
+    from 90deg,
+    transparent 0deg,
+    rgba(201, 162, 39, 0.8) 50deg,
+    transparent 110deg,
+    rgba(232, 212, 139, 0.9) 200deg,
+    transparent 270deg
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  animation: welcome-spin-rev 6s linear infinite;
+}
+
+.welcome-rays {
+  position: absolute;
+  inset: -18%;
+  border-radius: 9999px;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(232, 212, 139, 0.35) 0deg 6deg,
+    transparent 6deg 30deg
+  );
+  mask: radial-gradient(farthest-side, transparent 42%, #000 58%, transparent 72%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 42%, #000 58%, transparent 72%);
+  animation: welcome-spin 10s linear infinite, welcome-ray 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.welcome-spark {
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: #fff8dc;
+  box-shadow: 0 0 10px 3px rgba(232, 212, 139, 0.9);
+  animation: welcome-spark 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.welcome-logo-img {
+  position: relative;
+  z-index: 2;
+  border-radius: 9999px;
+  animation: welcome-breathe 2.4s ease-in-out infinite;
+}
+
+/* Home: luces continuas alrededor del logo */
+@keyframes home-logo-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes home-logo-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.15), 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 36px 4px rgba(232, 212, 139, 0.35), 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.home-logo-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 1.75rem;
+}
+
+.home-logo-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(232, 212, 139, 0.45) 0%,
+    rgba(201, 162, 39, 0.18) 42%,
+    transparent 70%
+  );
+  animation: home-logo-glow 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.home-logo-ring {
+  position: absolute;
+  inset: 0.35rem;
+  border-radius: 1.5rem;
+  pointer-events: none;
+}
+
+.home-logo-ring-a {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(232, 212, 139, 0.9) 35deg,
+    transparent 85deg,
+    rgba(201, 162, 39, 0.5) 150deg,
+    transparent 210deg,
+    rgba(255, 255, 255, 0.55) 275deg,
+    transparent 335deg
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  animation: welcome-spin 8s linear infinite;
+  border-radius: 1.75rem;
+}
+
+.home-logo-ring-b {
+  inset: 0.9rem;
+  background: conic-gradient(
+    from 120deg,
+    transparent 0deg,
+    rgba(201, 162, 39, 0.7) 40deg,
+    transparent 100deg,
+    rgba(232, 212, 139, 0.8) 190deg,
+    transparent 260deg
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  animation: welcome-spin-rev 12s linear infinite;
+  border-radius: 1.5rem;
+}
+
+.home-logo-rays {
+  position: absolute;
+  inset: -12%;
+  border-radius: 9999px;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(232, 212, 139, 0.22) 0deg 5deg,
+    transparent 5deg 28deg
+  );
+  mask: radial-gradient(farthest-side, transparent 48%, #000 62%, transparent 78%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 48%, #000 62%, transparent 78%);
+  animation: welcome-spin 18s linear infinite, welcome-ray 3.2s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.home-logo-frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  animation: home-logo-breathe 3.8s ease-in-out infinite;
+}
+
+.home-logo-spark {
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: #fff8dc;
+  box-shadow: 0 0 10px 3px rgba(232, 212, 139, 0.85);
+  animation: welcome-spark 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-glow,
+  .welcome-ring-a,
+  .welcome-ring-b,
+  .welcome-rays,
+  .welcome-spark,
+  .welcome-logo-img {
+    animation: none !important;
+  }
+
+  .home-logo-glow,
+  .home-logo-ring-a,
+  .home-logo-ring-b,
+  .home-logo-rays,
+  .home-logo-spark,
+  .home-logo-frame {
+    animation: none !important;
+  }
+}
+

@@ -46,15 +46,34 @@ export default function HomePage() {
             <span className="hidden sm:block h-px w-8 bg-gold/50 shrink-0" />
           </p>
 
-          <div className="animate-fade-up relative mb-10">
-            <div className="absolute -inset-6 rounded-full bg-gold/10 blur-3xl" />
-            <div className="relative rounded-3xl bg-white/5 p-3 ring-1 ring-white/20 shadow-2xl backdrop-blur-sm">
+          <div className="animate-fade-up home-logo-stage relative mb-10">
+            <div className="home-logo-rays" aria-hidden />
+            <div className="home-logo-glow" aria-hidden />
+            <div className="home-logo-ring home-logo-ring-a" aria-hidden />
+            <div className="home-logo-ring home-logo-ring-b" aria-hidden />
+            <span className="home-logo-spark" style={{ top: "10%", left: "18%" }} aria-hidden />
+            <span
+              className="home-logo-spark"
+              style={{ top: "16%", right: "14%", animationDelay: "0.5s" }}
+              aria-hidden
+            />
+            <span
+              className="home-logo-spark"
+              style={{ bottom: "14%", left: "22%", animationDelay: "1s" }}
+              aria-hidden
+            />
+            <span
+              className="home-logo-spark"
+              style={{ bottom: "18%", right: "18%", animationDelay: "1.4s" }}
+              aria-hidden
+            />
+            <div className="home-logo-frame">
               <Image
                 src="/logo.jpeg"
                 alt="La Orden de las Hijas del Rey"
                 width={220}
                 height={220}
-                className="rounded-2xl w-[min(220px,70vw)] h-auto"
+                className="h-auto w-[min(220px,70vw)] rounded-2xl"
                 priority
               />
             </div>

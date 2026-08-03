@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LessonCard } from "@/components/LessonCard";
+import { ReadingDocument } from "@/components/ReadingDocument";
 import { getCourse, getCourseMeta } from "@/lib/courses";
 
 type Props = {
@@ -20,11 +21,36 @@ export default async function CoursePage({ params }: Props) {
   const course = await getCourse(courseSlug);
   if (!course || course.lessons.length === 0) notFound();
 
+  const isReading = course.format === "reading" || meta.format === "reading";
+
+  if (isReading) {
+    const lesson = course.lessons[0];
+    return (
+      <div className="page-container py-8 sm:py-12">
+        <Link
+          href="/estudios"
+          className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
+        >
+          ← Biblioteca de formación
+        </Link>
+
+        <div className="mt-6 rounded-none bg-white p-4 shadow-none sm:mt-8 sm:rounded-2xl sm:p-10 sm:shadow-sm">
+          <ReadingDocument
+            title={course.title}
+            subtitle={course.subtitle}
+            author={course.author}
+            content={lesson.content}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="page-container py-8 sm:py-12">
       <Link
         href="/estudios"
-        className="inline-flex items-center gap-1 text-sm text-navy/60 hover:text-navy transition"
+        className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
       >
         ← Todos los cursos
       </Link>
@@ -43,7 +69,7 @@ export default async function CoursePage({ params }: Props) {
         </p>
       </header>
 
-      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {course.lessons.map((lesson, i) => (
           <LessonCard
             key={lesson.id}

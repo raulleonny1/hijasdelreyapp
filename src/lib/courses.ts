@@ -8,6 +8,7 @@ export const GUIA_NACIONAL_SLUG = "guia-nacional";
 const catalog = catalogData as CourseCatalog;
 
 const courseModules: Record<string, () => Promise<Course>> = {
+  anglicanismo: async () => (await import("@/data/courses/anglicanismo.json")).default as Course,
   "matrimonio-iere": async () =>
     (await import("@/data/courses/matrimonio-iere.json")).default as Course,
   "idiomas-biblia": async () =>

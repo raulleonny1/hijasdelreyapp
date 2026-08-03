@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { StudyTabs } from "@/components/StudyTabs";
-import { getCourse, getCourseMeta, getLesson, getAllCourseSlugs } from "@/lib/courses";
+import { getAllCourseSlugs, getCourse, getCourseMeta, getLesson } from "@/lib/courses";
 
 type Props = {
   params: Promise<{ courseSlug: string; lessonId: string }>;
@@ -29,11 +29,18 @@ export default async function LessonPage({ params }: Props) {
 
   if (!meta || !meta.available || Number.isNaN(lessonId)) notFound();
 
+  const course = await getCourse(courseSlug);
+  if (!course) notFound();
+
+  // Documentos de lectura se muestran enteros en /estudios/[slug]
+  if (course.format === "reading" || meta.format === "reading") {
+    redirect(`/estudios/${courseSlug}`);
+  }
+
   const lesson = await getLesson(courseSlug, lessonId);
   if (!lesson) notFound();
 
-  const course = await getCourse(courseSlug);
-  const total = course?.lessons.length ?? 0;
+  const total = course.lessons.length;
   const prev = lessonId > 1 ? lessonId - 1 : null;
   const next = lessonId < total ? lessonId + 1 : null;
 
@@ -41,7 +48,7 @@ export default async function LessonPage({ params }: Props) {
     <div className="page-container max-w-4xl py-6 sm:py-10">
       <Link
         href={`/estudios/${courseSlug}`}
-        className="inline-flex items-center gap-1 text-sm text-navy/60 hover:text-navy transition"
+        className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
       >
         ← {meta.title}
       </Link>
@@ -59,7 +66,7 @@ export default async function LessonPage({ params }: Props) {
 
       <StudyTabs lesson={lesson} courseSlug={courseSlug} />
 
-      <nav className="mt-12 sm:mt-16 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between sm:gap-4 border-t border-navy/10 pt-6 sm:pt-8">
+      <nav className="mt-12 flex flex-col-reverse gap-3 border-t border-navy/10 pt-6 sm:mt-16 sm:flex-row sm:justify-between sm:gap-4 sm:pt-8">
         {prev ? (
           <Link
             href={`/estudios/${courseSlug}/${prev}`}
@@ -78,9 +85,7 @@ export default async function LessonPage({ params }: Props) {
             Lección {next} →
           </Link>
         ) : (
-          <p className="text-sm text-navy/50 text-center sm:text-left">
-            ¡Ha completado este curso!
-          </p>
+          <p className="text-center text-sm text-navy/50 sm:text-left">¡Ha completado este curso!</p>
         )}
       </nav>
     </div>

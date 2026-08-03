@@ -47,7 +47,7 @@ export default function LoginPage() {
   return (
     <AuthCard
       title="Bienvenida"
-      subtitle="Ingrese su PIN de 4 dígitos para continuar"
+      subtitle="La Orden de las Hijas del Rey — ingrese su PIN de 4 dígitos"
       footer={
         <>
           ¿Primera vez aquí?{" "}

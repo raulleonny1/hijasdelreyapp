@@ -60,8 +60,10 @@ export function Header() {
             className="h-10 w-10 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-12 sm:w-12"
           />
           <div className="hidden min-w-0 sm:block">
-            <p className="font-serif text-sm leading-tight text-white truncate">Hijas del Rey</p>
-            <p className="text-[10px] tracking-widest text-gold-light/80 uppercase hidden sm:block">
+            <p className="font-serif text-sm leading-snug text-white">
+              La Orden de las Hijas del Rey
+            </p>
+            <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
               Guía de estudio
             </p>
           </div>

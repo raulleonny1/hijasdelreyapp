@@ -12,6 +12,17 @@
       "available": true
     },
     {
+      "slug": "anglicanismo",
+      "title": "Anglicanismo",
+      "subtitle": "Identidad, historia y fe de la Comunión Anglicana",
+      "author": "Material de formación",
+      "description": "Documento completo de lectura sobre el Anglicanismo, con todo el texto e imágenes del material original.",
+      "category": "Biblioteca de formación",
+      "lessonCount": 1,
+      "available": true,
+      "format": "reading"
+    },
+    {
       "slug": "matrimonio-iere",
       "title": "Matrimonio en la Comunión Anglicana",
       "subtitle": "Celebración religiosa anglicana en España (IERE)",

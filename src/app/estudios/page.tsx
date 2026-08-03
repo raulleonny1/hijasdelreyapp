@@ -33,8 +33,9 @@ export default async function EstudiosPage({ searchParams }: Props) {
               Hola, {session.nombre}
             </h1>
             <p className="mt-3 text-navy/70 leading-relaxed">
-              Elija un curso. Cada lección tiene resumen, lectura y preguntas; sus respuestas se
-              guardan automáticamente.
+              Elija un curso o documento. Los estudios incluyen resumen, lectura y preguntas; los
+              documentos de lectura muestran el material completo. Sus respuestas se guardan
+              automáticamente.
             </p>
           </>
         ) : (

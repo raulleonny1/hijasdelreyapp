@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Lesson } from "@/types/course";
+import type { ContentBlock, Lesson } from "@/types/course";
 import { normalizeParagraph } from "@/lib/studies";
 import { QuestionsForm } from "./QuestionsForm";
 
@@ -11,6 +11,58 @@ type Props = {
   lesson: Lesson;
   courseSlug: string;
 };
+
+function renderBlock(block: ContentBlock, index: number) {
+  if (typeof block === "string") {
+    const text = normalizeParagraph(block);
+    const isQuote =
+      text.includes("Anónimo") || (text.length < 200 && text.split("\n").length > 2);
+    if (isQuote && text.length < 350) {
+      return (
+        <blockquote
+          key={index}
+          className="my-6 border-l-4 border-gold pl-6 font-serif text-lg italic text-navy/80"
+        >
+          {text.replace(/\s*Anónimo\s*$/i, "").trim()}
+        </blockquote>
+      );
+    }
+    return (
+      <p key={index} className="whitespace-pre-wrap text-navy/85">
+        {text}
+      </p>
+    );
+  }
+
+  if (block.type === "heading") {
+    const level = block.level ?? 2;
+    const className =
+      level <= 1
+        ? "mt-8 mb-3 font-serif text-xl sm:text-2xl text-navy leading-snug"
+        : "mt-8 mb-3 font-serif text-lg sm:text-xl text-navy leading-snug";
+    return (
+      <h3 key={index} className={className}>
+        {block.text}
+      </h3>
+    );
+  }
+
+  if (block.type === "image") {
+    return (
+      <figure key={index} className="my-6 overflow-hidden rounded-xl border border-navy/10 bg-cream/40 sm:my-8">
+        <img
+          src={block.src}
+          alt={block.alt ?? "Imagen del material de estudio"}
+          className="h-auto w-full object-contain"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    );
+  }
+
+  return null;
+}
 
 export function StudyTabs({ lesson, courseSlug }: Props) {
   const [tab, setTab] = useState<Tab>("resumen");
@@ -29,7 +81,7 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
             key={t.id}
             type="button"
             onClick={() => setTab(t.id)}
-            className={`rounded-full px-2 py-2.5 text-xs font-medium transition-all sm:px-5 sm:text-sm sm:w-auto ${
+            className={`min-h-11 rounded-full px-2 py-2.5 text-xs font-medium transition-all touch-manipulation sm:px-5 sm:text-sm sm:w-auto ${
               tab === t.id
                 ? "bg-navy text-white shadow-md"
                 : "bg-white text-navy/70 hover:bg-navy/5"
@@ -62,10 +114,10 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
             </div>
             <button
               type="button"
-              onClick={() => setTab("preguntas")}
+              onClick={() => setTab("lectura")}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-medium text-white transition hover:bg-navy-light"
             >
-              Ir a las preguntas de reflexión
+              Ir a la lectura completa
             </button>
           </section>
         )}
@@ -79,27 +131,7 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
                 preguntas para su reflexión.
               </p>
             ) : (
-              lesson.content.map((para, i) => {
-                const text = normalizeParagraph(para);
-                const isQuote =
-                  text.includes("Anónimo") ||
-                  (text.length < 200 && text.split("\n").length > 2);
-                if (isQuote && text.length < 350) {
-                  return (
-                    <blockquote
-                      key={i}
-                      className="my-6 border-l-4 border-gold pl-6 font-serif text-lg italic text-navy/80"
-                    >
-                      {text.replace(/\s*Anónimo\s*$/i, "").trim()}
-                    </blockquote>
-                  );
-                }
-                return (
-                  <p key={i} className="text-navy/85">
-                    {text}
-                  </p>
-                );
-              })
+              lesson.content.map((block, i) => renderBlock(block, i))
             )}
           </section>
         )}
