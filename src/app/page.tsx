@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PwaInstallButton } from "@/components/PwaInstallButton";
 import { data, getStudies } from "@/lib/studies";
 
 function CrossOrnament({ className = "" }: { className?: string }) {
@@ -109,9 +108,6 @@ export default function HomePage() {
             >
               Entrar con PIN
             </Link>
-            <div className="flex w-full justify-center sm:w-auto">
-              <PwaInstallButton />
-            </div>
           </div>
 
         </div>

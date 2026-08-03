@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import { Header } from "@/components/Header";
+import { PwaInstallBanner } from "@/components/PwaInstallBanner";
 import { PwaRegister } from "@/components/PwaRegister";
 import { WelcomeIntro } from "@/components/WelcomeIntro";
 import "./globals.css";
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p className="font-serif text-gold-light">MAGNANIMITER CRUCEM SUSTINE</p>
           <p className="mt-1 text-xs">La Orden de las Hijas del Rey® — Edición 2020</p>
         </footer>
+        <PwaInstallBanner />
       </body>
     </html>
   );
