@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CourseCard } from "@/components/CourseCard";
+import { PwaInstallButton } from "@/components/PwaInstallButton";
 import { getSession } from "@/lib/auth";
 import { getCourseCatalog, GUIA_NACIONAL_SLUG } from "@/lib/courses";
 
@@ -37,6 +38,9 @@ export default async function EstudiosPage({ searchParams }: Props) {
               documentos de lectura muestran el material completo. Sus respuestas se guardan
               automáticamente.
             </p>
+            <div className="mt-4">
+              <PwaInstallButton tone="onLight" />
+            </div>
           </>
         ) : (
           <>

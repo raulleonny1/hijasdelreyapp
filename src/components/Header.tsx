@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PwaInstallButton } from "@/components/PwaInstallButton";
 
 type User = {
   id: string;
@@ -70,6 +71,7 @@ export function Header() {
         </Link>
 
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-3">
+          <PwaInstallButton compact />
           <nav className="flex gap-0.5 sm:gap-1">
             {navLinks.map((link) => {
               const active =
