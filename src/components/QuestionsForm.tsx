@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Question } from "@/types/study";
+import { useLocale } from "@/components/LocaleProvider";
 
 type Props = {
   studyId: number;
@@ -16,6 +17,8 @@ function calcProgress(answers: Record<number, string>, total: number): number {
 }
 
 export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
+  const { t } = useLocale();
+  const Q = t.questions;
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [progress, setProgress] = useState(0);
   const [saved, setSaved] = useState<number | null>(null);
@@ -68,23 +71,17 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
   );
 
   if (loading) {
-    return (
-      <p className="rounded-xl bg-white p-8 text-center text-navy/60">Cargando sus respuestas…</p>
-    );
+    return <p className="rounded-xl bg-white p-8 text-center text-navy/60">{Q.loading}</p>;
   }
 
   if (questions.length === 0) {
-    return (
-      <p className="rounded-xl bg-white p-8 text-center text-navy/60">
-        Las preguntas de este estudio se están preparando. Consulte la guía impresa mientras tanto.
-      </p>
-    );
+    return <p className="rounded-xl bg-white p-8 text-center text-navy/60">{Q.empty}</p>;
   }
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between rounded-xl bg-white px-4 py-3 shadow-sm">
-        <span className="text-sm text-navy/70">Progreso en este estudio</span>
+        <span className="text-sm text-navy/70">{Q.progress}</span>
         <span className="font-semibold text-navy">{progress}%</span>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-navy/10">
@@ -109,12 +106,10 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
             rows={4}
             value={answers[q.id] ?? ""}
             onChange={(e) => handleChange(q.id, e.target.value)}
-            placeholder="Escriba su reflexión aquí…"
+            placeholder={Q.placeholder}
             className="mt-2 w-full resize-y rounded-xl border border-navy/15 bg-cream/50 px-4 py-3 text-navy placeholder:text-navy/35 focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy/30"
           />
-          {saved === q.id && (
-            <p className="mt-2 text-xs text-gold">Guardado en Firebase</p>
-          )}
+          {saved === q.id && <p className="mt-2 text-xs text-gold">{Q.saved}</p>}
         </label>
       ))}
     </div>

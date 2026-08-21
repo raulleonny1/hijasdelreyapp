@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ContentBlock, Lesson } from "@/types/course";
+import { useLocale } from "@/components/LocaleProvider";
 import { normalizeParagraph } from "@/lib/studies";
 import { QuestionsForm } from "./QuestionsForm";
 
@@ -12,7 +13,7 @@ type Props = {
   courseSlug: string;
 };
 
-function renderBlock(block: ContentBlock, index: number) {
+function renderBlock(block: ContentBlock, index: number, imageAlt: string) {
   if (typeof block === "string") {
     const text = normalizeParagraph(block);
     const isQuote =
@@ -52,7 +53,7 @@ function renderBlock(block: ContentBlock, index: number) {
       <figure key={index} className="my-6 overflow-hidden rounded-xl border border-navy/10 bg-cream/40 sm:my-8">
         <img
           src={block.src}
-          alt={block.alt ?? "Imagen del material de estudio"}
+          alt={block.alt ?? imageAlt}
           className="h-auto w-full object-contain"
           loading="lazy"
           decoding="async"
@@ -65,12 +66,14 @@ function renderBlock(block: ContentBlock, index: number) {
 }
 
 export function StudyTabs({ lesson, courseSlug }: Props) {
+  const { t } = useLocale();
+  const S = t.studyTabs;
   const [tab, setTab] = useState<Tab>("resumen");
 
   const tabs: { id: Tab; label: string }[] = [
-    { id: "resumen", label: "Resumen" },
-    { id: "lectura", label: "Lectura" },
-    { id: "preguntas", label: "Preguntas" },
+    { id: "resumen", label: S.summary },
+    { id: "lectura", label: S.reading },
+    { id: "preguntas", label: S.questions },
   ];
 
   return (
@@ -100,15 +103,15 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
       <div className="mt-8 animate-fade-up">
         {tab === "resumen" && (
           <section className="rounded-2xl border border-gold/30 bg-gradient-to-br from-white to-cream p-5 sm:p-8">
-            <h2 className="font-serif text-2xl text-navy mb-4">Resumen del estudio</h2>
+            <h2 className="font-serif text-2xl text-navy mb-4">{S.summaryTitle}</h2>
             <p className="text-lg leading-relaxed text-navy/90">{lesson.summary}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl bg-navy/5 p-4">
-                <p className="text-xs font-semibold tracking-wider text-gold uppercase">Sección</p>
+                <p className="text-xs font-semibold tracking-wider text-gold uppercase">{S.section}</p>
                 <p className="mt-1 text-navy">{lesson.part}</p>
               </div>
               <div className="rounded-xl bg-navy/5 p-4">
-                <p className="text-xs font-semibold tracking-wider text-gold uppercase">Enfoque</p>
+                <p className="text-xs font-semibold tracking-wider text-gold uppercase">{S.focus}</p>
                 <p className="mt-1 text-navy">{lesson.subtitle}</p>
               </div>
             </div>
@@ -117,21 +120,18 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
               onClick={() => setTab("lectura")}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-medium text-white transition hover:bg-navy-light"
             >
-              Ir a la lectura completa
+              {S.goReading}
             </button>
           </section>
         )}
 
         {tab === "lectura" && (
           <section className="prose-study max-w-none rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
-            <h2 className="font-serif text-2xl text-navy mb-6">Material de estudio</h2>
+            <h2 className="font-serif text-2xl text-navy mb-6">{S.material}</h2>
             {lesson.content.length === 0 ? (
-              <p className="text-navy/60 italic">
-                El contenido de esta lección se encuentra en el material impreso. Utilice la sección de
-                preguntas para su reflexión.
-              </p>
+              <p className="text-navy/60 italic">{S.emptyContent}</p>
             ) : (
-              lesson.content.map((block, i) => renderBlock(block, i))
+              lesson.content.map((block, i) => renderBlock(block, i, S.imageAlt))
             )}
           </section>
         )}
@@ -139,11 +139,7 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
         {tab === "preguntas" && (
           <section>
             <div className="mb-6 rounded-xl bg-navy/5 border border-navy/10 p-4 text-sm text-navy/80">
-              <p>
-                No hay respuestas correctas o incorrectas. Sus reflexiones se guardan en este
-                dispositivo de forma privada. Prepárese para compartir con su grupo cuando lo
-                desee.
-              </p>
+              <p>{S.questionsIntro}</p>
             </div>
             <QuestionsForm
               studyId={lesson.id}

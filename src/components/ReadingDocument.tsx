@@ -1,4 +1,7 @@
+"use client";
+
 import type { ContentBlock, ContentHeading } from "@/types/course";
+import { useLocale } from "@/components/LocaleProvider";
 
 type Props = {
   title: string;
@@ -22,14 +25,14 @@ function isHeading(block: ContentBlock): block is ContentHeading {
 }
 
 export function ReadingDocument({ title, subtitle, author, content }: Props) {
+  const { t } = useLocale();
+  const R = t.reading;
   const toc = content.filter(isHeading).filter((h) => (h.level ?? 2) <= 2).slice(0, 24);
 
   return (
     <article className="mx-auto max-w-3xl">
       <header className="mb-8 border-b border-navy/10 pb-6 sm:mb-10 sm:pb-8">
-        <p className="text-xs font-semibold tracking-wider text-gold uppercase">
-          Documento de lectura
-        </p>
+        <p className="text-xs font-semibold tracking-wider text-gold uppercase">{R.eyebrow}</p>
         <h1 className="mt-3 font-serif text-[1.75rem] leading-snug text-navy sm:text-4xl">
           {title}
         </h1>
@@ -39,10 +42,10 @@ export function ReadingDocument({ title, subtitle, author, content }: Props) {
 
       {toc.length > 4 && (
         <nav
-          aria-label="Índice"
+          aria-label={R.tocAria}
           className="mb-8 rounded-2xl border border-navy/10 bg-cream/60 p-4 sm:mb-10 sm:p-6"
         >
-          <p className="mb-2 text-xs font-semibold tracking-wider text-gold uppercase">Contenido</p>
+          <p className="mb-2 text-xs font-semibold tracking-wider text-gold uppercase">{R.contents}</p>
           <ol className="space-y-1 text-sm text-navy/80 sm:space-y-2">
             {toc.map((h, i) => (
               <li key={`${h.text}-${i}`} className={(h.level ?? 2) > 1 ? "pl-3" : ""}>
@@ -100,10 +103,9 @@ export function ReadingDocument({ title, subtitle, author, content }: Props) {
                   key={index}
                   className="my-6 -mx-4 overflow-hidden border-y border-navy/10 bg-cream/40 sm:mx-0 sm:my-8 sm:rounded-2xl sm:border sm:shadow-sm"
                 >
-                  {/* Imágenes del documento: <img> nativo para mejor compatibilidad móvil */}
                   <img
                     src={block.src}
-                    alt={block.alt ?? "Imagen del documento"}
+                    alt={block.alt ?? R.imageAlt}
                     className="h-auto w-full object-contain"
                     loading="lazy"
                     decoding="async"

@@ -3,9 +3,15 @@
 import { useState } from "react";
 import { AuthCard, AuthLink } from "@/components/AuthCard";
 import { BirthDatePicker } from "@/components/BirthDatePicker";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { PinInput } from "@/components/PinInput";
+import { useLocale } from "@/components/LocaleProvider";
+import { translateApiError } from "@/lib/i18n";
 
 export default function RegistroPage() {
+  const { locale, t } = useLocale();
+  const R = t.register;
+
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [fechaNacimiento, setFechaNacimiento] = useState("");
@@ -20,23 +26,23 @@ export default function RegistroPage() {
     setError("");
 
     if (!nombre.trim() || !apellido.trim()) {
-      setError("Nombre y apellido son obligatorios.");
+      setError(R.errNameRequired);
       return;
     }
     if (!fechaNacimiento || !/^\d{4}-\d{2}-\d{2}$/.test(fechaNacimiento)) {
-      setError("Seleccione su fecha de nacimiento (día, mes y año).");
+      setError(R.errBirthDate);
       return;
     }
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Ingrese un correo electrónico válido.");
+      setError(R.errEmail);
       return;
     }
     if (pin.length !== 4) {
-      setError("El PIN debe tener 4 dígitos.");
+      setError(R.errPinLength);
       return;
     }
     if (pin !== pinConfirm) {
-      setError("Los PIN no coinciden.");
+      setError(R.errPinMismatch);
       return;
     }
 
@@ -56,13 +62,12 @@ export default function RegistroPage() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error ?? "No se pudo registrar.");
+        setError(translateApiError(locale, data.error, R.errRegister));
         return;
       }
-      // Recarga completa para que la cookie de sesión se aplique antes del middleware
       window.location.href = "/estudios?registrado=1";
     } catch {
-      setError("Error de conexión. Intente de nuevo.");
+      setError(R.errConnection);
     } finally {
       setLoading(false);
     }
@@ -73,34 +78,35 @@ export default function RegistroPage() {
 
   return (
     <AuthCard
-      title="Crear cuenta"
-      subtitle="La Orden de las Hijas del Rey — complete sus datos para acceder"
+      title={R.title}
+      subtitle={R.subtitle}
+      languageSwitcher={<LanguageSwitcher variant="auth" />}
       footer={
         <>
-          ¿Ya tiene cuenta? <AuthLink href="/login">Iniciar sesión con PIN</AuthLink>
+          {R.hasAccount} <AuthLink href="/login">{R.signInPin}</AuthLink>
         </>
       }
     >
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="mb-1 block text-sm font-medium text-navy/80">Nombre</label>
+            <label className="mb-1 block text-sm font-medium text-navy/80">{R.firstName}</label>
             <input
               className={inputClass}
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
-              placeholder="María"
+              placeholder={R.placeholderFirst}
               autoComplete="given-name"
               required
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-navy/80">Apellido</label>
+            <label className="mb-1 block text-sm font-medium text-navy/80">{R.lastName}</label>
             <input
               className={inputClass}
               value={apellido}
               onChange={(e) => setApellido(e.target.value)}
-              placeholder="García"
+              placeholder={R.placeholderLast}
               autoComplete="family-name"
               required
             />
@@ -111,25 +117,25 @@ export default function RegistroPage() {
           value={fechaNacimiento}
           onChange={(v) => {
             setFechaNacimiento(v);
-            if (error.includes("fecha")) setError("");
+            if (error) setError("");
           }}
         />
 
         <div>
-          <label className="mb-1 block text-sm font-medium text-navy/80">Correo electrónico</label>
+          <label className="mb-1 block text-sm font-medium text-navy/80">{R.email}</label>
           <input
             type="email"
             className={inputClass}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="nombre@ejemplo.com"
+            placeholder={R.placeholderEmail}
             autoComplete="email"
             required
           />
         </div>
 
-        <PinInput value={pin} onChange={setPin} label="Cree su PIN (4 dígitos)" />
-        <PinInput value={pinConfirm} onChange={setPinConfirm} label="Confirme su PIN" />
+        <PinInput value={pin} onChange={setPin} label={R.pinCreate} />
+        <PinInput value={pinConfirm} onChange={setPinConfirm} label={R.pinConfirm} />
 
         {error && (
           <p className="text-sm text-red-600 text-center" role="alert">
@@ -142,7 +148,7 @@ export default function RegistroPage() {
           disabled={loading}
           className="w-full rounded-full bg-gold py-3.5 font-semibold text-navy-dark transition hover:bg-gold-light disabled:opacity-50"
         >
-          {loading ? "Registrando…" : "Crear cuenta"}
+          {loading ? R.submitting : R.submit}
         </button>
       </form>
     </AuthCard>

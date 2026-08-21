@@ -1,0 +1,240 @@
+{
+  "slug": "calvino-vida-cristiana",
+  "title": "Christian Meditations",
+  "subtitle": "The Golden Book of the True Christian Life",
+  "author": "John Calvin",
+  "description": "Five devotional chapters by Calvin on obedience, self-denial, the cross, and the Christian use of the present life.",
+  "category": "Reformed spirituality",
+  "estimatedWeeks": 5,
+  "available": true,
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Humble Obedience",
+      "part": "Christian life",
+      "subtitle": "Imitation of Christ and Scripture as the rule",
+      "summary": ", TRUE IMITATION OF CHRIST Scripture is the rule of life. 1 Here Calvin inserts: \"I am not the person suited to write at length, since I love brevity. It is likely that I will attempt it in the future; in any case, I will leave this task to others.\" 2 Evidently Calvin here is thinking of 1 Cor. 1–3. 5 Holiness is the key principle",
+      "content": [
+        ", TRUE IMITATION OF \nCHRIST \nScripture is the rule of life.",
+        "1 Here Calvin inserts: \"I am not the person suited to write at length, since I love brevity. It is \nlikely that I will attempt it in the future; in any case, I will leave this task to others.\" \n2 Evidently Calvin here is thinking of 1 Cor. 1–3.",
+        "5 Holiness is the key principle",
+        "Holiness means total obedience to Christ",
+        "External Christianity is not enough.",
+        "Spiritual progress is necessary"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the central idea of «Humble Obedience»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "What concept or passage from this lesson was most significant to you? Explain why.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "How can you apply what you have learned in your personal life or in your service in the church?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "What questions remain after this reading? What would you like to explore further?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepare to share with your group: a key takeaway from «Christian life».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Self-Denial",
+      "part": "Christian life",
+      "subtitle": "We do not belong to ourselves; we belong to the Lord",
+      "summary": "We do not belong to ourselves; we belong to the Lord. 10 Seeking the glory of God implies self-denial. Self-denial means sobriety, justice, and devotion.",
+      "content": [
+        "We do not belong to ourselves; we belong to the Lord.",
+        "10 \nSeeking the glory of God implies self-denial.",
+        "Self-denial means sobriety, justice, and devotion.",
+        "True humility means respect for others.",
+        "We must seek the good of other believers.",
+        "We must seek the good of all, friends and enemies.",
+        "Good civic conduct is not enough.",
+        "17 \nThere is no happiness without the blessing of God.",
+        "18 \nWe must not be anxious to obtain riches and honors.",
+        "The Lord is just in all His acts."
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the central idea of «Self-Denial»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "What concept or passage from this lesson was most significant to you? Explain why.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "How can you apply what you have learned in your personal life or in your service in the church?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "What questions remain after this reading? What would you like to explore further?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepare to share with your group: a key takeaway from «Christian life».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Patience and Bearing the Cross",
+      "part": "Christian life",
+      "subtitle": "The cross and spiritual progress",
+      "summary": "Bearing the cross is harder than denying oneself. The cross makes us humble The cross makes us hopeful",
+      "content": [
+        "Bearing the cross is harder than denying oneself.",
+        "The cross makes us humble",
+        "The cross makes us hopeful",
+        "The cross teaches us obedience.",
+        "The cross contributes to discipline.",
+        "25 \nThe cross brings repentance.",
+        "26 \nPersecution brings with it the favor of God",
+        "27 Persecution should produce spiritual joy",
+        "Our cross should not make us indifferent.",
+        "The cross is necessary for our submission.",
+        "30 The cross is necessary for our salvation"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the central idea of «Patience and Bearing the Cross»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "What concept or passage from this lesson was most significant to you? Explain why.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "How can you apply what you have learned in your personal life or in your service in the church?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "What questions remain after this reading? What would you like to explore further?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepare to share with your group: a key takeaway from «Christian life».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Longing for the World to Come",
+      "part": "Christian life",
+      "subtitle": "Hope beyond this world",
+      "summary": "We tend to overestimate the present life We should not despise the blessings of this present life. What is the earth compared with heaven?",
+      "content": [
+        "We tend to overestimate the present life",
+        "We should not despise the blessings of this present life.",
+        "What is the earth compared with heaven?",
+        "We should not fear death, but lift up our heads",
+        "38 \nThe Lord will come in His glory: Maranatha",
+        "3 This is added in the French version.",
+        "39 \nA few brief words by way of conclusion"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the central idea of «Longing for the World to Come»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "What concept or passage from this lesson was most significant to you? Explain why.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "How can you apply what you have learned in your personal life or in your service in the church?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "What questions remain after this reading? What would you like to explore further?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepare to share with your group: a key takeaway from «Christian life».",
+          "type": "open"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Right Use of the Present Life",
+      "part": "Christian life",
+      "subtitle": "Living with sobriety and devotion",
+      "summary": "Earthly things are gifts from God 42 True gratitude will restrain us from committing abuses 43 Let us live with moderation.",
+      "content": [
+        "Earthly things are gifts from God",
+        "42 \nTrue gratitude will restrain us from committing abuses",
+        "43 \nLet us live with moderation.",
+        "Let us be patient and content under privations.",
+        "Be faithful to your divine calling",
+        "46 Table of contents \nCALVIN'S PRAYER .................................................................................................................... 3 \nCHAPTER 1: HUMBLE OBEDIENCE, TRUE IMITATION OF CHRIST ................................... 4 \nScripture is the rule of life. .................................................................................................... 4 \nHoliness is the key principle ...................................................................................................... 5 \nHoliness means total obedience to Christ ................................................................................ 5 \nExternal Christianity is not enough. ....................................................................................... 6 \nSpiritual progress is necessary ................................................................................................. 7 \nCHAPTER 2: SELF-DENIAL ........................................................................................................... 9 \nWe do not belong to ourselves; we belong to the Lord. ....................................................................................... 9 \nSeeking the glory of God implies self-denial. ....................................................................... 10 \nSelf-denial means sobriety, justice, and devotion. .............................................................. 11 \nTrue humility means respect for others. .............................................................. 12 \nWe must seek the good of other believers. ........................................................................ 13 \nWe must seek the good of all, friends and enemies. ............................................................... 15 \nGood civic conduct is not enough. ................................................................................ 16 \nThere is no happiness without the blessing of God. ..................................................................................... 17 \nWe must not be anxious to obtain riches and honors. ...................................................... 18 \nThe Lord is just in all His acts. ............................................................................................ 19 \nCHAPTER 3: PATIENCE AND BEARING THE CROSS ................................................................................ 21 \nBearing the cross is harder than denying oneself. .................................................................... 21 \nThe cross makes us humble ............................................................................................................. 21 \nThe cross makes us hopeful ............................................................................................... 22 \nThe cross teaches us obedience. ..................................................................................................... 23 \nThe cross contributes to discipline. .................................................................................................. 24 \nThe cross brings repentance. ....................................................................................................... 25 \nPersecution brings with it the favor of God ................................................................................ 26 \nPersecution should produce spiritual joy .......................................................................... 27 \nOur cross should not make us indifferent. ........................................................................... 27 \nThe cross is necessary for our submission. ................................................................................. 28 \nThe cross is necessary for our salvation ................................................................................. 30 \nCHAPTER 4: LONGING FOR THE WORLD TO COME ............................................................. 32",
+        "47 There is no crown without a cross. ................................................................................................................. 32 \nWe tend to overestimate the present life ............................................................................ 33 \nWe should not despise the blessings of this present life. ................................................ 34 \nWhat is the earth compared with heaven? .......................................................................... 35 \nWe should not fear death, but lift up our heads............................................. 36 \nThe Lord will come in His glory: Maranatha ........................................................................................ 38 \nA few brief words by way of conclusion .............................................................................................. 39 \nCHAPTER 5: THE RIGHT USE OF THE PRESENT LIFE ................................................................... 40 \nLet us avoid extremes ............................................................................................................. 40 \nEarthly things are gifts from God ...................................................................................... 41 \nTrue gratitude will restrain us from committing abuses ..................................................................... 42 \nLet us live with moderation. ............................................................................................................. 43 \nLet us be patient and content under privations. ........................................................... 43 \nBe faithful to your divine calling ....................................................................................... 44",
+        "THE GOLDEN BOOK OF THE TRUE CHRISTIAN LIFE \n(10-91)",
+        "THE MANAGEMENT of EDITORIAL CLIE sincerely thanks you for \nhaving purchased this book, and hopes that it will be entirely to your \nsatisfaction. If you wish to receive information, please send us this slip, with your \nname and address, and we will send you our New Releases Bulletin free of charge. \nAny comments you wish to make may be written on the back. Detach \nthis sheet by pulling outward from top to bottom and send it to your bookseller or to:",
+        "Editorial Clie: \nGalvani 113 08224. Terrassa (BCN) Spain  \nTel: (34) 93 788 4262  \nFax: (34) 93 780 0514  \ne-mail: libros@clie.es \nWeb: http://www.clie.es/",
+        "Name ______________________________________________ \nStreet ______________________________________________ \nCity ______________________________________________ \nState ______________________________________________ \nL",
+        "49 Age ______________________________________________ \nProfession ______________________________________________ \nNote ______________________________________________",
+        "Digitized by:  \nAbel Raúl Tec Kumul \nThursday, January 10, 2008. \nCorrections and comments: \n abeltec@prodigy.net.mx"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the central idea of «The Right Use of the Present Life»?",
+          "type": "open"
+        },
+        {
+          "id": 2,
+          "text": "What concept or passage from this lesson was most significant to you? Explain why.",
+          "type": "open"
+        },
+        {
+          "id": 3,
+          "text": "How can you apply what you have learned in your personal life or in your service in the church?",
+          "type": "open"
+        },
+        {
+          "id": 4,
+          "text": "What questions remain after this reading? What would you like to explore further?",
+          "type": "reflection"
+        },
+        {
+          "id": 5,
+          "text": "Prepare to share with your group: a key takeaway from «Christian life».",
+          "type": "open"
+        }
+      ]
+    }
+  ],
+  "lessonCount": 5
+}

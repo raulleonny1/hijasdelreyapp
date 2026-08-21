@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLocale } from "@/components/LocaleProvider";
 
 type User = {
   id: string;
@@ -16,7 +18,7 @@ const AUTH_PAGES = ["/login", "/registro"];
 
 export function Header() {
   const pathname = usePathname();
-  const router = useRouter();
+  const { t } = useLocale();
   const [user, setUser] = useState<User | null>(null);
   const [checked, setChecked] = useState(false);
   const isAuthPage = AUTH_PAGES.includes(pathname);
@@ -39,10 +41,10 @@ export function Header() {
 
   const homeHref = user ? "/estudios" : "/";
   const navLinks = user
-    ? [{ href: "/estudios", label: "Estudios" }]
+    ? [{ href: "/estudios", label: t.nav.studies }]
     : [
-        { href: "/", label: "Inicio" },
-        { href: "/estudios", label: "Estudios" },
+        { href: "/", label: t.nav.home },
+        { href: "/estudios", label: t.nav.studies },
       ];
 
   return (
@@ -54,22 +56,22 @@ export function Header() {
         >
           <Image
             src="/logo.jpeg"
-            alt="La Orden de las Hijas del Rey"
+            alt={t.brand}
             width={44}
             height={44}
             className="h-10 w-10 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-12 sm:w-12"
           />
           <div className="hidden min-w-0 sm:block">
-            <p className="font-serif text-sm leading-snug text-white">
-              La Orden de las Hijas del Rey
-            </p>
+            <p className="font-serif text-sm leading-snug text-white">{t.brand}</p>
             <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
-              Guía de estudio
+              {t.studyGuide}
             </p>
           </div>
         </Link>
 
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-3">
+          <LanguageSwitcher variant="header" />
+
           <nav className="flex gap-0.5 sm:gap-1">
             {navLinks.map((link) => {
               const active =
@@ -103,7 +105,7 @@ export function Header() {
                     onClick={handleLogout}
                     className="rounded-full px-2 py-1 text-xs text-white/70 hover:bg-white/10 sm:px-3 sm:py-1.5"
                   >
-                    Salir
+                    {t.nav.logout}
                   </button>
                 </div>
               ) : (
@@ -112,14 +114,14 @@ export function Header() {
                     href="/login"
                     className="rounded-full px-2 py-1 text-xs text-white/90 hover:bg-white/10 sm:px-3 sm:py-1.5 sm:text-sm"
                   >
-                    Entrar
+                    {t.nav.enter}
                   </Link>
                   <Link
                     href="/registro"
                     className="rounded-full bg-gold px-2 py-1 text-xs font-semibold text-navy-dark hover:bg-gold-light sm:px-3 sm:py-1.5 sm:text-sm"
                   >
-                    <span className="hidden sm:inline">Registrarse</span>
-                    <span className="sm:hidden">Registro</span>
+                    <span className="hidden sm:inline">{t.nav.register}</span>
+                    <span className="sm:hidden">{t.nav.registerShort}</span>
                   </Link>
                 </div>
               )}

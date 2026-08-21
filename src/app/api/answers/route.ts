@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStudyAnswers, saveStudyAnswer } from "@/lib/answers-db";
 import { getSession } from "@/lib/auth";
-import { GUIA_NACIONAL_SLUG } from "@/lib/courses";
+import { GUIA_NACIONAL_SLUG } from "@/lib/course-constants";
 
 export async function GET(request: Request) {
   const session = await getSession();

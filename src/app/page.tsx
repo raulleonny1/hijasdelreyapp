@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { data, getStudies } from "@/lib/studies";
+import { useLocale } from "@/components/LocaleProvider";
 
 function CrossOrnament({ className = "" }: { className?: string }) {
   return (
@@ -15,12 +17,12 @@ function CrossOrnament({ className = "" }: { className?: string }) {
 }
 
 export default function HomePage() {
-  const studies = getStudies();
-  const { intro } = data;
+  const { t } = useLocale();
+  const h = t.home;
+  const { intro, studies } = h;
 
   return (
     <>
-      {/* Hero — solo visitantes sin sesión (con sesión el middleware envía a /estudios) */}
       <section className="relative min-h-[100dvh] sm:min-h-[90vh] overflow-hidden bg-navy text-white">
         <div
           className="absolute inset-0"
@@ -42,7 +44,7 @@ export default function HomePage() {
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pt-10 pb-16 sm:px-6 sm:pt-16 sm:pb-20 lg:pt-20">
           <p className="animate-fade-up mb-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.35em] text-gold uppercase max-w-[280px] sm:max-w-none">
             <span className="hidden sm:block h-px w-8 bg-gold/50 shrink-0" />
-            <span>La Orden de las Hijas del Rey</span>
+            <span>{t.brand}</span>
             <span className="hidden sm:block h-px w-8 bg-gold/50 shrink-0" />
           </p>
 
@@ -70,7 +72,7 @@ export default function HomePage() {
             <div className="home-logo-frame">
               <Image
                 src="/logo.jpeg"
-                alt="La Orden de las Hijas del Rey"
+                alt={t.brand}
                 width={220}
                 height={220}
                 className="h-auto w-[min(220px,70vw)] rounded-2xl"
@@ -100,26 +102,24 @@ export default function HomePage() {
               href="/registro"
               className="w-full sm:w-auto sm:min-w-[200px] rounded-full bg-gold px-8 py-3.5 sm:px-10 sm:py-4 text-center text-sm sm:text-base font-semibold text-navy-dark shadow-lg shadow-gold/20 transition hover:bg-gold-light"
             >
-              Crear mi cuenta
+              {h.createAccount}
             </Link>
             <Link
               href="/login"
               className="w-full sm:w-auto sm:min-w-[200px] rounded-full border border-white/25 bg-white/5 px-8 py-3.5 sm:px-10 sm:py-4 text-center text-sm sm:text-base font-medium text-white backdrop-blur-sm transition hover:bg-white/10"
             >
-              Entrar con PIN
+              {h.enterWithPin}
             </Link>
           </div>
-
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
       </section>
 
-      {/* Escritura */}
       <section className="relative -mt-8 bg-cream px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <CrossOrnament className="mx-auto mb-6" />
-          <blockquote className="font-serif text-xl leading-relaxed text-navy/90 italic sm:text-3xl px-2">
+          <blockquote className="font-serif text-xl leading-relaxed text-navy/90 italic sm:text-3xl px-2 whitespace-pre-line">
             {intro.scripture.replace(" — ", "\n— ")}
           </blockquote>
           <div className="mx-auto mt-8 flex justify-center gap-2">
@@ -130,16 +130,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Los 12 estudios */}
       <section className="bg-white px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase">Su camino</p>
-            <h2 className="mt-3 font-serif text-2xl sm:text-4xl text-navy px-2">Doce semanas de preparación</h2>
-            <p className="mx-auto mt-4 max-w-xl text-navy/60">
-              Cada sesión incluye lectura, reflexión y preguntas para compartir en comunidad.
-              Inicie sesión para guardar sus respuestas en la nube.
+            <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase">
+              {h.yourPath}
             </p>
+            <h2 className="mt-3 font-serif text-2xl sm:text-4xl text-navy px-2">
+              {h.twelveWeeks}
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-navy/60">{h.studiesBlurb}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {studies.map((study) => (
@@ -162,18 +162,17 @@ export default function HomePage() {
               href="/login?from=/estudios"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-8 py-3.5 font-medium text-white transition hover:bg-navy-light"
             >
-              Acceder a los estudios
+              {h.accessStudies}
               <span aria-hidden>→</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Propósito */}
       <section className="bg-cream px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-serif text-3xl text-navy text-center mb-3">Propósito de la guía</h2>
-          <p className="text-center text-navy/55 mb-12">Fundamentos de su preparación espiritual</p>
+          <h2 className="font-serif text-3xl text-navy text-center mb-3">{h.purposeTitle}</h2>
+          <p className="text-center text-navy/55 mb-12">{h.purposeSubtitle}</p>
           <ul className="grid gap-5 sm:grid-cols-2">
             {intro.purposes.map((purpose, i) => (
               <li
@@ -190,7 +189,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Lema */}
       <section className="relative overflow-hidden bg-navy px-4 py-24 sm:px-6 text-white text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,39,0.12)_0%,transparent_70%)]" />
         <div className="relative mx-auto max-w-2xl">
@@ -202,24 +200,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA final */}
       <section className="px-4 py-16 sm:px-6 bg-cream border-t border-navy/5">
         <div className="mx-auto max-w-xl text-center">
-          <p className="text-navy/70 mb-6">
-            Cuando esté lista, cree su cuenta y comience el Estudio Uno con su PIN personal.
-          </p>
+          <p className="text-navy/70 mb-6">{h.ctaReady}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/registro"
               className="rounded-full bg-gold px-8 py-3 font-semibold text-navy-dark hover:bg-gold-light transition"
             >
-              Registrarse
+              {h.register}
             </Link>
             <Link
               href="/login"
               className="rounded-full border border-navy/20 px-8 py-3 font-medium text-navy hover:bg-navy/5 transition"
             >
-              Iniciar sesión
+              {h.signIn}
             </Link>
           </div>
         </div>

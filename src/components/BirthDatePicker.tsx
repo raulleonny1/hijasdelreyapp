@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
-
-const MONTHS = [
-  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
-];
+import { useLocale } from "@/components/LocaleProvider";
 
 type Props = {
   value: string;
@@ -31,16 +27,9 @@ function toIso(day: number, month: number, year: number): string {
   return `${year}-${String(month).padStart(2, "0")}-${String(clamped).padStart(2, "0")}`;
 }
 
-function formatDisplay(iso: string): string {
-  return new Date(iso + "T12:00:00").toLocaleDateString("es", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
-
 export function BirthDatePicker({ value, onChange }: Props) {
+  const { locale, t } = useLocale();
+  const B = t.birthDate;
   const id = useId();
   const parsed = parseIso(value);
   const [day, setDay] = useState(parsed.day);
@@ -83,6 +72,14 @@ export function BirthDatePicker({ value, onChange }: Props) {
     onChange(iso);
   };
 
+  const formatDisplay = (iso: string) =>
+    new Date(iso + "T12:00:00").toLocaleDateString(locale === "en" ? "en" : "es", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+
   const selectClass =
     "w-full min-h-[48px] rounded-xl border border-navy/15 bg-white px-3 py-3 text-base text-navy focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20 cursor-pointer touch-manipulation";
 
@@ -90,14 +87,14 @@ export function BirthDatePicker({ value, onChange }: Props) {
     <div>
       <div className="mb-2 flex items-center justify-between gap-2">
         <label htmlFor={`${id}-date`} className="text-sm font-medium text-navy/80">
-          Fecha de nacimiento
+          {B.label}
         </label>
         <button
           type="button"
           onClick={() => setMode(mode === "calendar" ? "manual" : "calendar")}
           className="text-xs text-navy/50 underline hover:text-gold"
         >
-          {mode === "calendar" ? "Elegir día / mes / año" : "Usar calendario"}
+          {mode === "calendar" ? B.pickParts : B.useCalendar}
         </button>
       </div>
 
@@ -116,7 +113,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <div>
             <label htmlFor={`${id}-day`} className="mb-1 block text-xs text-navy/50">
-              Día
+              {B.day}
             </label>
             <select
               id={`${id}-day`}
@@ -134,7 +131,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
           </div>
           <div>
             <label htmlFor={`${id}-month`} className="mb-1 block text-xs text-navy/50">
-              Mes
+              {B.month}
             </label>
             <select
               id={`${id}-month`}
@@ -150,7 +147,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
               }}
             >
               <option value="">—</option>
-              {MONTHS.map((name, i) => (
+              {B.months.map((name, i) => (
                 <option key={name} value={i + 1}>
                   {name}
                 </option>
@@ -159,7 +156,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
           </div>
           <div>
             <label htmlFor={`${id}-year`} className="mb-1 block text-xs text-navy/50">
-              Año
+              {B.year}
             </label>
             <select
               id={`${id}-year`}
@@ -190,9 +187,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
           {formatDisplay(value)}
         </p>
       ) : (
-        <p className="mt-2 text-center text-xs text-navy/45">
-          Toque el campo de fecha o elija día, mes y año
-        </p>
+        <p className="mt-2 text-center text-xs text-navy/45">{B.hint}</p>
       )}
     </div>
   );

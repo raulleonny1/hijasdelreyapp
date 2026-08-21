@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useLocale } from "@/components/LocaleProvider";
 
 type Props = {
   value: string;
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export function PinInput({ value, onChange, length = 4, label, autoFocus }: Props) {
+  const { t } = useLocale();
   const inputs = useRef<(HTMLInputElement | null)[]>([]);
   const digits = value.padEnd(length, " ").slice(0, length).split("");
 
@@ -40,9 +42,7 @@ export function PinInput({ value, onChange, length = 4, label, autoFocus }: Prop
 
   return (
     <div>
-      {label && (
-        <p className="mb-3 text-sm font-medium text-navy/80">{label}</p>
-      )}
+      {label && <p className="mb-3 text-sm font-medium text-navy/80">{label}</p>}
       <div className="flex justify-center gap-2 sm:gap-4 max-w-xs mx-auto" onPaste={handlePaste}>
         {Array.from({ length }).map((_, i) => (
           <input
@@ -56,7 +56,7 @@ export function PinInput({ value, onChange, length = 4, label, autoFocus }: Prop
             maxLength={1}
             autoFocus={autoFocus && i === 0}
             autoComplete={i === 0 ? "one-time-code" : "off"}
-            aria-label={`Dígito ${i + 1}`}
+            aria-label={`${t.pinDigit} ${i + 1}`}
             value={digits[i]?.trim() ? digits[i] : ""}
             onChange={(e) => setDigit(i, e.target.value)}
             onKeyDown={(e) => handleKeyDown(i, e)}

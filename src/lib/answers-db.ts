@@ -1,5 +1,5 @@
 import { getAdminFirestore } from "@/lib/firebase/admin";
-import { GUIA_NACIONAL_SLUG } from "@/lib/courses";
+import { GUIA_NACIONAL_SLUG } from "@/lib/course-constants";
 
 const ANSWERS = "answers";
 

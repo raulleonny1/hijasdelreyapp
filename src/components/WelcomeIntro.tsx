@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "@/components/LocaleProvider";
 
 const AUDIO_SRC = "/sound/alzad-la-cruz.m4a";
 const START_SEC = 30;
@@ -26,6 +27,7 @@ function isAppleTouchDevice() {
 }
 
 export function WelcomeIntro() {
+  const { t } = useLocale();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const finishRef = useRef<(() => void) | null>(null);
   const startPlaybackRef = useRef<(() => Promise<void>) | null>(null);
@@ -252,7 +254,7 @@ export function WelcomeIntro() {
         exiting ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
       role="dialog"
-      aria-label="Bienvenida — La Orden de las Hijas del Rey"
+      aria-label={t.welcome.aria}
       onClick={() => void handleTap()}
     >
       <div
@@ -285,7 +287,7 @@ export function WelcomeIntro() {
           />
           <Image
             src="/logo.jpeg"
-            alt="La Orden de las Hijas del Rey"
+            alt={t.brand}
             width={200}
             height={200}
             priority
@@ -293,12 +295,10 @@ export function WelcomeIntro() {
           />
         </div>
         <p className="max-w-[16rem] text-center font-serif text-lg leading-snug text-gold-light drop-shadow sm:max-w-none sm:text-xl">
-          La Orden de las Hijas del Rey
+          {t.brand}
         </p>
         {blocked && (
-          <p className="max-w-xs text-center text-sm text-white/80">
-            Toque para escuchar el himno
-          </p>
+          <p className="max-w-xs text-center text-sm text-white/80">{t.welcome.tap}</p>
         )}
       </div>
     </div>

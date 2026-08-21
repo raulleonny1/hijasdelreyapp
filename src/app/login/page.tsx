@@ -3,12 +3,17 @@
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { AuthCard, AuthLink } from "@/components/AuthCard";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { PinInput } from "@/components/PinInput";
+import { useLocale } from "@/components/LocaleProvider";
+import { translateApiError } from "@/lib/i18n";
 
 export default function LoginPage() {
   const searchParams = useSearchParams();
   const from = searchParams.get("from") ?? "/estudios";
   const registered = searchParams.get("registrado") === "1";
+  const { locale, t } = useLocale();
+  const L = t.login;
 
   const [pin, setPin] = useState("");
   const [error, setError] = useState("");
@@ -18,7 +23,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
     if (pin.length !== 4) {
-      setError("Ingrese los 4 dígitos de su PIN.");
+      setError(L.errPinLength);
       return;
     }
     setLoading(true);
@@ -30,7 +35,7 @@ export default function LoginPage() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error ?? "No se pudo iniciar sesión.");
+        setError(translateApiError(locale, data.error, L.errLogin));
         setPin("");
         return;
       }
@@ -38,7 +43,7 @@ export default function LoginPage() {
         from && from.startsWith("/") && !from.startsWith("//") && from !== "/" ? from : "/estudios";
       window.location.href = target;
     } catch {
-      setError("Error de conexión. Intente de nuevo.");
+      setError(L.errConnection);
     } finally {
       setLoading(false);
     }
@@ -46,22 +51,22 @@ export default function LoginPage() {
 
   return (
     <AuthCard
-      title="Bienvenida"
-      subtitle="La Orden de las Hijas del Rey — ingrese su PIN de 4 dígitos"
+      title={L.title}
+      subtitle={L.subtitle}
+      languageSwitcher={<LanguageSwitcher variant="auth" />}
       footer={
         <>
-          ¿Primera vez aquí?{" "}
-          <AuthLink href="/registro">Crear cuenta</AuthLink>
+          {L.firstTime} <AuthLink href="/registro">{L.createAccount}</AuthLink>
         </>
       }
     >
       {registered && (
         <p className="mb-6 rounded-xl bg-gold/15 px-4 py-3 text-sm text-navy text-center">
-          ¡Registro exitoso! Use el PIN que eligió para entrar.
+          {L.registeredOk}
         </p>
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
-        <PinInput value={pin} onChange={setPin} autoFocus label="Su PIN personal" />
+        <PinInput value={pin} onChange={setPin} autoFocus label={L.pinLabel} />
         {error && (
           <p className="text-center text-sm text-red-600" role="alert">
             {error}
@@ -72,7 +77,7 @@ export default function LoginPage() {
           disabled={loading || pin.length !== 4}
           className="w-full rounded-full bg-navy py-3.5 font-semibold text-white transition hover:bg-navy-light disabled:opacity-50"
         >
-          {loading ? "Entrando…" : "Entrar"}
+          {loading ? L.entering : L.enter}
         </button>
       </form>
     </AuthCard>
