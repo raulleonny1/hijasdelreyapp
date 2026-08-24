@@ -22,22 +22,23 @@ export function Header() {
   const [user, setUser] = useState<User | null>(null);
   const [checked, setChecked] = useState(false);
   const isAuthPage = AUTH_PAGES.includes(pathname);
+  const isAdminPage = pathname === "/admin" || pathname.startsWith("/admin/");
 
   useEffect(() => {
-    if (isAuthPage) return;
+    if (isAuthPage || isAdminPage) return;
     fetch("/api/auth/me")
       .then((r) => (r.ok ? r.json() : { user: null }))
       .then((d) => setUser(d.user ?? null))
       .catch(() => setUser(null))
       .finally(() => setChecked(true));
-  }, [pathname, isAuthPage]);
+  }, [pathname, isAuthPage, isAdminPage]);
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
     window.location.href = "/";
   };
 
-  if (isAuthPage) return null;
+  if (isAuthPage || isAdminPage) return null;
 
   const homeHref = user ? "/estudios" : "/";
   const navLinks = user

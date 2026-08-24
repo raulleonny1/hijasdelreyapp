@@ -1,6 +1,7 @@
 import { jwtVerify } from "jose";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { ADMIN_COOKIE_NAME } from "@/lib/admin-constants";
 
 const COOKIE_NAME = "hdr_session";
 const PUBLIC_PATHS = ["/", "/login", "/registro"];
@@ -12,6 +13,11 @@ function getSecret(): Uint8Array {
   return new TextEncoder().encode(secret);
 }
 
+function getAdminSecret(): Uint8Array {
+  const secret = process.env.AUTH_SECRET ?? "hijas-del-rey-dev-secret-cambiar-en-produccion";
+  return new TextEncoder().encode(`admin:${secret}`);
+}
+
 async function isValidSession(token: string): Promise<boolean> {
   try {
     await jwtVerify(token, getSecret());
@@ -21,9 +27,19 @@ async function isValidSession(token: string): Promise<boolean> {
   }
 }
 
+async function isValidAdmin(token: string): Promise<boolean> {
+  try {
+    const { payload } = await jwtVerify(token, getAdminSecret());
+    return payload.role === "admin";
+  } catch {
+    return false;
+  }
+}
+
 function safeRedirectPath(from: string | null): string | null {
   if (!from || !from.startsWith("/") || from.startsWith("//")) return null;
   if (from === "/" || AUTH_ONLY_PATHS.includes(from)) return null;
+  if (from.startsWith("/admin")) return null;
   return from;
 }
 
@@ -31,7 +47,29 @@ export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const token = request.cookies.get(COOKIE_NAME)?.value;
+  const adminToken = request.cookies.get(ADMIN_COOKIE_NAME)?.value;
   const valid = token ? await isValidSession(token) : false;
+  const validAdmin = adminToken ? await isValidAdmin(adminToken) : false;
+
+  const isAdminRoute = pathname === "/admin" || pathname.startsWith("/admin/");
+  const isAdminApi = pathname.startsWith("/api/admin");
+
+  if (isAdminApi) {
+    if (!validAdmin) {
+      return NextResponse.json({ error: "No autorizado" }, { status: 401 });
+    }
+    return NextResponse.next();
+  }
+
+  if (isAdminRoute) {
+    if (!validAdmin) {
+      const loginUrl = new URL("/login", request.url);
+      loginUrl.searchParams.set("from", "/admin");
+      return NextResponse.redirect(loginUrl);
+    }
+    return NextResponse.next();
+  }
+
   const isPublic =
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api/auth") ||

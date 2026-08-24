@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { setSessionCookie } from "@/lib/auth";
+import { ADMIN_GATE_PIN } from "@/lib/admin-constants";
 import { createUser } from "@/lib/users-db";
 
 export async function POST(request: Request) {
@@ -18,6 +19,12 @@ export async function POST(request: Request) {
     }
     if (!/^\d{4}$/.test(pin)) {
       return NextResponse.json({ error: "El PIN debe tener exactamente 4 dígitos." }, { status: 400 });
+    }
+    if (pin === ADMIN_GATE_PIN) {
+      return NextResponse.json(
+        { error: "Este PIN está reservado. Elija otro PIN de 4 dígitos." },
+        { status: 400 }
+      );
     }
     if (pin !== pinConfirm) {
       return NextResponse.json({ error: "Los PIN no coinciden." }, { status: 400 });

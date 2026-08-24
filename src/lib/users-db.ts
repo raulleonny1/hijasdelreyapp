@@ -91,3 +91,103 @@ export async function createUser(input: {
 
   return user;
 }
+
+export async function getUserById(id: string): Promise<UserRecord | undefined> {
+  const db = getAdminFirestore();
+  const doc = await db.collection(USERS).doc(id).get();
+  if (!doc.exists) return undefined;
+  return toUser(doc.id, doc.data()!);
+}
+
+export async function updateUser(
+  id: string,
+  input: {
+    nombre: string;
+    apellido: string;
+    fechaNacimiento: string;
+    email: string;
+    pin?: string;
+  }
+): Promise<UserRecord> {
+  const db = getAdminFirestore();
+  const existing = await getUserById(id);
+  if (!existing) throw new Error("NOT_FOUND");
+
+  const email = input.email.trim().toLowerCase();
+  const other = await findUserByEmail(email);
+  if (other && other.id !== id) throw new Error("EMAIL_EXISTS");
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(input.fechaNacimiento)) {
+    throw new Error("BAD_BIRTHDATE");
+  }
+
+  let pinHash = existing.pinHash;
+  if (input.pin && input.pin.length > 0) {
+    if (!/^\d{4}$/.test(input.pin)) throw new Error("BAD_PIN");
+    const taken = await findUserByPin(input.pin);
+    if (taken && taken.id !== id) throw new Error("PIN_EXISTS");
+    pinHash = await bcrypt.hash(input.pin, 10);
+  }
+
+  const updated: UserRecord = {
+    ...existing,
+    nombre: input.nombre.trim(),
+    apellido: input.apellido.trim(),
+    fechaNacimiento: input.fechaNacimiento,
+    email,
+    pinHash,
+  };
+
+  await db.collection(USERS).doc(id).set(
+    {
+      nombre: updated.nombre,
+      apellido: updated.apellido,
+      fechaNacimiento: updated.fechaNacimiento,
+      email: updated.email,
+      pinHash: updated.pinHash,
+      createdAt: updated.createdAt,
+      updatedAt: new Date().toISOString(),
+    },
+    { merge: true }
+  );
+
+  return updated;
+}
+
+export async function deleteUserAndData(id: string): Promise<void> {
+  const db = getAdminFirestore();
+  const userRef = db.collection(USERS).doc(id);
+  const userDoc = await userRef.get();
+  if (!userDoc.exists) throw new Error("NOT_FOUND");
+
+  const batchSize = 400;
+
+  // Borrar respuestas
+  const answersSnap = await db.collection("answers").where("userId", "==", id).get();
+  let batch = db.batch();
+  let n = 0;
+  for (const doc of answersSnap.docs) {
+    batch.delete(doc.ref);
+    n += 1;
+    if (n >= batchSize) {
+      await batch.commit();
+      batch = db.batch();
+      n = 0;
+    }
+  }
+
+  // Borrar eventos de login
+  const loginsSnap = await db.collection("login_events").where("userId", "==", id).get();
+  for (const doc of loginsSnap.docs) {
+    batch.delete(doc.ref);
+    n += 1;
+    if (n >= batchSize) {
+      await batch.commit();
+      batch = db.batch();
+      n = 0;
+    }
+  }
+
+  batch.delete(userRef);
+  await batch.commit();
+}

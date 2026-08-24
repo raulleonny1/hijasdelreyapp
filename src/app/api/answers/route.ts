@@ -20,7 +20,8 @@ export async function GET(request: Request) {
   try {
     const answers = await getStudyAnswers(session.id, studyId, courseId);
     return NextResponse.json({ answers });
-  } catch {
+  } catch (e) {
+    console.error("[answers GET]", e);
     return NextResponse.json({ error: "Error al cargar respuestas" }, { status: 500 });
   }
 }
@@ -45,7 +46,15 @@ export async function PUT(request: Request) {
       String(courseId),
     );
     return NextResponse.json({ ok: true, answers });
-  } catch {
+  } catch (e) {
+    console.error("[answers PUT]", e);
+    const msg = e instanceof Error ? e.message : "";
+    if (msg.includes("Firebase Admin no configurado") || msg.includes("FIREBASE")) {
+      return NextResponse.json(
+        { error: "Firebase no está configurado en el servidor." },
+        { status: 503 }
+      );
+    }
     return NextResponse.json({ error: "Error al guardar" }, { status: 500 });
   }
 }

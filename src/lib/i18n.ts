@@ -159,6 +159,8 @@ export type Messages = {
     progress: string;
     placeholder: string;
     saved: string;
+    saveError: string;
+    authRequired: string;
   };
   reading: {
     eyebrow: string;
@@ -561,6 +563,8 @@ export const messages: Record<Locale, Messages> = {
       progress: "Progreso en este estudio",
       placeholder: "Escriba su reflexión aquí…",
       saved: "Guardado",
+      saveError: "No se pudo guardar. Compruebe su conexión e intente de nuevo.",
+      authRequired: "Su sesión expiró. Vuelva a iniciar sesión para guardar.",
     },
     reading: {
       eyebrow: "Documento de lectura",
@@ -766,6 +770,8 @@ export const messages: Record<Locale, Messages> = {
       progress: "Progress in this study",
       placeholder: "Write your reflection here…",
       saved: "Saved",
+      saveError: "Could not save. Check your connection and try again.",
+      authRequired: "Your session expired. Sign in again to save your answers.",
     },
     reading: {
       eyebrow: "Reading document",

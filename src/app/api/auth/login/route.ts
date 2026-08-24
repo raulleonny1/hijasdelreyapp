@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { setSessionCookie } from "@/lib/auth";
+import { logLoginEvent } from "@/lib/login-log-db";
 import { findUserByPin } from "@/lib/users-db";
 
 export async function POST(request: Request) {
@@ -21,6 +22,17 @@ export async function POST(request: Request) {
       apellido: user.apellido,
       email: user.email,
     });
+
+    try {
+      await logLoginEvent({
+        id: user.id,
+        nombre: user.nombre,
+        apellido: user.apellido,
+        email: user.email,
+      });
+    } catch {
+      /* no bloquear el login si falla el log */
+    }
 
     return NextResponse.json({
       ok: true,

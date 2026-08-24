@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useLocale } from "@/components/LocaleProvider";
 
 type BeforeInstallPromptEvent = Event & {
@@ -28,13 +29,16 @@ function isStandalone(): boolean {
  * En iOS muestra instrucción de “Añadir a pantalla de inicio”.
  */
 export function PwaInstallBanner() {
+  const pathname = usePathname();
   const { t } = useLocale();
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
   const [visible, setVisible] = useState(false);
   const [ios, setIos] = useState(false);
+  const isAdmin = pathname === "/admin" || pathname.startsWith("/admin/");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (isAdmin) return;
     if (isStandalone()) return;
     if (sessionStorage.getItem(DISMISS_KEY) === "1") return;
 
@@ -64,7 +68,7 @@ export function PwaInstallBanner() {
       window.removeEventListener("beforeinstallprompt", onBip);
       window.removeEventListener("appinstalled", onInstalled);
     };
-  }, []);
+  }, [isAdmin]);
 
   const dismiss = () => {
     sessionStorage.setItem(DISMISS_KEY, "1");
@@ -82,6 +86,7 @@ export function PwaInstallBanner() {
     }
   };
 
+  if (isAdmin) return null;
   if (!visible) return null;
   if (!ios && !deferred) return null;
 

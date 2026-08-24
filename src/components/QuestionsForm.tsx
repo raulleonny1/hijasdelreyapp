@@ -22,6 +22,7 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [progress, setProgress] = useState(0);
   const [saved, setSaved] = useState<number | null>(null);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const saveTimers = useRef<Record<number, ReturnType<typeof setTimeout>>>({});
 
@@ -30,7 +31,11 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
     fetch(`/api/answers?studyId=${studyId}&courseId=${encodeURIComponent(courseSlug)}`)
       .then((r) => (r.ok ? r.json() : { answers: {} }))
       .then((d) => {
-        const a = d.answers ?? {};
+        const raw = (d.answers ?? {}) as Record<string, string>;
+        const a: Record<number, string> = {};
+        for (const [k, v] of Object.entries(raw)) {
+          a[Number(k)] = String(v);
+        }
         setAnswers(a);
         setProgress(calcProgress(a, questions.length));
       })
@@ -44,12 +49,24 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ studyId, questionId, value, courseId: courseSlug }),
-      }).then(() => {
-        setSaved(questionId);
-        setTimeout(() => setSaved(null), 1500);
-      });
+      })
+        .then(async (r) => {
+          if (!r.ok) {
+            const err = await r.json().catch(() => null);
+            setSaveError(
+              err?.error === "No autorizado" ? Q.authRequired : Q.saveError
+            );
+            return;
+          }
+          setSaveError(null);
+          setSaved(questionId);
+          setTimeout(() => setSaved(null), 1500);
+        })
+        .catch(() => {
+          setSaveError(Q.saveError);
+        });
     },
-    [studyId, courseSlug],
+    [studyId, courseSlug, Q.authRequired, Q.saveError],
   );
 
   const handleChange = useCallback(
@@ -112,6 +129,11 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
           {saved === q.id && <p className="mt-2 text-xs text-gold">{Q.saved}</p>}
         </label>
       ))}
+      {saveError ? (
+        <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          {saveError}
+        </p>
+      ) : null}
     </div>
   );
 }
