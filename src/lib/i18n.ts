@@ -173,38 +173,24 @@ export type Messages = {
 };
 
 const homeStudiesEs: Messages["home"]["studies"] = [
-  { id: 1, title: "¿Qué es un cristiano?", part: "Las Hijas en un viaje" },
-  { id: 2, title: "¿Qué es una Orden?", part: "Las Hijas en un viaje" },
+  { id: 1, title: "¿Qué es un cristiano?", part: "Hijas en camino" },
+  { id: 2, title: "¿Qué es una orden?", part: "Hijas en camino" },
   { id: 3, title: "¿Qué espera Cristo de sus Hijas?", part: "Nuestro compromiso" },
   {
     id: 4,
-    title: "¿Cuál es el propósito primordial de la Orden?",
+    title: "¿Cuál es el propósito principal de la Orden?",
     part: "Nuestro compromiso",
   },
-  {
-    id: 5,
-    title: "¿Cuál es el propósito de un capítulo?",
-    part: "Nuestro compromiso",
-  },
-  { id: 6, title: "Los fondos de La Orden", part: "Nuestro compromiso" },
-  { id: 7, title: "Oración y estudio", part: "¿Quiénes somos? Martas y Marías" },
-  {
-    id: 8,
-    title: "Servicio y evangelización",
-    part: "¿Quiénes somos? Martas y Marías",
-  },
+  { id: 5, title: "¿Cuál es el propósito de un Capítulo?", part: "Nuestro compromiso" },
+  { id: 6, title: "Oración y Estudio", part: "Martas y Marías" },
+  { id: 7, title: "Servicio y Evangelización", part: "Martas y Marías" },
+  { id: 8, title: "¿Qué es una Regla de Vida?", part: "Martas y Marías" },
   {
     id: 9,
-    title: "¿Cuál es una Regla de Vida?",
-    part: "¿Quiénes somos? Martas y Marías",
+    title: "¿Cómo las Hijas son empoderadas para servir?",
+    part: "Extender la mano para servir",
   },
-  {
-    id: 10,
-    title: "¿Cómo están las Hijas facultadas para servir?",
-    part: "Alcanzar para servir",
-  },
-  { id: 11, title: "Llamado a la humildad", part: "Alcanzar para servir" },
-  { id: 12, title: "¿Cuál es el siguiente paso?", part: "¿Ha sido usted llamada?" },
+  { id: 10, title: "¿Cuál es el siguiente paso?", part: "¿Está llamada a la Orden?" },
 ];
 
 const homeStudiesEn: Messages["home"]["studies"] = [
@@ -240,7 +226,7 @@ const coursesEs: Messages["courses"] = {
     subtitle: "Preparación para La Orden de las Hijas del Rey®",
     author: "La Orden de las Hijas del Rey",
     description:
-      "Doce estudios oficiales de preparación para la admisión en La Orden.",
+      "Guía de Estudio Internacional (español 2022): diez estudios oficiales para la admisión.",
     category: "Formación en La Orden",
   },
   anglicanismo: {
@@ -420,7 +406,7 @@ export const messages: Record<Locale, Messages> = {
         subtitle:
           "Preparación para la admisión en La Orden de las Hijas del Rey®",
         description:
-          "Doce sesiones de reflexión, oración y estudio para conocer la filosofía, historia y compromiso de La Orden. Se recomienda un período de doce semanas de preparación.",
+          "Diez estudios de la Guía de Estudio Internacional para conocer la filosofía, historia y compromiso de La Orden. Se recomienda un período mínimo de doce semanas de preparación.",
         scripture:
           "Tu palabra es una lámpara para mis pies y una luz para mi camino. — Salmo 119:105",
         motto: "MAGNANIMITER CRUCEM SUSTINE",

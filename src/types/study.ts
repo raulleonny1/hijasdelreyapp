@@ -1,3 +1,5 @@
+import type { ContentBlock } from "./course";
+
 export type Question = {
   id: number;
   text: string;
@@ -11,7 +13,7 @@ export type Study = {
   part: string;
   subtitle: string;
   summary: string;
-  content: string[];
+  content: ContentBlock[];
   questions: Question[];
   enrichment?: string[] | null;
 };
