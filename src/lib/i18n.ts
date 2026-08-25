@@ -207,17 +207,15 @@ const homeStudiesEn: Messages["home"]["studies"] = [
     part: "Our commitment",
   },
   { id: 5, title: "What is the purpose of a chapter?", part: "Our commitment" },
-  { id: 6, title: "The funds of The Order", part: "Our commitment" },
-  { id: 7, title: "Prayer and study", part: "Who are we? Marthas and Marys" },
-  { id: 8, title: "Service and evangelism", part: "Who are we? Marthas and Marys" },
-  { id: 9, title: "What is a Rule of Life?", part: "Who are we? Marthas and Marys" },
+  { id: 6, title: "Prayer and Study", part: "Marthas and Marys" },
+  { id: 7, title: "Service and Evangelism", part: "Marthas and Marys" },
+  { id: 8, title: "What is a Rule of Life?", part: "Marthas and Marys" },
   {
-    id: 10,
-    title: "How are Daughters empowered to serve?",
-    part: "Reach out to serve",
+    id: 9,
+    title: "How Daughters are empowered to serve",
+    part: "Reaching out to serve",
   },
-  { id: 11, title: "A call to humility", part: "Reach out to serve" },
-  { id: 12, title: "What is the next step?", part: "Have you been called?" },
+  { id: 10, title: "What is the next step?", part: "Are you called to The Order?" },
 ];
 
 const coursesEs: Messages["courses"] = {
@@ -302,7 +300,7 @@ const coursesEn: Messages["courses"] = {
     subtitle: "Preparation for The Order of the Daughters of the King®",
     author: "The Order of the Daughters of the King",
     description:
-      "Twelve official preparation studies for admission into The Order.",
+      "International Study Guide: ten official studies for preparation for admission.",
     category: "Formation in The Order",
   },
   anglicanismo: {
@@ -614,7 +612,7 @@ export const messages: Record<Locale, Messages> = {
         subtitle:
           "Preparation for admission into The Order of the Daughters of the King®",
         description:
-          "Twelve sessions of reflection, prayer, and study to learn the philosophy, history, and commitment of The Order. A twelve-week period of preparation is recommended.",
+          "Ten studies from the International Study Guide to learn the philosophy, history, and commitment of The Order. A minimum twelve-week period of preparation is recommended.",
         scripture:
           "Your word is a lamp to my feet and a light to my path. — Psalm 119:105",
         motto: "MAGNANIMITER CRUCEM SUSTINE",
