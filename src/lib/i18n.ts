@@ -433,7 +433,7 @@ export const messages: Record<Locale, Messages> = {
   es: {
     brand: "La Orden de las Hijas del Rey",
     brandShort: "La Orden de las Hijas del Rey",
-    studyGuide: "Guía de estudio",
+    studyGuide: "Guía de Estudio Internacional 2022",
     footerEdition: "La Orden de las Hijas del Rey® — Edición 2022",
     nav: {
       home: "Inicio",
@@ -703,7 +703,7 @@ export const messages: Record<Locale, Messages> = {
   en: {
     brand: "The Order of the Daughters of the King",
     brandShort: "Daughters of the King",
-    studyGuide: "Study guide",
+    studyGuide: "International Study Guide 2022",
     footerEdition: "The Order of the Daughters of the King® — 2022 Edition",
     nav: {
       home: "Home",

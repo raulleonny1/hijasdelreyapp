@@ -76,7 +76,6 @@ export function Header() {
   const homeActive = pathname === "/";
   const unreadLabel = unread > 99 ? "99+" : String(unread);
 
-  /** Solo la pestaña activa va en dorado; las demás, outline */
   const tabClass = (active: boolean) =>
     `shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-5 sm:py-2 sm:text-sm ${
       active
@@ -87,11 +86,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md pt-[env(safe-area-inset-top)]">
       <div className="mx-auto max-w-6xl px-3 py-2 sm:px-6 sm:py-2.5">
-        {/* Fila 1: logo + idioma + cuenta (centrado vertical; no afecta pestañas) */}
-        <div className="flex min-h-14 items-center justify-between gap-2 sm:min-h-16">
+        {/* Fila 1: logo arriba + idioma/cuenta */}
+        <div className="flex items-center justify-between gap-2">
           <Link
             href={homeHref}
-            className="flex min-w-0 items-center self-center transition-opacity hover:opacity-90"
+            className="flex min-w-0 items-center gap-2.5 transition-opacity hover:opacity-90 sm:gap-3"
           >
             <Image
               src="/logo.jpeg"
@@ -99,17 +98,18 @@ export function Header() {
               width={64}
               height={64}
               priority
-              className="block h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-gold/40 sm:h-[3.75rem] sm:w-[3.75rem]"
+              className="block h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-gold/40 sm:h-14 sm:w-14"
             />
-            <div className="ml-3 hidden min-w-0 md:block">
+            {/* Solo escritorio (no Android / iPhone / iPad) */}
+            <div className="hidden min-w-0 xl:block">
               <p className="truncate font-serif text-sm leading-snug text-white">{t.brand}</p>
-              <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
+              <p className="mt-0.5 text-[10px] tracking-wide text-gold-light/85 uppercase">
                 {t.studyGuide}
               </p>
             </div>
           </Link>
 
-          <div className="flex shrink-0 items-center self-center gap-1.5 sm:gap-2">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
             <LanguageSwitcher variant="header" />
             {checked && (
               <>
@@ -148,7 +148,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Fila 2: las tres pestañas centradas */}
+        {/* Pestañas centradas */}
         <nav
           className="mt-2.5 flex items-center justify-center gap-2 sm:gap-3"
           aria-label="Principal"
