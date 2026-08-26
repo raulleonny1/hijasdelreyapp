@@ -280,6 +280,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 1.75rem;
 }
 
+/* En móvil/tablet los anillos decorativos parecen banners apilados: se ocultan */
+@media (max-width: 1023px) {
+  .home-logo-rays,
+  .home-logo-glow,
+  .home-logo-ring,
+  .home-logo-spark {
+    display: none !important;
+  }
+
+  .home-logo-stage {
+    padding: 0.5rem;
+  }
+
+  .home-logo-frame {
+    animation: none;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    padding: 0;
+  }
+}
+
 .home-logo-glow {
   position: absolute;
   inset: 0;

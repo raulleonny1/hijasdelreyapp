@@ -249,6 +249,8 @@ export function ChatApp({ user }: { user: SessionUser }) {
         const first = list.find((r) => r.type === "community") ?? list[0] ?? null;
         if (first) {
           setActiveId(first.id);
+          // En móvil abrir el hilo con el compositor (no solo la lista)
+          setMobileThread(true);
         }
         if (!cancelled) await refreshUnreadByRoom();
       } catch {
@@ -510,11 +512,11 @@ export function ChatApp({ user }: { user: SessionUser }) {
         </p>
       ) : null}
 
-      <div className="flex h-[min(72vh,720px)] overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm">
+      <div className="flex h-[calc(100dvh-13.5rem)] min-h-[22rem] max-h-[720px] flex-col overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm sm:h-[min(72vh,720px)] sm:flex-row">
         {/* Room list */}
         <aside
-          className={`w-full shrink-0 border-navy/10 bg-cream/40 sm:w-72 sm:border-r lg:w-80 ${
-            mobileThread ? "hidden sm:flex sm:flex-col" : "flex flex-col"
+          className={`w-full shrink-0 border-navy/10 bg-cream/40 sm:flex sm:w-72 sm:flex-col sm:border-r lg:w-80 ${
+            mobileThread ? "hidden sm:flex" : "flex flex-col"
           }`}
         >
           <div className="border-b border-navy/10 px-4 py-3">
@@ -566,7 +568,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
 
         {/* Thread */}
         <section
-          className={`min-w-0 flex-1 flex-col ${
+          className={`min-h-0 min-w-0 flex-1 flex-col ${
             mobileThread ? "flex" : "hidden sm:flex"
           }`}
         >
@@ -587,7 +589,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
                 </div>
               </header>
 
-              <div className="flex-1 space-y-3 overflow-y-auto bg-gradient-to-b from-cream/80 to-white px-3 py-4 sm:px-5">
+              <div className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-gradient-to-b from-cream/80 to-white px-3 py-4 sm:px-5">
                 {messages.length === 0 ? (
                   <p className="py-12 text-center text-sm text-navy/45">{t.chat.emptyThread}</p>
                 ) : (
@@ -604,7 +606,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
                 <div ref={bottomRef} />
               </div>
 
-              <footer className="relative border-t border-navy/10 bg-white px-3 py-3 sm:px-4">
+              <footer className="relative shrink-0 border-t border-navy/10 bg-white px-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-4">
                 {showEmoji ? (
                   <div className="absolute bottom-full left-3 right-3 mb-2 grid max-h-40 grid-cols-8 gap-1 overflow-y-auto rounded-xl border border-navy/10 bg-white p-2 shadow-lg sm:left-4 sm:right-auto sm:w-72">
                     {EMOJIS.map((e) => (

@@ -76,67 +76,113 @@ export function Header() {
   const homeActive = pathname === "/";
   const unreadLabel = unread > 99 ? "99+" : String(unread);
 
+  const navLinkClass = (active: boolean, emphasize?: "gold" | "outline") => {
+    if (emphasize === "gold") {
+      return `shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-4 sm:py-2 sm:text-sm ${
+        active
+          ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/40"
+          : "bg-gold text-navy-dark shadow-sm hover:bg-gold-light"
+      }`;
+    }
+    if (emphasize === "outline") {
+      return `shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-4 sm:py-2 sm:text-sm ${
+        active
+          ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/40"
+          : "border border-gold/45 text-gold-light hover:bg-gold hover:text-navy-dark"
+      }`;
+    }
+    return `shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm ${
+      active
+        ? "bg-white/15 text-white"
+        : "text-white/85 hover:bg-white/10 hover:text-white"
+    }`;
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md pt-[env(safe-area-inset-top)]">
-      <div className="relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 py-2.5 sm:gap-4 sm:px-6 sm:py-3">
-        <Link
-          href={homeHref}
-          className="flex min-w-0 items-center gap-2 justify-self-start transition-opacity hover:opacity-90 sm:gap-3"
-        >
-          <Image
-            src="/logo.jpeg"
-            alt={t.brand}
-            width={44}
-            height={44}
-            className="h-10 w-10 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-12 sm:w-12"
-          />
-          <div className="hidden min-w-0 sm:block">
-            <p className="font-serif text-sm leading-snug text-white">{t.brand}</p>
-            <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
-              {t.studyGuide}
-            </p>
-          </div>
-        </Link>
+      <div className="mx-auto max-w-6xl px-3 py-2 sm:px-6 sm:py-2.5">
+        {/* Fila 1: logo + idioma + cuenta (sin solapes) */}
+        <div className="flex items-center justify-between gap-2">
+          <Link
+            href={homeHref}
+            className="flex min-w-0 items-center gap-2 transition-opacity hover:opacity-90 sm:gap-3"
+          >
+            <Image
+              src="/logo.jpeg"
+              alt={t.brand}
+              width={44}
+              height={44}
+              className="h-9 w-9 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-11 sm:w-11"
+            />
+            <div className="hidden min-w-0 md:block">
+              <p className="truncate font-serif text-sm leading-snug text-white">{t.brand}</p>
+              <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
+                {t.studyGuide}
+              </p>
+            </div>
+          </Link>
 
-        <nav className="flex items-center justify-center gap-1 sm:gap-2">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <LanguageSwitcher variant="header" />
+            {checked && (
+              <>
+                {user ? (
+                  <div className="flex items-center gap-1 border-l border-white/20 pl-1.5 sm:gap-2 sm:pl-3">
+                    <span className="hidden max-w-[90px] truncate text-xs text-white/80 lg:inline">
+                      {user.nombre}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={handleLogout}
+                      className="rounded-full px-2 py-1 text-xs text-white/70 hover:bg-white/10 sm:px-3 sm:py-1.5"
+                    >
+                      {t.nav.logout}
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1 border-l border-white/20 pl-1.5 sm:gap-2 sm:pl-3">
+                    <Link
+                      href="/login"
+                      className="rounded-full px-2 py-1 text-xs text-white/90 hover:bg-white/10 sm:px-3 sm:py-1.5 sm:text-sm"
+                    >
+                      {t.nav.enter}
+                    </Link>
+                    <Link
+                      href="/registro"
+                      className="rounded-full bg-gold px-2 py-1 text-xs font-semibold text-navy-dark hover:bg-gold-light sm:px-3 sm:py-1.5 sm:text-sm"
+                    >
+                      <span className="hidden sm:inline">{t.nav.register}</span>
+                      <span className="sm:hidden">{t.nav.registerShort}</span>
+                    </Link>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Fila 2: navegación centrada, scroll horizontal si hace falta */}
+        <nav
+          className="mt-2 flex items-center justify-start gap-1.5 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:justify-center sm:gap-2 [&::-webkit-scrollbar]:hidden"
+          aria-label="Principal"
+        >
           {user ? (
             <>
-              <Link
-                href="/estudios"
-                className={`rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm ${
-                  studiesActive
-                    ? "bg-white/15 text-white"
-                    : "text-white/80 hover:bg-white/10 hover:text-white"
-                }`}
-              >
+              <Link href="/estudios" className={navLinkClass(studiesActive)}>
                 {t.nav.studies}
               </Link>
-              <Link
-                href="/chat"
-                className={`relative rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-5 sm:py-2 sm:text-sm ${
-                  chatActive
-                    ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/50"
-                    : "bg-gold text-navy-dark shadow-sm hover:bg-gold-light hover:shadow-md"
-                }`}
-              >
+              <Link href="/chat" className={`relative ${navLinkClass(chatActive, "gold")}`}>
                 {t.nav.chat}
                 {unread > 0 ? (
                   <span
-                    className="absolute -right-1.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold leading-none text-white shadow-sm ring-2 ring-navy"
+                    className="absolute -right-1 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold leading-none text-white shadow-sm ring-2 ring-navy"
                     aria-label={`${unread}`}
                   >
                     {unreadLabel}
                   </span>
                 ) : null}
               </Link>
-              <Link
-                href="/oracion"
-                className={`rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-5 sm:py-2 sm:text-sm ${
-                  prayerActive
-                    ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/50"
-                    : "border border-gold/50 bg-white/10 text-gold-light hover:bg-gold hover:text-navy-dark"
-                }`}
-              >
+              <Link href="/oracion" className={navLinkClass(prayerActive, "outline")}>
                 {t.nav.prayer}
               </Link>
             </>
@@ -144,66 +190,19 @@ export function Header() {
             <>
               <Link
                 href="/"
-                className={`rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm ${
-                  homeActive
-                    ? "bg-gold text-navy-dark"
-                    : "text-white/90 hover:bg-white/10"
-                }`}
+                className={navLinkClass(homeActive, homeActive ? "gold" : undefined)}
               >
                 {t.nav.home}
               </Link>
               <Link
                 href="/estudios"
-                className={`rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm ${
-                  studiesActive
-                    ? "bg-gold text-navy-dark"
-                    : "text-white/90 hover:bg-white/10"
-                }`}
+                className={navLinkClass(studiesActive, studiesActive ? "gold" : undefined)}
               >
                 {t.nav.studies}
               </Link>
             </>
           )}
         </nav>
-
-        <div className="flex min-w-0 items-center justify-end gap-1.5 sm:gap-3">
-          <LanguageSwitcher variant="header" />
-
-          {checked && (
-            <>
-              {user ? (
-                <div className="flex items-center gap-1 border-l border-white/20 pl-1.5 sm:gap-2 sm:pl-3">
-                  <span className="hidden max-w-[72px] truncate text-xs text-white/80 md:inline lg:max-w-[100px]">
-                    {user.nombre}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={handleLogout}
-                    className="rounded-full px-2 py-1 text-xs text-white/70 hover:bg-white/10 sm:px-3 sm:py-1.5"
-                  >
-                    {t.nav.logout}
-                  </button>
-                </div>
-              ) : (
-                <div className="flex items-center gap-1 border-l border-white/20 pl-1.5 sm:gap-2 sm:pl-3">
-                  <Link
-                    href="/login"
-                    className="rounded-full px-2 py-1 text-xs text-white/90 hover:bg-white/10 sm:px-3 sm:py-1.5 sm:text-sm"
-                  >
-                    {t.nav.enter}
-                  </Link>
-                  <Link
-                    href="/registro"
-                    className="rounded-full bg-gold px-2 py-1 text-xs font-semibold text-navy-dark hover:bg-gold-light sm:px-3 sm:py-1.5 sm:text-sm"
-                  >
-                    <span className="hidden sm:inline">{t.nav.register}</span>
-                    <span className="sm:hidden">{t.nav.registerShort}</span>
-                  </Link>
-                </div>
-              )}
-            </>
-          )}
-        </div>
       </div>
     </header>
   );
