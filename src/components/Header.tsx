@@ -87,20 +87,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md pt-[env(safe-area-inset-top)]">
       <div className="mx-auto max-w-6xl px-3 py-2 sm:px-6 sm:py-2.5">
-        {/* Fila 1: logo + idioma + cuenta */}
-        <div className="flex items-center justify-between gap-2">
+        {/* Fila 1: logo + idioma + cuenta (centrado vertical; no afecta pestañas) */}
+        <div className="flex min-h-14 items-center justify-between gap-2 sm:min-h-16">
           <Link
             href={homeHref}
-            className="flex min-w-0 items-center gap-2 transition-opacity hover:opacity-90 sm:gap-3"
+            className="flex min-w-0 items-center self-center transition-opacity hover:opacity-90"
           >
             <Image
               src="/logo.jpeg"
               alt={t.brand}
-              width={52}
-              height={52}
-              className="h-11 w-11 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-12 sm:w-12"
+              width={64}
+              height={64}
+              priority
+              className="block h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-gold/40 sm:h-[3.75rem] sm:w-[3.75rem]"
             />
-            <div className="hidden min-w-0 md:block">
+            <div className="ml-3 hidden min-w-0 md:block">
               <p className="truncate font-serif text-sm leading-snug text-white">{t.brand}</p>
               <p className="mt-0.5 text-[10px] tracking-widest text-gold-light/80 uppercase">
                 {t.studyGuide}
@@ -108,7 +109,7 @@ export function Header() {
             </div>
           </Link>
 
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <div className="flex shrink-0 items-center self-center gap-1.5 sm:gap-2">
             <LanguageSwitcher variant="header" />
             {checked && (
               <>
