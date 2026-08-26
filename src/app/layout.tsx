@@ -23,7 +23,7 @@ const sans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "La Orden de las Hijas del Rey — Guía de Estudio",
   description:
-    "Guía de Estudio Nacional para la preparación en La Orden de las Hijas del Rey. Doce estudios con reflexión y preguntas.",
+    "Guía de Estudio Internacional 2022 para la preparación en La Orden de las Hijas del Rey. Diez estudios con reflexión y preguntas.",
   applicationName: "La Orden de las Hijas del Rey",
   manifest: "/manifest.webmanifest",
   icons: {

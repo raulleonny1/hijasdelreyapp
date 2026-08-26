@@ -1,6 +1,6 @@
 # La Orden de las Hijas del Rey — Guía de Estudio
 
-Aplicación web para la **Guía de Estudio Nacional** de La Orden de las Hijas del Rey® (edición 2020).
+Aplicación web para la **Guía de Estudio Internacional** de La Orden de las Hijas del Rey® (edición 2022).
 
 ## Características
 

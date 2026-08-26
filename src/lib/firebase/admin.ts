@@ -1,5 +1,6 @@
 import { cert, getApps, initializeApp, type App, type ServiceAccount } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
+import { getStorage } from "firebase-admin/storage";
 
 let adminApp: App | undefined;
 
@@ -54,9 +55,12 @@ export function getAdminApp(): App {
   }
 
   const serviceAccount = loadServiceAccount();
+  const storageBucket =
+    process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET?.trim() || undefined;
   adminApp = initializeApp({
     credential: cert(serviceAccount),
     projectId: serviceAccount.projectId,
+    ...(storageBucket ? { storageBucket } : {}),
   });
 
   return adminApp;
@@ -64,4 +68,14 @@ export function getAdminApp(): App {
 
 export function getAdminFirestore() {
   return getFirestore(getAdminApp());
+}
+
+export function getAdminBucket() {
+  const bucketName = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET?.trim();
+  if (!bucketName) {
+    throw new Error(
+      "Firebase Storage no configurado. Agregue NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET.",
+    );
+  }
+  return getStorage(getAdminApp()).bucket(bucketName);
 }

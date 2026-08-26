@@ -1,0 +1,12 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Solo el servidor (Admin SDK) sube/lee audio del chat.
+    match /chat-audio/{allPaths=**} {
+      allow read, write: if false;
+    }
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

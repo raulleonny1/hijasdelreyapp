@@ -18,6 +18,8 @@ export type Messages = {
   nav: {
     home: string;
     studies: string;
+    chat: string;
+    prayer: string;
     enter: string;
     register: string;
     registerShort: string;
@@ -168,6 +170,63 @@ export type Messages = {
     contents: string;
     imageAlt: string;
   };
+  chat: {
+    title: string;
+    community: string;
+    privateChat: string;
+    newPrivate: string;
+    searchMembers: string;
+    noMembers: string;
+    selectConversation: string;
+    emptyThread: string;
+    placeholder: string;
+    send: string;
+    emoji: string;
+    record: string;
+    stopRecord: string;
+    recording: string;
+    cancel: string;
+    showOriginal: string;
+    showTranslation: string;
+    translated: string;
+    loading: string;
+    loadError: string;
+    sendError: string;
+    audioError: string;
+    micDenied: string;
+    you: string;
+    back: string;
+    membersTitle: string;
+    startChat: string;
+    audioMessage: string;
+  };
+  prayer: {
+    title: string;
+    subtitle: string;
+    tabRead: string;
+    tabPublish: string;
+    tabMine: string;
+    emptyShared: string;
+    emptyMine: string;
+    yourRequest: string;
+    placeholder: string;
+    consentLabel: string;
+    consentHint: string;
+    publish: string;
+    publishing: string;
+    published: string;
+    sharedBadge: string;
+    privateBadge: string;
+    delete: string;
+    confirmDelete: string;
+    you: string;
+    loading: string;
+    loadError: string;
+    publishError: string;
+    deleteError: string;
+    errEmpty: string;
+    errConsent: string;
+  };
   courses: Record<string, CourseUiCopy>;
   apiErrors: Record<string, string>;
 };
@@ -220,11 +279,11 @@ const homeStudiesEn: Messages["home"]["studies"] = [
 
 const coursesEs: Messages["courses"] = {
   "guia-nacional": {
-    title: "Guía de Estudio Nacional",
+    title: "Guía de Estudio Internacional 2022",
     subtitle: "Preparación para La Orden de las Hijas del Rey®",
     author: "La Orden de las Hijas del Rey",
     description:
-      "Guía de Estudio Internacional (español 2022): diez estudios oficiales para la admisión.",
+      "Diez estudios oficiales para la preparación a la admisión en La Orden.",
     category: "Formación en La Orden",
   },
   anglicanismo: {
@@ -296,11 +355,11 @@ const coursesEs: Messages["courses"] = {
 
 const coursesEn: Messages["courses"] = {
   "guia-nacional": {
-    title: "National Study Guide",
+    title: "International Study Guide 2022",
     subtitle: "Preparation for The Order of the Daughters of the King®",
     author: "The Order of the Daughters of the King",
     description:
-      "International Study Guide: ten official studies for preparation for admission.",
+      "Ten official studies for preparation for admission into The Order.",
     category: "Formation in The Order",
   },
   anglicanismo: {
@@ -375,10 +434,12 @@ export const messages: Record<Locale, Messages> = {
     brand: "La Orden de las Hijas del Rey",
     brandShort: "La Orden de las Hijas del Rey",
     studyGuide: "Guía de estudio",
-    footerEdition: "La Orden de las Hijas del Rey® — Edición 2020",
+    footerEdition: "La Orden de las Hijas del Rey® — Edición 2022",
     nav: {
       home: "Inicio",
       studies: "Estudios",
+      chat: "Chat",
+      prayer: "Oración",
       enter: "Entrar",
       register: "Registrarse",
       registerShort: "Registro",
@@ -400,7 +461,7 @@ export const messages: Record<Locale, Messages> = {
       register: "Registrarse",
       signIn: "Iniciar sesión",
       intro: {
-        title: "Guía de Estudio Nacional",
+        title: "Guía de Estudio Internacional 2022",
         subtitle:
           "Preparación para la admisión en La Orden de las Hijas del Rey®",
         description:
@@ -503,7 +564,7 @@ export const messages: Record<Locale, Messages> = {
       guestTitle: "Cursos de estudio",
       guestBlurb:
         "Inicie sesión con su PIN para acceder a los cursos y guardar sus reflexiones.",
-      goLesson1: "Ir directo a la lección 1 de la Guía Nacional →",
+      goLesson1: "Ir directo a la lección 1 de la Guía Internacional →",
       formationLibrary: "Biblioteca de formación",
     },
     course: {
@@ -556,6 +617,66 @@ export const messages: Record<Locale, Messages> = {
       contents: "Contenido",
       imageAlt: "Imagen del documento",
     },
+    chat: {
+      title: "Chat",
+      community: "Comunidad",
+      privateChat: "Privado",
+      newPrivate: "Nuevo chat privado",
+      searchMembers: "Buscar miembro…",
+      noMembers: "No hay otras miembros aún.",
+      selectConversation: "Seleccione una conversación",
+      emptyThread: "Aún no hay mensajes. Sea la primera en escribir.",
+      placeholder: "Escriba un mensaje…",
+      send: "Enviar",
+      emoji: "Emojis",
+      record: "Grabar audio",
+      stopRecord: "Detener",
+      recording: "Grabando…",
+      cancel: "Cancelar",
+      showOriginal: "Ver original",
+      showTranslation: "Ver traducción",
+      translated: "Traducido",
+      loading: "Cargando…",
+      loadError: "No se pudo cargar el chat.",
+      sendError: "No se pudo enviar el mensaje.",
+      audioError: "No se pudo enviar el audio.",
+      micDenied: "Permiso de micrófono denegado.",
+      you: "Usted",
+      back: "Conversaciones",
+      membersTitle: "Iniciar chat privado",
+      startChat: "Abrir chat",
+      audioMessage: "Mensaje de audio",
+    },
+    prayer: {
+      title: "Pedidos de oración",
+      subtitle:
+        "Comparta sus intenciones con la comunidad. Solo se publican los pedidos si usted acepta que otras miembros los lean.",
+      tabRead: "Leer",
+      tabPublish: "Publicar",
+      tabMine: "Mis pedidos",
+      emptyShared: "Aún no hay pedidos compartidos. Sea la primera en publicar.",
+      emptyMine: "Todavía no ha publicado ningún pedido.",
+      yourRequest: "Su pedido de oración",
+      placeholder: "Escriba aquí su pedido de oración…",
+      consentLabel:
+        "Acepto que otras miembros de la comunidad lean mi pedido de oración.",
+      consentHint:
+        "Sin esta aceptación, su pedido no se publica. No se comparte su correo ni su PIN.",
+      publish: "Publicar pedido",
+      publishing: "Publicando…",
+      published: "Su pedido se publicó correctamente.",
+      sharedBadge: "Compartido con la comunidad",
+      privateBadge: "Solo usted",
+      delete: "Eliminar",
+      confirmDelete: "¿Eliminar este pedido de oración?",
+      you: "Usted",
+      loading: "Cargando…",
+      loadError: "No se pudieron cargar los pedidos.",
+      publishError: "No se pudo publicar el pedido.",
+      deleteError: "No se pudo eliminar el pedido.",
+      errEmpty: "Escriba su pedido de oración.",
+      errConsent: "Debe aceptar que otras miembros lean su pedido para publicarlo.",
+    },
     courses: coursesEs,
     apiErrors: {
       "Ingrese su PIN de 4 dígitos.": "Ingrese su PIN de 4 dígitos.",
@@ -583,10 +704,12 @@ export const messages: Record<Locale, Messages> = {
     brand: "The Order of the Daughters of the King",
     brandShort: "Daughters of the King",
     studyGuide: "Study guide",
-    footerEdition: "The Order of the Daughters of the King® — 2020 Edition",
+    footerEdition: "The Order of the Daughters of the King® — 2022 Edition",
     nav: {
       home: "Home",
       studies: "Studies",
+      chat: "Chat",
+      prayer: "Prayer",
       enter: "Sign in",
       register: "Register",
       registerShort: "Join",
@@ -608,7 +731,7 @@ export const messages: Record<Locale, Messages> = {
       register: "Register",
       signIn: "Sign in",
       intro: {
-        title: "National Study Guide",
+        title: "International Study Guide 2022",
         subtitle:
           "Preparation for admission into The Order of the Daughters of the King®",
         description:
@@ -710,7 +833,7 @@ export const messages: Record<Locale, Messages> = {
         "Choose a course or document. Studies include summary, reading, and questions; reading documents show the full material. Your answers are saved automatically.",
       guestTitle: "Study courses",
       guestBlurb: "Sign in with your PIN to access courses and save your reflections.",
-      goLesson1: "Go straight to lesson 1 of the National Guide →",
+      goLesson1: "Go straight to lesson 1 of the International Guide →",
       formationLibrary: "Formation library",
     },
     course: {
@@ -762,6 +885,66 @@ export const messages: Record<Locale, Messages> = {
       tocAria: "Table of contents",
       contents: "Contents",
       imageAlt: "Document image",
+    },
+    chat: {
+      title: "Chat",
+      community: "Community",
+      privateChat: "Private",
+      newPrivate: "New private chat",
+      searchMembers: "Search member…",
+      noMembers: "No other members yet.",
+      selectConversation: "Select a conversation",
+      emptyThread: "No messages yet. Be the first to write.",
+      placeholder: "Type a message…",
+      send: "Send",
+      emoji: "Emojis",
+      record: "Record audio",
+      stopRecord: "Stop",
+      recording: "Recording…",
+      cancel: "Cancel",
+      showOriginal: "Show original",
+      showTranslation: "Show translation",
+      translated: "Translated",
+      loading: "Loading…",
+      loadError: "Could not load chat.",
+      sendError: "Could not send the message.",
+      audioError: "Could not send the audio.",
+      micDenied: "Microphone permission denied.",
+      you: "You",
+      back: "Conversations",
+      membersTitle: "Start private chat",
+      startChat: "Open chat",
+      audioMessage: "Audio message",
+    },
+    prayer: {
+      title: "Prayer requests",
+      subtitle:
+        "Share your intentions with the community. Requests are published only if you agree that other members may read them.",
+      tabRead: "Read",
+      tabPublish: "Publish",
+      tabMine: "My requests",
+      emptyShared: "No shared requests yet. Be the first to publish.",
+      emptyMine: "You have not published any requests yet.",
+      yourRequest: "Your prayer request",
+      placeholder: "Write your prayer request here…",
+      consentLabel:
+        "I agree that other members of the community may read my prayer request.",
+      consentHint:
+        "Without this consent, your request is not published. Your email and PIN are never shared.",
+      publish: "Publish request",
+      publishing: "Publishing…",
+      published: "Your request was published successfully.",
+      sharedBadge: "Shared with the community",
+      privateBadge: "Only you",
+      delete: "Delete",
+      confirmDelete: "Delete this prayer request?",
+      you: "You",
+      loading: "Loading…",
+      loadError: "Could not load prayer requests.",
+      publishError: "Could not publish the request.",
+      deleteError: "Could not delete the request.",
+      errEmpty: "Please write your prayer request.",
+      errConsent: "You must agree that others may read your request to publish it.",
     },
     courses: coursesEn,
     apiErrors: {

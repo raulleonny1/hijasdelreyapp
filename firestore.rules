@@ -9,5 +9,17 @@ service cloud.firestore {
     match /answers/{answerId} {
       allow read, write: if false;
     }
+    match /chatRooms/{roomId} {
+      allow read, write: if false;
+      match /messages/{messageId} {
+        allow read, write: if false;
+      }
+    }
+    match /chatReads/{userId} {
+      allow read, write: if false;
+    }
+    match /prayerRequests/{requestId} {
+      allow read, write: if false;
+    }
   }
 }

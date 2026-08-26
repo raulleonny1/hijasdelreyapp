@@ -2,10 +2,10 @@
   "courses": [
     {
       "slug": "guia-nacional",
-      "title": "Guía de Estudio Nacional",
+      "title": "Guía de Estudio Internacional 2022",
       "subtitle": "Preparación para La Orden de las Hijas del Rey®",
       "author": "La Orden de las Hijas del Rey",
-      "description": "Guía de Estudio Internacional (edición en español): diez estudios oficiales para la preparación a la admisión.",
+      "description": "Diez estudios oficiales para la preparación a la admisión en La Orden.",
       "category": "Formación en La Orden",
       "lessonCount": 10,
       "estimatedWeeks": 12,
