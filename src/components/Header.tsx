@@ -76,32 +76,18 @@ export function Header() {
   const homeActive = pathname === "/";
   const unreadLabel = unread > 99 ? "99+" : String(unread);
 
-  const navLinkClass = (active: boolean, emphasize?: "gold" | "outline") => {
-    if (emphasize === "gold") {
-      return `shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-4 sm:py-2 sm:text-sm ${
-        active
-          ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/40"
-          : "bg-gold text-navy-dark shadow-sm hover:bg-gold-light"
-      }`;
-    }
-    if (emphasize === "outline") {
-      return `shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-4 sm:py-2 sm:text-sm ${
-        active
-          ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/40"
-          : "border border-gold/45 text-gold-light hover:bg-gold hover:text-navy-dark"
-      }`;
-    }
-    return `shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm ${
+  /** Solo la pestaña activa va en dorado; las demás, outline */
+  const tabClass = (active: boolean) =>
+    `shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all sm:px-5 sm:py-2 sm:text-sm ${
       active
-        ? "bg-white/15 text-white"
-        : "text-white/85 hover:bg-white/10 hover:text-white"
+        ? "bg-gold text-navy-dark shadow-md ring-2 ring-gold-light/40"
+        : "border border-gold/45 bg-transparent text-gold-light hover:bg-gold/15"
     }`;
-  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md pt-[env(safe-area-inset-top)]">
       <div className="mx-auto max-w-6xl px-3 py-2 sm:px-6 sm:py-2.5">
-        {/* Fila 1: logo + idioma + cuenta (sin solapes) */}
+        {/* Fila 1: logo + idioma + cuenta */}
         <div className="flex items-center justify-between gap-2">
           <Link
             href={homeHref}
@@ -161,17 +147,17 @@ export function Header() {
           </div>
         </div>
 
-        {/* Fila 2: navegación centrada, scroll horizontal si hace falta */}
+        {/* Fila 2: las tres pestañas centradas */}
         <nav
-          className="mt-2 flex items-center justify-start gap-1.5 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:justify-center sm:gap-2 [&::-webkit-scrollbar]:hidden"
+          className="mt-2.5 flex items-center justify-center gap-2 sm:gap-3"
           aria-label="Principal"
         >
           {user ? (
             <>
-              <Link href="/estudios" className={navLinkClass(studiesActive)}>
+              <Link href="/estudios" className={tabClass(studiesActive)}>
                 {t.nav.studies}
               </Link>
-              <Link href="/chat" className={`relative ${navLinkClass(chatActive, "gold")}`}>
+              <Link href="/chat" className={`relative ${tabClass(chatActive)}`}>
                 {t.nav.chat}
                 {unread > 0 ? (
                   <span
@@ -182,22 +168,16 @@ export function Header() {
                   </span>
                 ) : null}
               </Link>
-              <Link href="/oracion" className={navLinkClass(prayerActive, "outline")}>
+              <Link href="/oracion" className={tabClass(prayerActive)}>
                 {t.nav.prayer}
               </Link>
             </>
           ) : (
             <>
-              <Link
-                href="/"
-                className={navLinkClass(homeActive, homeActive ? "gold" : undefined)}
-              >
+              <Link href="/" className={tabClass(homeActive)}>
                 {t.nav.home}
               </Link>
-              <Link
-                href="/estudios"
-                className={navLinkClass(studiesActive, studiesActive ? "gold" : undefined)}
-              >
+              <Link href="/estudios" className={tabClass(studiesActive)}>
                 {t.nav.studies}
               </Link>
             </>
