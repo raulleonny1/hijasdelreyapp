@@ -96,9 +96,9 @@ export function Header() {
             <Image
               src="/logo.jpeg"
               alt={t.brand}
-              width={44}
-              height={44}
-              className="h-9 w-9 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-11 sm:w-11"
+              width={52}
+              height={52}
+              className="h-11 w-11 shrink-0 rounded-full ring-2 ring-gold/40 sm:h-12 sm:w-12"
             />
             <div className="hidden min-w-0 md:block">
               <p className="truncate font-serif text-sm leading-snug text-white">{t.brand}</p>
