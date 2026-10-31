@@ -7,8 +7,8 @@
   --color-cream: #f8f6f1;
   --color-gold: #c9a227;
   --color-gold-light: #e8d48b;
-  --font-serif: "Cormorant Garamond", "Georgia", serif;
-  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", "Georgia", serif;
+  --font-sans: var(--font-source), "Source Sans 3", "Segoe UI", system-ui, sans-serif;
 }
 
 html {
@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-weight: 500;
   background: var(--color-cream);
   color: var(--color-navy-dark);
   /* Altura correcta en Safari/PWA (dvh) */
@@ -27,6 +28,17 @@ body {
   /* Mejor toque en iOS/Android */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  /* Subpixel: la letra se ve más nítida y menos fina que con antialiased */
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+input,
+textarea,
+select,
+button {
+  font-weight: inherit;
 }
 
 /* En modo standalone (app instalada) el fondo de barra queda navy */
@@ -55,11 +67,20 @@ body {
 
 .font-serif {
   font-family: var(--font-serif);
+  /* Cormorant es delicada: 600 mejora lectura en títulos de toda la app */
+  font-weight: 600;
 }
 
 .prose-study p {
   margin-bottom: 1rem;
   line-height: 1.75;
+  font-weight: 500;
+}
+
+.reading-doc p,
+.reading-doc li,
+.prose-study li {
+  font-weight: 500;
 }
 
 @keyframes fade-up {

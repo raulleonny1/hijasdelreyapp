@@ -69,7 +69,7 @@ export function ReadingDocument({ title, subtitle, author, content }: Props) {
               return (
                 <p
                   key={index}
-                  className="mb-4 whitespace-pre-wrap text-base leading-[1.75] text-navy/85 sm:text-[1.05rem] sm:leading-[1.8]"
+                  className="mb-4 whitespace-pre-wrap text-base leading-[1.75] text-navy sm:text-[1.05rem] sm:leading-[1.8]"
                 >
                   {block}
                 </p>

@@ -11,13 +11,13 @@ import "./globals.css";
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
 const sans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${serif.variable} ${sans.variable}`}>
-      <body className="min-h-dvh antialiased overflow-x-hidden">
+      <body className="min-h-dvh overflow-x-hidden">
         <LocaleProvider>
           <PwaRegister />
           <WelcomeIntro />
