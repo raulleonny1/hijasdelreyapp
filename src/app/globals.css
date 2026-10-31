@@ -9,6 +9,12 @@
   --color-gold-light: #e8d48b;
   --font-serif: var(--font-cormorant), "Cormorant Garamond", "Georgia", serif;
   --font-sans: var(--font-source), "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  /* Ligero refuerzo de tamaño; no altera el layout */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.3125rem;
 }
 
 html {
@@ -21,6 +27,7 @@ html {
 body {
   font-family: var(--font-sans);
   font-weight: 500;
+  line-height: 1.6;
   background: var(--color-cream);
   color: var(--color-navy-dark);
   /* Altura correcta en Safari/PWA (dvh) */
@@ -67,7 +74,7 @@ button {
 
 .font-serif {
   font-family: var(--font-serif);
-  /* Cormorant es delicada: 600 mejora lectura en títulos de toda la app */
+  /* Cormorant se lee mejor en 600 sin forzar el diseño */
   font-weight: 600;
 }
 

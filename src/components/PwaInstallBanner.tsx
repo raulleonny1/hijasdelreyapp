@@ -100,7 +100,7 @@ export function PwaInstallBanner() {
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6">
         <div className="min-w-0 text-sm leading-snug">
           <p className="font-semibold text-gold-light">{t.pwa.title}</p>
-          <p className="mt-0.5 text-white/80">{ios ? t.pwa.ios : t.pwa.android}</p>
+          <p className="mt-0.5 text-white/95">{ios ? t.pwa.ios : t.pwa.android}</p>
         </div>
 
         <div className="flex shrink-0 items-center gap-2">

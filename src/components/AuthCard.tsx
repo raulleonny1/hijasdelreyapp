@@ -30,7 +30,7 @@ export function AuthCard({ title, subtitle, children, footer, languageSwitcher }
           />
           <p className="mb-2 text-xs font-semibold tracking-wider text-gold uppercase">{t.brand}</p>
           <h1 className="font-serif text-3xl text-navy">{title}</h1>
-          <p className="mt-2 text-navy/60">{subtitle}</p>
+          <p className="mt-2 text-navy/85">{subtitle}</p>
         </div>
         <div className="rounded-2xl border border-navy/10 bg-white p-5 sm:p-8 shadow-lg">
           {children}

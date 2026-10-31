@@ -29,7 +29,7 @@ export function CoursePageClient({ courseSlug, course, isReading }: Props) {
       <div className="page-container py-8 sm:py-12">
         <Link
           href="/estudios"
-          className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
+          className="inline-flex items-center gap-1 text-sm text-navy/85 transition hover:text-navy"
         >
           {t.course.backLibrary}
         </Link>
@@ -50,7 +50,7 @@ export function CoursePageClient({ courseSlug, course, isReading }: Props) {
     <div className="page-container py-8 sm:py-12">
       <Link
         href="/estudios"
-        className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
+        className="inline-flex items-center gap-1 text-sm text-navy/85 transition hover:text-navy"
       >
         {t.course.backCourses}
       </Link>
@@ -60,10 +60,10 @@ export function CoursePageClient({ courseSlug, course, isReading }: Props) {
         <h1 className="mt-2 font-serif text-2xl sm:text-4xl text-navy leading-snug">
           {copy.title}
         </h1>
-        <p className="mt-2 text-base sm:text-lg text-navy/70">{copy.subtitle}</p>
-        <p className="mt-1 text-sm text-navy/50">{copy.author}</p>
-        <p className="mt-4 text-navy/70 leading-relaxed">{copy.description}</p>
-        <p className="mt-4 text-sm text-navy/50">
+        <p className="mt-2 text-base sm:text-lg text-navy/90">{copy.subtitle}</p>
+        <p className="mt-1 text-sm text-navy/80">{copy.author}</p>
+        <p className="mt-4 text-navy/90 leading-relaxed">{copy.description}</p>
+        <p className="mt-4 text-sm text-navy/80">
           {course.lessonCount} {t.course.lessons}
           {course.estimatedWeeks
             ? ` · ~${course.estimatedWeeks} ${t.course.weeksSuggested}`

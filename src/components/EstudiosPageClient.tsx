@@ -34,12 +34,12 @@ export function EstudiosPageClient({ courses, sessionNombre, justRegistered }: P
             <h1 className="mt-2 font-serif text-2xl sm:text-4xl text-navy">
               {t.estudios.hello} {sessionNombre}
             </h1>
-            <p className="mt-3 text-navy/70 leading-relaxed">{t.estudios.loggedInBlurb}</p>
+            <p className="mt-3 text-navy/90 leading-relaxed">{t.estudios.loggedInBlurb}</p>
           </>
         ) : (
           <>
             <h1 className="font-serif text-2xl sm:text-4xl text-navy">{t.estudios.guestTitle}</h1>
-            <p className="mt-3 text-navy/70 leading-relaxed">{t.estudios.guestBlurb}</p>
+            <p className="mt-3 text-navy/90 leading-relaxed">{t.estudios.guestBlurb}</p>
           </>
         )}
       </header>

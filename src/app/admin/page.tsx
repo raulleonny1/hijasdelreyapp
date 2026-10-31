@@ -292,11 +292,11 @@ export default function AdminPage() {
         >
           <div className="flex items-start justify-between gap-3 px-4 pb-2 pt-2 md:block md:px-5 md:pb-4 md:pt-5">
             <div className="min-w-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
                 Administración
               </p>
               <h1 className="mt-0.5 font-serif text-base leading-snug md:text-lg">Hijas del Rey</h1>
-              <p className="mt-0.5 hidden text-xs text-white/55 md:block">Panel de seguimiento</p>
+              <p className="mt-0.5 hidden text-xs text-white/90 md:block">Panel de seguimiento</p>
             </div>
             <div className="flex shrink-0 gap-1.5 md:hidden">
               <button
@@ -364,7 +364,7 @@ export default function AdminPage() {
           }}
         >
           {loading && (
-            <p className="rounded-2xl border border-navy/10 bg-white p-8 text-center text-navy/60">
+            <p className="rounded-2xl border border-navy/10 bg-white p-8 text-center text-navy/85">
               Cargando panel…
             </p>
           )}
@@ -379,7 +379,7 @@ export default function AdminPage() {
             <div className="space-y-5 sm:space-y-6">
               <div>
                 <h2 className="font-serif text-xl sm:text-2xl">Resumen</h2>
-                <p className="mt-1 text-sm text-navy/55">Vista general de la comunidad</p>
+                <p className="mt-1 text-sm text-navy/85">Vista general de la comunidad</p>
               </div>
               <section className="grid grid-cols-2 gap-3 xl:grid-cols-4">
                 {[
@@ -396,18 +396,18 @@ export default function AdminPage() {
                     key={card.label}
                     className="rounded-2xl border border-navy/10 bg-white p-4 shadow-sm sm:p-5"
                   >
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-navy/45 sm:text-[11px]">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy/75 sm:text-sm">
                       {card.label}
                     </p>
                     <p className="mt-2 font-serif text-2xl sm:text-3xl">{card.value}</p>
-                    {card.hint ? <p className="mt-1 text-xs text-navy/50">{card.hint}</p> : null}
+                    {card.hint ? <p className="mt-1 text-xs text-navy/80">{card.hint}</p> : null}
                   </div>
                 ))}
               </section>
 
               <section className="rounded-2xl border border-navy/10 bg-white p-4 shadow-sm sm:p-6">
                 <h3 className="font-serif text-lg sm:text-xl">Progreso reciente</h3>
-                <p className="mt-1 text-xs text-navy/50 sm:text-sm">
+                <p className="mt-1 text-xs text-navy/80 sm:text-sm">
                   Según las respuestas guardadas en cada curso
                 </p>
                 <div className="mt-4 space-y-4">
@@ -431,7 +431,7 @@ export default function AdminPage() {
                               <p className="truncate text-sm font-medium">
                                 {m.nombre} {m.apellido}
                               </p>
-                              <p className="truncate text-[11px] text-navy/45">{progressHint(m)}</p>
+                              <p className="truncate text-sm text-navy/75">{progressHint(m)}</p>
                               <div className="mt-1.5">
                                 <ProgressBar value={m.progress.overallPercent} />
                               </div>
@@ -445,7 +445,7 @@ export default function AdminPage() {
                               {started.slice(0, 3).map((c) => (
                                 <li
                                   key={c.courseId}
-                                  className="flex items-center justify-between gap-2 text-[11px] text-navy/55"
+                                  className="flex items-center justify-between gap-2 text-sm text-navy/85"
                                 >
                                   <span className="min-w-0 truncate">{c.title}</span>
                                   <span className="shrink-0 tabular-nums">
@@ -459,7 +459,7 @@ export default function AdminPage() {
                       );
                     })}
                   {data.members.length === 0 && (
-                    <p className="py-6 text-center text-sm text-navy/50">Aún no hay registradas.</p>
+                    <p className="py-6 text-center text-sm text-navy/80">Aún no hay registradas.</p>
                   )}
                 </div>
               </section>
@@ -470,7 +470,7 @@ export default function AdminPage() {
             <div className="space-y-5 sm:space-y-6">
               <div>
                 <h2 className="font-serif text-xl sm:text-2xl">Accesos por día</h2>
-                <p className="mt-1 text-sm text-navy/55">
+                <p className="mt-1 text-sm text-navy/85">
                   Toque un día del calendario para ver quién ingresó
                 </p>
               </div>
@@ -482,7 +482,7 @@ export default function AdminPage() {
                     <button
                       type="button"
                       aria-label="Mes anterior"
-                      className="flex h-11 w-11 items-center justify-center rounded-full text-lg text-navy/70 touch-manipulation hover:bg-navy/5"
+                      className="flex h-11 w-11 items-center justify-center rounded-full text-lg text-navy/90 touch-manipulation hover:bg-navy/5"
                       onClick={() => {
                         if (calMonth === 0) {
                           setCalMonth(11);
@@ -496,7 +496,7 @@ export default function AdminPage() {
                     <button
                       type="button"
                       aria-label="Mes siguiente"
-                      className="flex h-11 w-11 items-center justify-center rounded-full text-lg text-navy/70 touch-manipulation hover:bg-navy/5"
+                      className="flex h-11 w-11 items-center justify-center rounded-full text-lg text-navy/90 touch-manipulation hover:bg-navy/5"
                       onClick={() => {
                         if (calMonth === 11) {
                           setCalMonth(0);
@@ -508,7 +508,7 @@ export default function AdminPage() {
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-7 gap-1 text-center text-[10px] font-semibold uppercase tracking-wide text-navy/40">
+                  <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold uppercase tracking-wide text-navy/75">
                     {["L", "M", "X", "J", "V", "S", "D"].map((d) => (
                       <span key={d} className="py-1">
                         {d}
@@ -533,7 +533,7 @@ export default function AdminPage() {
                               ? "bg-navy text-white shadow-md"
                               : count > 0
                                 ? "bg-gold/30 text-navy active:bg-gold/50"
-                                : "text-navy/70 active:bg-navy/10"
+                                : "text-navy/90 active:bg-navy/10"
                           } ${isToday && !selected ? "ring-1 ring-gold" : ""}`}
                         >
                           {cell.day}
@@ -548,7 +548,7 @@ export default function AdminPage() {
                       );
                     })}
                   </div>
-                  <p className="mt-3 text-center text-xs text-navy/50">
+                  <p className="mt-3 text-center text-xs text-navy/80">
                     Punto = hubo accesos ese día
                   </p>
                 </div>
@@ -561,12 +561,12 @@ export default function AdminPage() {
                       month: "long",
                     })}
                   </h3>
-                  <p className="mt-1 text-sm text-navy/55">
+                  <p className="mt-1 text-sm text-navy/85">
                     {dayLogins.length} acceso{dayLogins.length === 1 ? "" : "s"}
                   </p>
 
                   {dayLogins.length === 0 ? (
-                    <p className="py-10 text-center text-sm text-navy/50">
+                    <p className="py-10 text-center text-sm text-navy/80">
                       Nadie ingresó este día.
                     </p>
                   ) : (
@@ -580,9 +580,9 @@ export default function AdminPage() {
                             <p className="truncate font-medium">
                               {e.nombre} {e.apellido}
                             </p>
-                            <p className="truncate text-xs text-navy/45">{e.email}</p>
+                            <p className="truncate text-xs text-navy/75">{e.email}</p>
                           </div>
-                          <p className="shrink-0 pt-0.5 text-[11px] text-navy/50">
+                          <p className="shrink-0 pt-0.5 text-sm text-navy/80">
                             {formatDate(e.at)}
                           </p>
                         </li>
@@ -599,7 +599,7 @@ export default function AdminPage() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <h2 className="font-serif text-xl sm:text-2xl">Editar / eliminar</h2>
-                  <p className="mt-1 text-sm text-navy/55">Gestione las cuentas registradas</p>
+                  <p className="mt-1 text-sm text-navy/85">Gestione las cuentas registradas</p>
                 </div>
                 <input
                   value={query}
@@ -611,7 +611,7 @@ export default function AdminPage() {
 
               <div className="space-y-3">
                 {filteredMembers.length === 0 && (
-                  <p className="rounded-2xl border border-navy/10 bg-white py-10 text-center text-sm text-navy/50">
+                  <p className="rounded-2xl border border-navy/10 bg-white py-10 text-center text-sm text-navy/80">
                     Sin resultados.
                   </p>
                 )}
@@ -635,13 +635,13 @@ export default function AdminPage() {
                             <span className="block truncate font-medium">
                               {m.nombre} {m.apellido}
                             </span>
-                            <span className="block truncate text-xs text-navy/50">{m.email}</span>
-                            <span className="mt-0.5 block text-xs text-navy/45 sm:hidden">
+                            <span className="block truncate text-xs text-navy/80">{m.email}</span>
+                            <span className="mt-0.5 block text-xs text-navy/75 sm:hidden">
                               Progreso {m.progress.overallPercent}%
                             </span>
                           </span>
                         </button>
-                        <span className="hidden text-xs text-navy/50 sm:inline">
+                        <span className="hidden text-xs text-navy/80 sm:inline">
                           {m.progress.overallPercent}%
                         </span>
                         <div className="grid grid-cols-2 gap-2 sm:flex sm:shrink-0">
@@ -665,16 +665,16 @@ export default function AdminPage() {
                       {open && (
                         <div className="border-t border-navy/10 bg-cream/30 px-4 py-4 text-sm">
                           <p>
-                            <span className="text-navy/45">Registro: </span>
+                            <span className="text-navy/75">Registro: </span>
                             {formatDate(m.createdAt)}
                           </p>
                           <p className="mt-1">
-                            <span className="text-navy/45">Última actividad: </span>
+                            <span className="text-navy/75">Última actividad: </span>
                             {formatDate(m.progress.lastActivityAt)}
                           </p>
                           <div className="mt-3">
                             <div className="mb-1 flex items-center justify-between text-xs">
-                              <span className="text-navy/55">Progreso en cursos empezados</span>
+                              <span className="text-navy/85">Progreso en cursos empezados</span>
                               <span className="font-semibold text-navy">
                                 {m.progress.overallPercent}%
                               </span>
@@ -688,7 +688,7 @@ export default function AdminPage() {
                                   <div className="flex items-start justify-between gap-2">
                                     <div className="min-w-0">
                                       <p className="truncate font-medium text-navy">{c.title}</p>
-                                      <p className="text-[11px] text-navy/45">
+                                      <p className="text-sm text-navy/75">
                                         {c.answered} de {c.total} respuestas ·{" "}
                                         {c.lessonsTouched}/{c.lessonCount} lecciones
                                       </p>
@@ -704,7 +704,7 @@ export default function AdminPage() {
                               ))}
                             </ul>
                           ) : (
-                            <p className="mt-3 text-xs text-navy/50">
+                            <p className="mt-3 text-xs text-navy/80">
                               Todavía no ha guardado respuestas en ningún curso.
                             </p>
                           )}
@@ -730,11 +730,11 @@ export default function AdminPage() {
             className="max-h-[92dvh] w-full max-w-md overflow-y-auto rounded-t-3xl bg-white p-5 shadow-xl sm:rounded-2xl sm:p-6"
           >
             <h3 className="font-serif text-xl">Editar miembro</h3>
-            <p className="mt-1 text-sm text-navy/55">Los cambios se guardan en Firebase</p>
+            <p className="mt-1 text-sm text-navy/85">Los cambios se guardan en Firebase</p>
             <div className="mt-4 space-y-3">
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <label className="block text-sm">
-                  <span className="mb-1 block text-navy/70">Nombre</span>
+                  <span className="mb-1 block text-navy/90">Nombre</span>
                   <input
                     className={inputClass}
                     value={editForm.nombre}
@@ -742,7 +742,7 @@ export default function AdminPage() {
                   />
                 </label>
                 <label className="block text-sm">
-                  <span className="mb-1 block text-navy/70">Apellido</span>
+                  <span className="mb-1 block text-navy/90">Apellido</span>
                   <input
                     className={inputClass}
                     value={editForm.apellido}
@@ -751,7 +751,7 @@ export default function AdminPage() {
                 </label>
               </div>
               <label className="block text-sm">
-                <span className="mb-1 block text-navy/70">Correo</span>
+                <span className="mb-1 block text-navy/90">Correo</span>
                 <input
                   type="email"
                   autoComplete="email"
@@ -761,7 +761,7 @@ export default function AdminPage() {
                 />
               </label>
               <label className="block text-sm">
-                <span className="mb-1 block text-navy/70">Fecha de nacimiento</span>
+                <span className="mb-1 block text-navy/90">Fecha de nacimiento</span>
                 <input
                   type="date"
                   className={inputClass}
@@ -772,7 +772,7 @@ export default function AdminPage() {
                 />
               </label>
               <label className="block text-sm">
-                <span className="mb-1 block text-navy/70">Nuevo PIN (opcional)</span>
+                <span className="mb-1 block text-navy/90">Nuevo PIN (opcional)</span>
                 <input
                   inputMode="numeric"
                   maxLength={4}
@@ -798,7 +798,7 @@ export default function AdminPage() {
                 type="button"
                 disabled={saving}
                 onClick={() => setEditing(null)}
-                className="min-h-11 rounded-full px-4 text-sm text-navy/70 touch-manipulation hover:bg-navy/5"
+                className="min-h-11 rounded-full px-4 text-sm text-navy/90 touch-manipulation hover:bg-navy/5"
               >
                 Cancelar
               </button>

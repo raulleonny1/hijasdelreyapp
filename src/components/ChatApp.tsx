@@ -103,14 +103,14 @@ function MessageBubble({
         }`}
       >
         {!isOwn ? (
-          <p className="mb-1 text-[11px] font-semibold tracking-wide text-gold">
+          <p className="mb-1 text-sm font-semibold tracking-wide text-gold">
             {message.senderName}
           </p>
         ) : null}
 
         {message.type === "audio" ? (
           <div className="space-y-1.5">
-            <p className={`text-xs ${isOwn ? "text-white/70" : "text-navy/50"}`}>
+            <p className={`text-xs ${isOwn ? "text-white/90" : "text-navy/80"}`}>
               {t.chat.audioMessage}
               {message.audioDurationMs
                 ? ` · ${formatDuration(message.audioDurationMs)}`
@@ -121,18 +121,18 @@ function MessageBubble({
                 <track kind="captions" />
               </audio>
             ) : (
-              <p className={`text-sm ${isOwn ? "text-white/80" : "text-navy/60"}`}>…</p>
+              <p className={`text-sm ${isOwn ? "text-white/95" : "text-navy/85"}`}>…</p>
             )}
           </div>
         ) : (
-          <p className="whitespace-pre-wrap break-words text-sm leading-relaxed sm:text-[15px]">
+          <p className="whitespace-pre-wrap break-words text-base leading-relaxed">
             {displayText}
           </p>
         )}
 
         <div
-          className={`mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] ${
-            isOwn ? "text-white/55" : "text-navy/40"
+          className={`mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs ${
+            isOwn ? "text-white/90" : "text-navy/75"
           }`}
         >
           <span>{formatTime(message.createdAt, locale)}</span>
@@ -144,7 +144,7 @@ function MessageBubble({
               <button
                 type="button"
                 className={`underline-offset-2 hover:underline ${
-                  isOwn ? "text-gold-light" : "text-navy/60"
+                  isOwn ? "text-gold-light" : "text-navy/85"
                 }`}
                 onClick={() => setShowOriginal((v) => !v)}
               >
@@ -482,7 +482,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center text-navy/60">
+      <div className="flex min-h-[60vh] items-center justify-center text-navy/85">
         {t.chat.loading}
       </div>
     );
@@ -520,7 +520,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
           }`}
         >
           <div className="border-b border-navy/10 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-navy/45">
+            <p className="text-xs font-semibold uppercase tracking-wide text-navy/75">
               {t.chat.title}
             </p>
           </div>
@@ -539,23 +539,23 @@ export function ChatApp({ user }: { user: SessionUser }) {
                   >
                     <span className="flex items-center gap-2">
                       <span
-                        className={`rounded-full px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${
+                        className={`rounded-full px-1.5 py-0.5 text-xs font-semibold uppercase tracking-wide ${
                           room.type === "community"
                             ? "bg-gold/20 text-navy"
-                            : "bg-navy/10 text-navy/70"
+                            : "bg-navy/10 text-navy/90"
                         }`}
                       >
                         {room.type === "community" ? t.chat.community : t.chat.privateChat}
                       </span>
                       {roomUnread > 0 ? (
-                        <span className="ml-auto flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold text-white">
+                        <span className="ml-auto flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-xs font-bold text-white">
                           {roomUnread > 99 ? "99+" : roomUnread}
                         </span>
                       ) : null}
                     </span>
                     <span className="truncate font-medium text-navy">{roomTitle(room)}</span>
                     {room.lastMessagePreview ? (
-                      <span className="truncate text-xs text-navy/45">
+                      <span className="truncate text-xs text-navy/75">
                         {room.lastMessagePreview}
                       </span>
                     ) : null}
@@ -577,7 +577,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
               <header className="flex items-center gap-2 border-b border-navy/10 px-3 py-3 sm:px-5">
                 <button
                   type="button"
-                  className="rounded-full px-2 py-1 text-sm text-navy/60 hover:bg-navy/5 sm:hidden"
+                  className="rounded-full px-2 py-1 text-sm text-navy/85 hover:bg-navy/5 sm:hidden"
                   onClick={() => setMobileThread(false)}
                 >
                   ← {t.chat.back}
@@ -591,7 +591,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
 
               <div className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-gradient-to-b from-cream/80 to-white px-3 py-4 sm:px-5">
                 {messages.length === 0 ? (
-                  <p className="py-12 text-center text-sm text-navy/45">{t.chat.emptyThread}</p>
+                  <p className="py-12 text-center text-sm text-navy/75">{t.chat.emptyThread}</p>
                 ) : (
                   messages.map((m) => (
                     <MessageBubble
@@ -653,7 +653,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
                     aria-label={t.chat.record}
                     disabled={sending || recording}
                     onClick={startRecording}
-                    className="shrink-0 rounded-full border border-navy/10 px-2.5 py-2 text-sm text-navy/70 hover:bg-cream disabled:opacity-40"
+                    className="shrink-0 rounded-full border border-navy/10 px-2.5 py-2 text-sm text-navy/90 hover:bg-cream disabled:opacity-40"
                   >
                     🎤
                   </button>
@@ -682,7 +682,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
               </footer>
             </>
           ) : (
-            <div className="flex flex-1 items-center justify-center text-sm text-navy/45">
+            <div className="flex flex-1 items-center justify-center text-sm text-navy/75">
               {t.chat.selectConversation}
             </div>
           )}
@@ -700,7 +700,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
               <h3 className="font-serif text-lg text-navy">{t.chat.membersTitle}</h3>
               <button
                 type="button"
-                className="text-sm text-navy/50 hover:text-navy"
+                className="text-sm text-navy/80 hover:text-navy"
                 onClick={() => setShowMembers(false)}
               >
                 {t.chat.cancel}
@@ -716,7 +716,7 @@ export function ChatApp({ user }: { user: SessionUser }) {
             </div>
             <ul className="max-h-72 overflow-y-auto pb-3">
               {filteredMembers.length === 0 ? (
-                <li className="px-4 py-6 text-center text-sm text-navy/45">{t.chat.noMembers}</li>
+                <li className="px-4 py-6 text-center text-sm text-navy/75">{t.chat.noMembers}</li>
               ) : (
                 filteredMembers.map((m) => (
                   <li key={m.id}>

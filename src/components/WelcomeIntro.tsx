@@ -298,7 +298,7 @@ export function WelcomeIntro() {
           {t.brand}
         </p>
         {blocked && (
-          <p className="max-w-xs text-center text-sm text-white/80">{t.welcome.tap}</p>
+          <p className="max-w-xs text-center text-sm text-white/95">{t.welcome.tap}</p>
         )}
       </div>
     </div>

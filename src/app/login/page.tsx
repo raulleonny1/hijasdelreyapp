@@ -143,7 +143,7 @@ export default function LoginPage() {
               setPin("");
               setError("");
             }}
-            className="w-full text-sm text-navy/55 hover:text-navy"
+            className="w-full text-sm text-navy/85 hover:text-navy"
           >
             Volver
           </button>

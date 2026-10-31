@@ -17,8 +17,8 @@ export function StudyCard({ study, index }: Props) {
       </span>
       <p className="mb-1 text-xs font-semibold tracking-wider text-gold uppercase">{study.part}</p>
       <h3 className="font-serif text-xl text-navy pr-12">{study.title}</h3>
-      <p className="mt-2 text-sm text-navy/70">{study.subtitle}</p>
-      <div className="mt-4 flex items-center gap-3 text-xs text-navy/50">
+      <p className="mt-2 text-sm text-navy/90">{study.subtitle}</p>
+      <div className="mt-4 flex items-center gap-3 text-xs text-navy/80">
         <span>{study.questions.length} preguntas</span>
         <span className="text-gold group-hover:translate-x-1 transition-transform">→</span>
       </div>

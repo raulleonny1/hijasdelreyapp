@@ -17,7 +17,7 @@ function headingClass(level: number): string {
   if (level === 2) {
     return "mt-8 mb-3 scroll-mt-[calc(5.5rem+env(safe-area-inset-top))] font-serif text-[1.2rem] sm:mt-10 sm:text-2xl text-navy leading-snug";
   }
-  return "mt-6 mb-2 scroll-mt-[calc(5.5rem+env(safe-area-inset-top))] font-serif text-[1.1rem] sm:mt-8 sm:text-xl text-navy/90 leading-snug";
+  return "mt-6 mb-2 scroll-mt-[calc(5.5rem+env(safe-area-inset-top))] font-serif text-[1.1rem] sm:mt-8 sm:text-xl text-navy leading-snug";
 }
 
 function isHeading(block: ContentBlock): block is ContentHeading {
@@ -36,8 +36,8 @@ export function ReadingDocument({ title, subtitle, author, content }: Props) {
         <h1 className="mt-3 font-serif text-[1.75rem] leading-snug text-navy sm:text-4xl">
           {title}
         </h1>
-        {subtitle ? <p className="mt-2 text-base text-navy/65 sm:text-lg">{subtitle}</p> : null}
-        {author ? <p className="mt-2 text-sm text-navy/50">{author}</p> : null}
+        {subtitle ? <p className="mt-2 text-base text-navy sm:text-lg">{subtitle}</p> : null}
+        {author ? <p className="mt-2 text-sm text-navy/90">{author}</p> : null}
       </header>
 
       {toc.length > 4 && (
@@ -69,7 +69,7 @@ export function ReadingDocument({ title, subtitle, author, content }: Props) {
               return (
                 <p
                   key={index}
-                  className="mb-4 whitespace-pre-wrap text-base leading-[1.75] text-navy sm:text-[1.05rem] sm:leading-[1.8]"
+                  className="mb-4 whitespace-pre-wrap text-base leading-[1.75] text-navy sm:text-[1.0625rem] sm:leading-[1.8]"
                 >
                   {block}
                 </p>

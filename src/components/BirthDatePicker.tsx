@@ -92,7 +92,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
         <button
           type="button"
           onClick={() => setMode(mode === "calendar" ? "manual" : "calendar")}
-          className="text-xs text-navy/50 underline hover:text-gold"
+          className="text-xs text-navy/80 underline hover:text-gold"
         >
           {mode === "calendar" ? B.pickParts : B.useCalendar}
         </button>
@@ -112,7 +112,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
       ) : (
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <div>
-            <label htmlFor={`${id}-day`} className="mb-1 block text-xs text-navy/50">
+            <label htmlFor={`${id}-day`} className="mb-1 block text-xs text-navy/80">
               {B.day}
             </label>
             <select
@@ -130,7 +130,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
             </select>
           </div>
           <div>
-            <label htmlFor={`${id}-month`} className="mb-1 block text-xs text-navy/50">
+            <label htmlFor={`${id}-month`} className="mb-1 block text-xs text-navy/80">
               {B.month}
             </label>
             <select
@@ -155,7 +155,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
             </select>
           </div>
           <div>
-            <label htmlFor={`${id}-year`} className="mb-1 block text-xs text-navy/50">
+            <label htmlFor={`${id}-year`} className="mb-1 block text-xs text-navy/80">
               {B.year}
             </label>
             <select
@@ -187,7 +187,7 @@ export function BirthDatePicker({ value, onChange }: Props) {
           {formatDisplay(value)}
         </p>
       ) : (
-        <p className="mt-2 text-center text-xs text-navy/45">{B.hint}</p>
+        <p className="mt-2 text-center text-xs text-navy/75">{B.hint}</p>
       )}
     </div>
   );

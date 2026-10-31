@@ -33,18 +33,18 @@ export function CourseCard({ course, featured }: Props) {
     <>
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {isOfficial && (
-          <span className="rounded-full bg-navy px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+          <span className="rounded-full bg-navy px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-white">
             {t.course.official}
           </span>
         )}
-        <span className="text-xs font-medium text-navy/50">{copy.category}</span>
+        <span className="text-xs font-medium text-navy/80">{copy.category}</span>
       </div>
 
       <h3 className="font-serif text-xl sm:text-2xl text-navy leading-snug">{copy.title}</h3>
-      <p className="mt-1 text-sm text-navy/55">{copy.author}</p>
-      <p className="mt-3 text-sm text-navy/70 leading-relaxed">{copy.description}</p>
+      <p className="mt-1 text-sm text-navy/85">{copy.author}</p>
+      <p className="mt-3 text-sm text-navy/90 leading-relaxed">{copy.description}</p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-navy/50">
+      <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-navy/80">
         {course.available ? (
           <>
             {course.format === "reading" ? (
@@ -69,7 +69,7 @@ export function CourseCard({ course, featured }: Props) {
             </span>
           </>
         ) : (
-          <span className="rounded-full bg-navy/10 px-3 py-1 text-navy/60">{t.course.comingSoon}</span>
+          <span className="rounded-full bg-navy/10 px-3 py-1 text-navy/85">{t.course.comingSoon}</span>
         )}
       </div>
     </>

@@ -42,7 +42,7 @@ export default function HomePage() {
         />
 
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pt-10 pb-16 sm:px-6 sm:pt-16 sm:pb-20 lg:pt-20">
-          <p className="animate-fade-up mb-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.35em] text-gold uppercase max-w-[280px] sm:max-w-none">
+          <p className="animate-fade-up mb-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-xs sm:text-xs tracking-[0.2em] sm:tracking-[0.35em] text-gold uppercase max-w-[280px] sm:max-w-none">
             <span className="hidden sm:block h-px w-8 bg-gold/50 shrink-0" />
             <span>{t.brand}</span>
             <span className="hidden sm:block h-px w-8 bg-gold/50 shrink-0" />
@@ -87,10 +87,10 @@ export default function HomePage() {
           >
             {intro.title}
           </h1>
-          <p className="animate-fade-up mt-5 max-w-2xl text-center text-lg text-white/80 sm:text-xl">
+          <p className="animate-fade-up mt-5 max-w-2xl text-center text-lg text-white/95 sm:text-xl">
             {intro.subtitle}
           </p>
-          <p className="animate-fade-up mt-6 max-w-2xl text-center text-base leading-relaxed text-white/65">
+          <p className="animate-fade-up mt-6 max-w-2xl text-center text-base leading-relaxed text-white/90">
             {intro.description}
           </p>
 
@@ -139,7 +139,7 @@ export default function HomePage() {
             <h2 className="mt-3 font-serif text-2xl sm:text-4xl text-navy px-2">
               {h.twelveWeeks}
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-navy/60">{h.studiesBlurb}</p>
+            <p className="mx-auto mt-4 max-w-xl text-navy/85">{h.studiesBlurb}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {studies.map((study) => (
@@ -150,7 +150,7 @@ export default function HomePage() {
                 <span className="font-serif text-3xl text-navy/10 group-hover:text-gold/30 transition">
                   {String(study.id).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-[10px] font-semibold tracking-wider text-gold uppercase">
+                <p className="mt-2 text-xs font-semibold tracking-wider text-gold uppercase">
                   {study.part}
                 </p>
                 <h3 className="mt-1 font-serif text-lg text-navy leading-snug">{study.title}</h3>
@@ -172,7 +172,7 @@ export default function HomePage() {
       <section className="bg-cream px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-serif text-3xl text-navy text-center mb-3">{h.purposeTitle}</h2>
-          <p className="text-center text-navy/55 mb-12">{h.purposeSubtitle}</p>
+          <p className="text-center text-navy/85 mb-12">{h.purposeSubtitle}</p>
           <ul className="grid gap-5 sm:grid-cols-2">
             {intro.purposes.map((purpose, i) => (
               <li
@@ -195,14 +195,14 @@ export default function HomePage() {
           <p className="font-serif text-2xl sm:text-3xl tracking-wide text-gold-light">
             {intro.motto}
           </p>
-          <p className="mt-4 text-lg text-white/75">{intro.mottoTranslation}</p>
+          <p className="mt-4 text-lg text-white/95">{intro.mottoTranslation}</p>
           <p className="mt-6 text-sm font-medium tracking-widest text-gold">{intro.initials}</p>
         </div>
       </section>
 
       <section className="px-4 py-16 sm:px-6 bg-cream border-t border-navy/5">
         <div className="mx-auto max-w-xl text-center">
-          <p className="text-navy/70 mb-6">{h.ctaReady}</p>
+          <p className="text-navy/90 mb-6">{h.ctaReady}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/registro"

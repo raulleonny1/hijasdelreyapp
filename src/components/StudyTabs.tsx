@@ -87,7 +87,7 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
             className={`min-h-11 rounded-full px-2 py-2.5 text-xs font-medium transition-all touch-manipulation sm:px-5 sm:text-sm sm:w-auto ${
               tab === t.id
                 ? "bg-navy text-white shadow-md"
-                : "bg-white text-navy/70 hover:bg-navy/5"
+                : "bg-white text-navy/90 hover:bg-navy/5"
             }`}
           >
             {t.label}
@@ -129,7 +129,7 @@ export function StudyTabs({ lesson, courseSlug }: Props) {
           <section className="prose-study max-w-none rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
             <h2 className="font-serif text-2xl text-navy mb-6">{S.material}</h2>
             {lesson.content.length === 0 ? (
-              <p className="text-navy/60 italic">{S.emptyContent}</p>
+              <p className="text-navy/85 italic">{S.emptyContent}</p>
             ) : (
               lesson.content.map((block, i) => renderBlock(block, i, S.imageAlt))
             )}

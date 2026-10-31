@@ -150,7 +150,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
           {t.brandShort}
         </p>
         <h1 className="mt-1 font-serif text-2xl text-navy sm:text-3xl">{P.title}</h1>
-        <p className="mt-2 text-sm text-navy/65 leading-relaxed">{P.subtitle}</p>
+        <p className="mt-2 text-sm text-navy/90 leading-relaxed">{P.subtitle}</p>
       </div>
 
       <div className="mb-5 flex flex-wrap gap-1 rounded-full border border-navy/10 bg-white p-1 shadow-sm sm:inline-flex">
@@ -166,7 +166,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
             className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition sm:px-4 sm:text-sm ${
               tab === item.id
                 ? "bg-navy text-white"
-                : "text-navy/70 hover:bg-cream"
+                : "text-navy/90 hover:bg-cream"
             }`}
           >
             {item.label}
@@ -186,13 +186,13 @@ export function PrayerApp({ user }: { user: SessionUser }) {
       ) : null}
 
       {loading && tab === "read" ? (
-        <p className="text-sm text-navy/50">{P.loading}</p>
+        <p className="text-sm text-navy/80">{P.loading}</p>
       ) : null}
 
       {tab === "read" && !loading ? (
         <div className="mx-auto max-w-2xl space-y-3">
           {shared.length === 0 ? (
-            <div className="rounded-2xl border border-navy/10 bg-white px-5 py-10 text-center text-sm text-navy/50">
+            <div className="rounded-2xl border border-navy/10 bg-white px-5 py-10 text-center text-sm text-navy/80">
               {P.emptyShared}
             </div>
           ) : (
@@ -205,14 +205,14 @@ export function PrayerApp({ user }: { user: SessionUser }) {
                   <p className="text-sm font-semibold text-navy">
                     {item.authorId === user.id ? P.you : item.authorName}
                   </p>
-                  <time className="text-xs text-navy/40">
+                  <time className="text-xs text-navy/75">
                     {formatDate(item.createdAt, locale)}
                   </time>
                 </div>
-                <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-navy/80">
+                <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-navy">
                   {item.text}
                 </p>
-                <p className="mt-3 text-[11px] font-medium uppercase tracking-wide text-gold">
+                <p className="mt-3 text-sm font-medium uppercase tracking-wide text-gold">
                   {P.sharedBadge}
                 </p>
               </article>
@@ -235,7 +235,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
             placeholder={P.placeholder}
             className="mt-2 w-full resize-y rounded-xl border border-navy/15 bg-cream/40 px-3 py-2.5 text-sm text-navy outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/30"
           />
-          <p className="mt-1 text-right text-[11px] text-navy/40">{text.length}/2000</p>
+          <p className="mt-1 text-right text-sm text-navy/75">{text.length}/2000</p>
 
           <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-xl border border-navy/10 bg-cream/50 px-3 py-3">
             <input
@@ -246,7 +246,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
             />
             <span className="text-sm leading-snug text-navy/80">{P.consentLabel}</span>
           </label>
-          <p className="mt-2 text-xs text-navy/45">{P.consentHint}</p>
+          <p className="mt-2 text-xs text-navy/75">{P.consentHint}</p>
 
           <button
             type="button"
@@ -262,7 +262,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
       {tab === "mine" ? (
         <div className="mx-auto max-w-2xl space-y-3">
           {mine.length === 0 ? (
-            <div className="rounded-2xl border border-navy/10 bg-white px-5 py-10 text-center text-sm text-navy/50">
+            <div className="rounded-2xl border border-navy/10 bg-white px-5 py-10 text-center text-sm text-navy/80">
               {P.emptyMine}
             </div>
           ) : (
@@ -272,7 +272,7 @@ export function PrayerApp({ user }: { user: SessionUser }) {
                 className="rounded-2xl border border-navy/10 bg-white px-4 py-4 shadow-sm sm:px-5"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <time className="text-xs text-navy/40">
+                  <time className="text-xs text-navy/75">
                     {formatDate(item.createdAt, locale)}
                   </time>
                   <button
@@ -283,10 +283,10 @@ export function PrayerApp({ user }: { user: SessionUser }) {
                     {P.delete}
                   </button>
                 </div>
-                <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-navy/80">
+                <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-navy">
                   {item.text}
                 </p>
-                <p className="mt-2 text-[11px] text-navy/45">
+                <p className="mt-2 text-sm text-navy/75">
                   {item.shareWithOthers ? P.sharedBadge : P.privateBadge}
                 </p>
               </article>

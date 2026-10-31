@@ -40,7 +40,7 @@ export function LessonPageClient({
     <div className="page-container max-w-4xl py-6 sm:py-10">
       <Link
         href={`/estudios/${courseSlug}`}
-        className="inline-flex items-center gap-1 text-sm text-navy/60 transition hover:text-navy"
+        className="inline-flex items-center gap-1 text-sm text-navy/85 transition hover:text-navy"
       >
         ← {copy.title}
       </Link>
@@ -49,13 +49,13 @@ export function LessonPageClient({
         <p className="text-xs font-semibold tracking-wider text-gold uppercase">
           {homeStudy?.part ?? lesson.part}
         </p>
-        <p className="mt-2 font-serif text-sm text-navy/50">
+        <p className="mt-2 font-serif text-sm text-navy/80">
           {formatMsg(t.lesson.of, { id: lesson.id, total })}
         </p>
         <h1 className="mt-2 font-serif text-2xl sm:text-4xl text-navy leading-snug">
           {homeStudy?.title ?? lesson.title}
         </h1>
-        <p className="mt-2 text-base sm:text-lg text-navy/70">{lesson.subtitle}</p>
+        <p className="mt-2 text-base sm:text-lg text-navy/90">{lesson.subtitle}</p>
       </header>
 
       <StudyTabs lesson={lesson} courseSlug={courseSlug} />
@@ -79,7 +79,7 @@ export function LessonPageClient({
             {formatMsg(t.lesson.next, { id: next })}
           </Link>
         ) : (
-          <p className="text-center text-sm text-navy/50 sm:text-left">{t.lesson.completed}</p>
+          <p className="text-center text-sm text-navy/80 sm:text-left">{t.lesson.completed}</p>
         )}
       </nav>
     </div>

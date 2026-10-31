@@ -103,7 +103,7 @@ export function Header() {
             {/* Solo escritorio (no Android / iPhone / iPad) */}
             <div className="hidden min-w-0 xl:block">
               <p className="truncate font-serif text-sm leading-snug text-white">{t.brand}</p>
-              <p className="mt-0.5 text-[10px] tracking-wide text-gold-light/85 uppercase">
+              <p className="mt-0.5 text-xs tracking-wide text-gold-light uppercase">
                 {t.studyGuide}
               </p>
             </div>
@@ -115,13 +115,13 @@ export function Header() {
               <>
                 {user ? (
                   <div className="flex items-center gap-1 border-l border-white/20 pl-1.5 sm:gap-2 sm:pl-3">
-                    <span className="hidden max-w-[90px] truncate text-xs text-white/80 lg:inline">
+                    <span className="hidden max-w-[90px] truncate text-xs text-white/95 lg:inline">
                       {user.nombre}
                     </span>
                     <button
                       type="button"
                       onClick={handleLogout}
-                      className="rounded-full px-2 py-1 text-xs text-white/70 hover:bg-white/10 sm:px-3 sm:py-1.5"
+                      className="rounded-full px-2 py-1 text-xs text-white/90 hover:bg-white/10 sm:px-3 sm:py-1.5"
                     >
                       {t.nav.logout}
                     </button>
@@ -162,7 +162,7 @@ export function Header() {
                 {t.nav.chat}
                 {unread > 0 ? (
                   <span
-                    className="absolute -right-1 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold leading-none text-white shadow-sm ring-2 ring-navy"
+                    className="absolute -right-1 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-600 px-1 text-xs font-bold leading-none text-white shadow-sm ring-2 ring-navy"
                     aria-label={`${unread}`}
                   >
                     {unreadLabel}

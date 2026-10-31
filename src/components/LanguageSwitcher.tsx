@@ -31,7 +31,7 @@ export function LanguageSwitcher({ variant = "header" }: Props) {
           className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
             active
               ? "bg-navy text-white"
-              : "border border-navy/20 text-navy/70 hover:bg-navy/5"
+              : "border border-navy/20 text-navy/90 hover:bg-navy/5"
           }`}
         >
           {short}
@@ -45,10 +45,10 @@ export function LanguageSwitcher({ variant = "header" }: Props) {
         onClick={() => choose(code)}
         aria-pressed={active}
         aria-label={code === "es" ? t.language.es : t.language.en}
-        className={`rounded-full px-2 py-1 text-[10px] font-semibold uppercase tracking-wide transition sm:px-2.5 sm:text-xs ${
+        className={`rounded-full px-2 py-1 text-xs font-semibold uppercase tracking-wide transition sm:px-2.5 sm:text-xs ${
           active
             ? "bg-gold text-navy-dark"
-            : "border border-white/20 text-white/80 hover:bg-white/10"
+            : "border border-white/20 text-white/95 hover:bg-white/10"
         }`}
       >
         {short}

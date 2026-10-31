@@ -31,8 +31,8 @@ export function LessonCard({ lesson, courseSlug, total }: Props) {
       </span>
       <p className="mb-1 text-xs font-semibold tracking-wider text-gold uppercase">{part}</p>
       <h3 className="font-serif text-xl text-navy pr-12">{title}</h3>
-      <p className="mt-2 text-sm text-navy/70">{lesson.subtitle}</p>
-      <div className="mt-4 flex items-center gap-3 text-xs text-navy/50">
+      <p className="mt-2 text-sm text-navy/90">{lesson.subtitle}</p>
+      <div className="mt-4 flex items-center gap-3 text-xs text-navy/80">
         <span>{formatMsg(t.lesson.of, { id: lesson.id, total })}</span>
         <span>·</span>
         <span>

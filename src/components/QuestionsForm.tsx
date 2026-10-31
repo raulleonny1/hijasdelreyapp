@@ -88,17 +88,17 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
   );
 
   if (loading) {
-    return <p className="rounded-xl bg-white p-8 text-center text-navy/60">{Q.loading}</p>;
+    return <p className="rounded-xl bg-white p-8 text-center text-navy/85">{Q.loading}</p>;
   }
 
   if (questions.length === 0) {
-    return <p className="rounded-xl bg-white p-8 text-center text-navy/60">{Q.empty}</p>;
+    return <p className="rounded-xl bg-white p-8 text-center text-navy/85">{Q.empty}</p>;
   }
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between rounded-xl bg-white px-4 py-3 shadow-sm">
-        <span className="text-sm text-navy/70">{Q.progress}</span>
+        <span className="text-sm text-navy/90">{Q.progress}</span>
         <span className="font-semibold text-navy">{progress}%</span>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-navy/10">
@@ -124,7 +124,7 @@ export function QuestionsForm({ studyId, courseSlug, questions }: Props) {
             value={answers[q.id] ?? ""}
             onChange={(e) => handleChange(q.id, e.target.value)}
             placeholder={Q.placeholder}
-            className="mt-2 w-full resize-y rounded-xl border border-navy/15 bg-cream/50 px-4 py-3 text-navy placeholder:text-navy/35 focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy/30"
+            className="mt-2 w-full resize-y rounded-xl border border-navy/15 bg-cream/50 px-4 py-3 text-navy placeholder:text-navy/90 focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy/30"
           />
           {saved === q.id && <p className="mt-2 text-xs text-gold">{Q.saved}</p>}
         </label>
